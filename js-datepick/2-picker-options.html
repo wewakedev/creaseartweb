@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Date Picker Options
+    </title>
+
+    <!-- (A) LOAD THE LIBRARIES -->
+    <link href="dp-dark.css" rel="stylesheet">
+    <!-- <link href="dp-light.css" rel="stylesheet"> -->
+    <script src="datepicker.js"></script>
+  </head>
+  <body>
+    <!-- (B) THE HTML -->
+    <h1>Date Picker Options</h1>
+    <input type="text" id="input-opt"/>
+    <div id="pick-opt"></div>
+
+    <!-- (C) ATTACH DATE PICKER ON LOAD -->
+    <script>
+    window.addEventListener("load", function(){
+      picker.attach({
+        target: "input-opt",
+        container: "pick-opt",
+        disableday : [2, 7], // DISABLE TUE, SUN
+        startmon: true // WEEK START ON MON
+      });
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Checkout</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="js-datepick/dp-light.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background: #F6F6F6;">
+
+  <!-- navbar section -->
+  <div class="container-fluid nav2">
+    <nav class="navbar container-fluid navbar-expand-lg pr-3 pl-3">
+        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
+            <i class="fas fa-bars " style="font-size: 30px;"></i>
+        </button>
+    
+      <!-- SidebarLEFT -->
+    
+      <!-- Toggle Bar -->
+          <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog leftsidebar" role="document">
+                  <div class="modal-content">
+      
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
+                      </div>
+      
+                      <div class="text-center">
+                         <span><p class="modal-title" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: 10px 18px; margin: 20px 70px; cursor: pointer; color: white; background: #B52421">Login</p></span> 
+                      </div>
+                      <div class="modal-body sidebar-item">
+                          <ul>
+                            <li><a class="" href="profile.html"><b>My Account </b></a></li>
+                            <li><a class="" href=""><b>Support</b></a></li>
+                            <li><a class="" href=""><b>FAQs</b></a></li>
+                            <li><a class="" href="about.html"><b>About Us</b></a></li>
+                            <li><a class="" href=""><b>Feedback</b></a></li>
+                            <li><a class="" href=""><b>Rate Us</b></a></li>
+                          </ul>
+                          <div class="sidebarbadge text-center">
+                            <img class="googlebadge" src="img/googlebadge.svg" alt="">
+                        </div>
+                        <div class="sidebarbadge text-center">
+                            <img class="iosbadge" src="img/badge-download-on-the-app-new.svg"  alt="">
+                        </div>
+                      </div>
+      
+                  </div><!-- modal-content -->
+              </div><!-- modal-dialog -->
+          </div><!-- modal -->
+    
+      <a class="navbar-brand logo" href="index.html"><img src="img/creaseart_logo.png" alt=""></a>
+      
+      <div class="collapse navbar-collapse navmenu  " id="navbarText">
+        <ul class="navbar-nav ml-auto ">
+          <li class="nav-item ml-2 mr-2 ">
+            <a class="nav-link " href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+            <a class="nav-link" href="#"><i class="fas fa-tags"></i> Offers</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+              <a class="nav-link" href="#"><i class="fas fa-question    "></i> Help</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+              <a class="nav-link" href="#"><i class="fas fa-user-alt    "></i> User</a>
+          </li>
+          <li class="nav-item ml-2 mr-2">
+              <a class="nav-link" href="#"><i class="fas fa-cart-plus    "></i> Cart</a>
+          </li>   
+       </ul>
+      </div>
+      <span class="navbar-text">
+        
+    
+        <!-- Button Sign up trigger modal -->
+    
+              <!-- <button type="button" class="btn signbtn" data-toggle="modal" data-target="#modalsignup">
+                  <a href="#" class="signbtn">Sign Up</a>
+                </button> -->
+                
+                <!-- RIGHT SIDEBAR -->
+
+                <div class="modal right fade" id="modalsignup" tabindex="-1" role="dialog" aria-labelledby="mysignupmodal">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                  
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                  
+                          <div class="modal-body">
+                            <form id="signupform" action="" method="post">
+                              <h3>Create Account</h3>
+                              
+                              <fieldset>
+                                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                              </fieldset>
+                              <fieldset>
+                                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                              </fieldset>
+                              <fieldset>
+                                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                              </fieldset>
+                              <fieldset>
+                                <input placeholder="Your Password" type="url" tabindex="4" required>
+                              </fieldset>
+                              <fieldset>
+                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                              </fieldset>
+                              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                              <p class="text-center"><b>or </b></p>
+                              <div class="text-center">
+                              <button class="loginBtn loginBtn--facebook">
+                                Login with Facebook
+                              </button>
+                              
+                              <button class="loginBtn loginBtn--google">
+                                Login with Google
+                              </button>
+                              </div>
+                              <p class="copyright">Already have and acoount ?<a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modallogin" title="gotologin"> Login </a></p>
+                            </form>
+                          </div>
+                  
+                      </div>
+                  </div>
+                  </div>
+
+
+
+
+              
+
+
+
+
+                <!-- Button Login trigger modal -->
+
+
+                <!-- <button type="button" class="btn loginbtn" data-toggle="modal" data-target="#modallogin">
+                  <a href="#" class="loginbtn">Login</a>
+                </button> -->
+                
+                <!-- LOGIN Modal -->
+
+
+                <div class="modal right fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="myloginmodal">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                  
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                  
+                          <div class="modal-body">
+                            <form id="loginform" action="" method="post">
+                              <fieldset>
+                                  <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                                </fieldset>
+                                <fieldset>
+                                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Login</button>
+                                </fieldset>
+                                <p class="text-center"><b>or </b></p>
+                                  <div class="text-center">
+                                  <button class="loginBtn loginBtn--facebook">
+                                    Login with Facebook
+                                  </button>
+                                  
+                                  <button class="loginBtn loginBtn--google">
+                                    Login with Google
+                                  </button>
+                                  </div>
+                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                                <p class="copyright">New to creaseart ? <a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modalsignup" title="gotologin">Create an account</a></p>
+                              </form>
+                          </div>
+                  
+                      </div>
+                  </div>
+                  </div>
+
+
+                
+    
+      </span>       
+                  
+                      
+    </nav>
+  </div>
+
+
+  <div class="container-fluid mt-5 checkoutsection" >
+
+  <div class="row">
+
+    <div class="col-md-8 checkoutleft">
+      
+      <ul class="timeline panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <li class="timeline-line"></li>
+  
+        <li class="timeline-item">
+            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-panel">
+                <div class="panel">
+                    <div class="panel-heading isOpen">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="timeline-heading">Account <i class="fa fa-check-circle" aria-hidden="true"></i><div class="timeline-date username">Vivek Rawat</div>
+                                </div> <span class="expand-icon-wrap"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
+                        <div class="panel-body">
+                            <div class="timeline-content">
+                                <p class="text-secondary">Account To place your order now, log in to your existing account or sign up.</p>
+                                <div class="btns d-flex justify-content-around" style="width: 50%; ">
+                                    <button type="button" class="btn" style="padding: 5px 25px; border: 1px solid;" data-toggle="modal" data-target="#modalsignup">
+                                      <p class="text-secondary">Have an account?</p>
+                                      <a href="#" class=""><h6 style="line-height: 2px;">LOGIN</h6></a>
+                                    </button>
+                                    <button type="button" class="btn" style="padding: 5px 25px; background: #B52421;" data-toggle="modal" data-target="#modalsignup">
+                                      <p class="text-white">New to Creaseart?</p>
+                                      <a href="#" class=""><h6 style="line-height: 2px;">SIGN UP</h6></a>
+                                    </button>
+                                </div>
+  
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+  
+        <li class="timeline-item">
+            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-panel">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                <div class="timeline-heading">Pickup & Delivery Address <i class="fa fa-check-circle" aria-hidden="true"></i></div> <span class="expand-icon-wrap" aria-expanded="false" aria-controls="collapseTwo"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <div class="timeline-content">
+                              <div class="container">
+                                <div class="row">
+                                    <div class="col-md-5 m-3 adds p-3">
+                                        <div class="row">
+                                          <i style="padding:5px;" class="fas fa-home"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="addbody">
+                                              <h6>Home</h6>
+                                              <p>123, Lorem, ipsum dolor. <br> 34/4 lorem, Lorem ipsum dolor sit. <br>
+                                              Gurgram, New Delhi 112203</p>
+                                            </div>
+                                            <button class="delivbtn">
+                                              <b>DELIVER HERE</b>
+                                            </button>
+                                          
+                                        </div>
+                                        
+                                    </div>   
+  
+                                    <div class="col-md-5 m-3 adds p-3">
+                                        <div class="row">
+                                          <i style="padding:5px;" class="fas fa-briefcase"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="addbody">
+                                              <h6>Work</h6>
+                                              <p>123, Lorem, ipsum dolor. <br> 34/4 lorem, Lorem ipsum dolor sit. <br>
+                                              Gurgram, New Delhi 112203</p>
+                                            </div>
+                                            <button class="delivbtn">
+                                              <b>DELIVER HERE</b>
+                                            </button>
+                                          
+                                        </div>
+                                        
+                                    </div>   
+  
+                                    <div class="col-md-5 m-3 adds p-3">
+                                      <div class="row">
+                                        <i style="padding:5px;" class="fas fa-location-arrow"></i>
+                                      </div>
+                                      <div class="col-10">
+                                          <div class="addbody">
+                                            <h6>Add New Address</h6>
+                                          </div>
+                                          <div class="addcta">
+                                              <button class="addbtn">
+                                                <b>ADD NEW</b>
+                                              </button>
+                                          </div>
+                                        
+                                      </div>
+                                      
+                                  </div>   
+                                    
+                                      
+                                </div>   
+  
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+  
+        <li class="timeline-item">
+            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-panel">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                <div id="about" class="timeline-heading">Pickup & Delivery Date & Time <i class="fa fa-check-circle" aria-hidden="true"></i></div> <span class="expand-icon-wrap" aria-expanded="false" aria-controls="collapseThree"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <div class="timeline-content">
+                                <div class="datepicker">
+                                  <div class="pickupdate">
+                                    <div class="form-group">
+                                      <input type="text" id="input-pop" placeholder="Popup"/>
+                                      <script>
+                                        
+                                      </script>
+                                      
+                                    </div>	
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+  
+        <li class="timeline-item">
+            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-panel">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                <div id="services" class="timeline-heading">Choose payment method <i class="fa fa-check-circle" aria-hidden="true"></i><div class="timeline-date">Paid via <span>Netbanking</span></div></div> <span class="expand-icon-wrap" aria-expanded="false" aria-controls="collapseThree"></span>
+                            </a> <span class="expand-icon-wrap" aria-expanded="false" aria-controls="collapseFour"></span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <div class="timeline-content">
+                                <div class="container">
+  
+                                  <div class="row ">
+                                    <div class="col-md-4 pb-3 pt-3" style="background: #F6F6F6;">
+                                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                          <a class="nav-link active" id="v-pills-cc-dd-tab" data-toggle="pill" href="#v-pills-cc-dd" role="tab" aria-controls="v-pills-cc-dd" aria-selected="true">Credit/Debit Cards</a>
+                                          <a class="nav-link" id="v-pills-upi-tab" data-toggle="pill" href="#v-pills-upi" role="tab" aria-controls="v-pills-upi" aria-selected="false">UPI</a>
+                                          <a class="nav-link" id="v-pills-wallets-tab" data-toggle="pill" href="#v-pills-wallets" role="tab" aria-controls="v-pills-wallets" aria-selected="false">Wallets</a>
+                                          <a class="nav-link" id="v-pills-netbanking-tab" data-toggle="pill" href="#v-pills-netbanking" role="tab" aria-controls="v-pills-netbanking" aria-selected="false">Netbanking</a>
+                                          <!-- <a class="nav-link" id="v-pills-coupons-tab" data-toggle="pill" href="#v-pills-coupons" role="tab" aria-controls="v-pills-coupons" aria-selected="false">Coupons & Offers</a> -->
+                                        </div>
+                                            
+                                            
+                            
+                                    </div>
+                        
+                                    <div class="col-md-8">
+                                        <div class="tab-content" id="v-pills-tabContent">
+                                          <div class="tab-pane fade show active" id="v-pills-cc-dd" role="tabpanel" aria-labelledby="v-pills-cc-dd-tab">
+                                            CC DD
+                                          </div>
+                                        
+                                          <div class="tab-pane fade" id="v-pills-upi" role="tabpanel" aria-labelledby="v-pills-upi-tab">
+                        
+                                            UPI
+                                            
+                                                
+                                          </div>
+                                          <div class="tab-pane fade" id="v-pills-wallets" role="tabpanel" aria-labelledby="v-pills-wallets-tab">
+                                                WALLETS
+                                          </div>
+                                          <div class="tab-pane fade" id="v-pills-netbanking" role="tabpanel" aria-labelledby="v-pills-netbanking-tab">NETBANKING</div>
+                                          <div class="tab-pane fade" id="v-pills-coupons" role="tabpanel" aria-labelledby="v-pills-coupons-tab"></div>
+                        
+                        
+                                        </div>
+                        
+                        
+                        
+                        
+                                    </div>
+                                  
+                                        
+                                  </div>
+                                
+                                </div>
+  
+                                
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+  
+  
+  
+      </ul>
+
+      <div class="success text-center text-secondary">Thank You. Your Order has been received <a href=""><span style="color: #B52421;"><b>View Order</b> </span></a></div>
+      </div>
+    <div class="col-md-4 checkoutright">
+      <div class="cartheader m-2 pb-2" style="border-bottom: 1px solid #aaa;">
+        <h5>CART</h5>
+        <div class="totalitems text-secondary"><span>6</span> ITEMS</div>
+      </div>
+      <div class="itemlist">
+        <div class="tshirt">
+          <span>Tshirt</span> 
+         
+          <input type="button" onclick="decrementValue()" value="-" />
+          <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+          <input type="button" onclick="incrementValue()" value="+" /><span class="price">Rs 120</span>
+          </div> 
+          </div>
+         <div class="shopping-cart-wrapper">
+  <table class="table is-fullwidth shopping-cart">
+    <thead>
+      <tr>
+        <th><abbr title="Position"></abbr></th>
+        <th></th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th></th>
+      </tr>
+    </thead>
+  </table>
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">Rs 120</div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (5%)</label>
+      <div class="totals-value" id="cart-tax">Rs 20</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">Rs 10</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">Rs 160</div>
+    </div>
+  </div>
+  <button class="checkout">Checkout</button>
+</div>
+         
+        </div>
+      </div>
+      <h5  >Total: $<span class="total">0.00</span></h5>
+      
+    </div>
+  
+    </div>
+
+          
+
+  </div>
+  
+
+  
+
+  </div>
+
+
+
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="main.js"></script>
+    <script src="js-datepick/datepicker.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

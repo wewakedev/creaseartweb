@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Simple Date Picker Example
+    </title>
+
+    <!-- (A) LOAD DATE PICKER -->
+    <!--<link href="dp-dark.css" rel="stylesheet">-->
+    <link href="dp-light.css" rel="stylesheet">
+    <script src="datepicker.js"></script>
+  </head>
+  <body>
+    <!-- (B) THE HTML  -->
+    <!-- (B1) INLINE DATE PICKER -->
+    <input type="text" id="input-inline" placeholder="Inline"/>
+    <div id="pick-inline"></div>
+
+    <!-- (B2) POPUP DATE PICKER -->
+    <input type="text" id="input-pop" placeholder="Popup"/>
+
+    <!-- (C) ATTACH DATE PICKER ON LOAD -->
+    <script>
+    window.addEventListener("load", function(){
+      // (C1) INLINE DATE PICKER
+      picker.attach({
+        target: "input-inline",
+        container: "pick-inline"
+      });
+
+      // (C2) POPUP DATE PICKER
+      picker.attach({
+        target: "input-pop"
+      });
+    });
+    </script>
+  </body>
+</html>
