@@ -8,6 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="style.css">
+  <script src="//code.jquery.com/jquery.min.js"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="js-datepick/dp-light.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -17,190 +18,13 @@
 
   <!-- navbar section -->
   <div class="container-fluid nav2">
-    <nav class="navbar container-fluid navbar-expand-lg pr-3 pl-3">
-        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
-            <i class="fas fa-bars " style="font-size: 30px;"></i>
-        </button>
-    
-      <!-- SidebarLEFT -->
-    
-      <!-- Toggle Bar -->
-          <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog leftsidebar" role="document">
-                  <div class="modal-content">
-      
-                      <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
-                      </div>
-      
-                      <div class="text-center">
-                         <span><p class="modal-title" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: 10px 18px; margin: 20px 70px; cursor: pointer; color: white; background: #B52421">Login</p></span> 
-                      </div>
-                      <div class="modal-body sidebar-item">
-                          <ul>
-                            <li><a class="" href="profile.html"><b>My Account </b></a></li>
-                            <li><a class="" href=""><b>Support</b></a></li>
-                            <li><a class="" href=""><b>FAQs</b></a></li>
-                            <li><a class="" href="about.html"><b>About Us</b></a></li>
-                            <li><a class="" href=""><b>Feedback</b></a></li>
-                            <li><a class="" href=""><b>Rate Us</b></a></li>
-                          </ul>
-                          <div class="sidebarbadge text-center">
-                            <img class="googlebadge" src="img/googlebadge.svg" alt="">
-                        </div>
-                        <div class="sidebarbadge text-center">
-                            <img class="iosbadge" src="img/badge-download-on-the-app-new.svg"  alt="">
-                        </div>
-                      </div>
-      
-                  </div><!-- modal-content -->
-              </div><!-- modal-dialog -->
-          </div><!-- modal -->
-    
-      <a class="navbar-brand logo" href="index.html"><img src="img/creaseart_logo.png" alt=""></a>
-      
-      <div class="collapse navbar-collapse navmenu  " id="navbarText">
-        <ul class="navbar-nav ml-auto ">
-          <li class="nav-item ml-2 mr-2 ">
-            <a class="nav-link " href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-            <a class="nav-link" href="#"><i class="fas fa-tags"></i> Offers</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-              <a class="nav-link" href="#"><i class="fas fa-question    "></i> Help</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-              <a class="nav-link" href="#"><i class="fas fa-user-alt    "></i> User</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-              <a class="nav-link" href="#"><i class="fas fa-cart-plus    "></i> Cart</a>
-          </li>   
-       </ul>
-      </div>
-      <span class="navbar-text">
-        
-    
-        <!-- Button Sign up trigger modal -->
-    
-              <!-- <button type="button" class="btn signbtn" data-toggle="modal" data-target="#modalsignup">
-                  <a href="#" class="signbtn">Sign Up</a>
-                </button> -->
-                
-                <!-- RIGHT SIDEBAR -->
-
-                <div class="modal right fade" id="modalsignup" tabindex="-1" role="dialog" aria-labelledby="mysignupmodal">
-                  <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                  
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                  
-                          <div class="modal-body">
-                            <form id="signupform" action="" method="post">
-                              <h3>Create Account</h3>
-                              
-                              <fieldset>
-                                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-                              </fieldset>
-                              <fieldset>
-                                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-                              </fieldset>
-                              <fieldset>
-                                <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                              </fieldset>
-                              <fieldset>
-                                <input placeholder="Your Password" type="url" tabindex="4" required>
-                              </fieldset>
-                              <fieldset>
-                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                              </fieldset>
-                              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
-                              <p class="text-center"><b>or </b></p>
-                              <div class="text-center">
-                              <button class="loginBtn loginBtn--facebook">
-                                Login with Facebook
-                              </button>
-                              
-                              <button class="loginBtn loginBtn--google">
-                                Login with Google
-                              </button>
-                              </div>
-                              <p class="copyright">Already have and acoount ?<a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modallogin" title="gotologin"> Login </a></p>
-                            </form>
-                          </div>
-                  
-                      </div>
-                  </div>
-                  </div>
-
-
-
-
-              
-
-
-
-
-                <!-- Button Login trigger modal -->
-
-
-                <!-- <button type="button" class="btn loginbtn" data-toggle="modal" data-target="#modallogin">
-                  <a href="#" class="loginbtn">Login</a>
-                </button> -->
-                
-                <!-- LOGIN Modal -->
-
-
-                <div class="modal right fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="myloginmodal">
-                  <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                  
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                  
-                          <div class="modal-body">
-                            <form id="loginform" action="" method="post">
-                              <fieldset>
-                                  <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-                                </fieldset>
-                                <fieldset>
-                                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Login</button>
-                                </fieldset>
-                                <p class="text-center"><b>or </b></p>
-                                  <div class="text-center">
-                                  <button class="loginBtn loginBtn--facebook">
-                                    Login with Facebook
-                                  </button>
-                                  
-                                  <button class="loginBtn loginBtn--google">
-                                    Login with Google
-                                  </button>
-                                  </div>
-                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
-                                <p class="copyright">New to creaseart ? <a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modalsignup" title="gotologin">Create an account</a></p>
-                              </form>
-                          </div>
-                  
-                      </div>
-                  </div>
-                  </div>
-
-
-                
-    
-      </span>       
-                  
-                      
-    </nav>
+    <script>
+      $.get("nav.html", function(data){
+          $("#navholder").replaceWith(data);
+      });
+      </script>
+      <div class="" id="navholder"></div>
+  </div>
   </div>
 
 
@@ -229,13 +53,13 @@
                         <div class="panel-body">
                             <div class="timeline-content">
                                 <p class="text-secondary">Account To place your order now, log in to your existing account or sign up.</p>
-                                <div class="btns d-flex justify-content-around" style="width: 50%; ">
-                                    <button type="button" class="btn" style="padding: 5px 25px; border: 1px solid;" data-toggle="modal" data-target="#modalsignup">
-                                      <p class="text-secondary">Have an account?</p>
+                                <div class="btns d-flex justify-content-between" style="width: %; ">
+                                    <button type="button" class="btn" style="padding: 5px 15px; border: 1px solid;" data-toggle="modal" data-target="#modalsignup">
+                                      <p class="text-secondary " style="font-size: 10px;">Have an account?</p>
                                       <a href="#" class=""><h6 style="line-height: 2px;">LOGIN</h6></a>
                                     </button>
-                                    <button type="button" class="btn" style="padding: 5px 25px; background: #B52421;" data-toggle="modal" data-target="#modalsignup">
-                                      <p class="text-white">New to Creaseart?</p>
+                                    <button type="button" class="btn" style="padding: 5px 15px; background: #B52421;" data-toggle="modal" data-target="#modalsignup">
+                                      <p class="text-white" style="font-size: 10px;">New to Creaseart?</p>
                                       <a href="#" class=""><h6 style="line-height: 2px;">SIGN UP</h6></a>
                                     </button>
                                 </div>
@@ -374,7 +198,7 @@
                         </h4>
                     </div>
                     <div id="collapseFour" class="panel-collapse collapse" role="tabpanel">
-                        <div class="panel-body">
+                        <div class="panel-body paymentgates">
                             <div class="timeline-content">
                                 <div class="container">
   
@@ -436,7 +260,10 @@
   
       </ul>
 
-      <div class="success text-center text-secondary">Thank You. Your Order has been received <a href=""><span style="color: #B52421;"><b>View Order</b> </span></a></div>
+      <div class="success text-center text-secondary">Thank You. Your Order has been received <span type="" class="" data-toggle="modal" data-target="#vieworder">
+        <a href="" class=""><b>View Orders</b> </a>
+      </span>
+      </button></div>
       </div>
     <div class="col-md-4 checkoutright">
       <div class="cartheader m-2 pb-2" style="border-bottom: 1px solid #aaa;">
@@ -488,9 +315,9 @@
          
         </div>
       </div>
-      <h5  >Total: $<span class="total">0.00</span></h5>
+      <h5  >Total Item (<span class="total">5</span>)</h5>
       
-    </div>
+      </div>
   
     </div>
 
@@ -504,13 +331,36 @@
   </div>
 
 
+  
+  <!-- VIEW ORDER SIDEBAR -->
+  
+  <div class="modal right fade" id="vieworder" tabindex="-1" role="dialog" aria-labelledby="#vieworder">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+    
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+    
+            <div class="modal-body">
+              
+            </div>
+    
+        </div>
+    </div>
+  </div>
+
+
 
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script src="main.js"></script>
-    <script src="js-datepick/datepicker.js"></script>
+    <!-- <script src="js-datepick/datepicker.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

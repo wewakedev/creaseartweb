@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -10,6 +9,7 @@ h1,h2,h3,h4,h5,h6{
 p{
 /* font: normal normal normal 16px/20px poppins;
 letter-spacing: 0.25px; */
+font-family: 'Montserrat';
 color: #191717;
 opacity: 1;
 }
@@ -78,6 +78,9 @@ ul{
 	 {
 		height: 100%;
 		overflow-y: inherit;
+    background-color: #fff;
+    background-image: linear-gradient(318deg, #dc3545 0%, #f3f3f5 74%);
+
 	}
 	
 	.modal.left .modal-body,.modal.right .modal-body
@@ -122,7 +125,7 @@ ul{
 
 	.modal-header {
 		border-bottom-color: #EEEEEE;
-		background-color: #FAFAFA;
+		background-color: #cccccc;
 	}
 
 
@@ -140,10 +143,10 @@ ul{
 }
 
 #signupform , #loginform{
-  background: #F9F9F9;
+  /* background: #F9F9F9; */
   padding: 25px;
   margin:  0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
 }
 
 #signupform h3 {
@@ -324,6 +327,7 @@ fieldset {
 
     body.modal-open {
         padding-right: 0 !important;
+        overflow: visiblen !important;
       }
 
       body:not(.modal-open){
@@ -349,15 +353,15 @@ fieldset {
     padding: 10px 25px;
 }
 .mainsec{
-    background-color: #eec0c6;
-    /* background-image:  url(img/hero.jpg); */
+    /* background-color: #eec0c6;
     background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-    /* background-size: cover;
-    background-position: center; */
-    height: 500px;
+  background-size: cover; */
+    /* height: 500px; */
+    padding: 0px !important;
+    position: absolute;
+    width: 100%;
 
 }
 .rotatinghero{
@@ -372,6 +376,13 @@ fieldset {
   }
 }
 
+#par-js{
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(315deg, #dc3545 0%, #f3f3f5 74%);
+  
+}
 .herosec{
     margin-top: 100px;
 }
@@ -408,6 +419,16 @@ fieldset {
   width: 100%;
   height: auto;
 
+}
+.input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
 }
 .nearbybox{
   position: relative;
@@ -502,6 +523,13 @@ fieldset {
 }
 
 
+@media only screen and (max-width: 900px){
+.checkoutleft .btns.d-flex.justify-content-between{
+  width: 100% !important;
+}
+}
+
+
 /*************************** MY ACCOUNT*************************************/
 
 
@@ -533,7 +561,7 @@ fieldset {
   margin:2px 0px;
 } */
 .nav-pills .nav-link{
-  padding: 10px 40px;
+  padding: 10px 30px;
   margin: 3px;
 }
 
@@ -762,6 +790,96 @@ fieldset {
   background: #b523219f;
 
 }
+
+/***ADDONS**/
+
+.wrapper{
+  width:100%;
+  padding-top: 20px;
+  text-align:center;
+}
+
+.carousel{
+  width:100%;
+  margin:0px auto;
+}
+.slick-slide{
+  margin:10px;
+}
+.slick-slide img{
+  width:100%;
+}
+.addon{
+  margin: 5px;
+  padding: 10px 25px;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  color: #000;
+}
+.addon small{
+text-align: center;
+}
+
+.addonbtn{
+  font-size: .8rem;
+  width: 100%;
+  padding: 5px 12px;
+  color: #B52421;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.addonbtn:hover{
+  color: white;
+  background: #B52421;
+}
+.addon p{
+  margin-bottom: 0rem;
+  font-size:.8rem;
+}
+
+
+.toggle {
+  position : relative ;
+  display : inline-block;
+  width : 40px;
+  height : 20px;
+  background-color: #b6b3b3;
+  border-radius: 30px;
+  border: 2px solid gray;
+  margin-left: 5px;
+
+}
+      
+/* After slide changes */
+.toggle:after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  top: 1px; 
+  left: 1px;
+  transition:  all 0.5s;
+}
+
+
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+  left : 20px; 
+}
+      
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+  background-color: #B52421;
+}
+      
+/* Checkbox vanished */
+.checkbox { 
+  display : none;
+}
+
 
 /**************CHECKOUT ***********************/
 
@@ -1080,48 +1198,37 @@ input#number {
   width: 8%;
 }
 
-
-
-
-
-
-
-/* testtttttttttttttttttttttttttttttttt */
-
-.shopping-cart-wrapper {
-  margin-top: 15px;
-  padding: 20px;
+.checkoutleft .btns.d-flex.justify-content-between {
+  width: 50%;
 }
-.totals .totals-item {
-  float: right;
-  clear: both;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.totals .totals-item label {
-  float: left;
-  clear: both;
-  width: 79%;
-  text-align: right;
-}
-.totals-value {
-  float: right;
-  width: 21%;
-  text-align: right;
+.checkoutleft  .paymentgates a:hover{
+  color: #fff !important;
 }
 
 
-.checkout {
-  float: right;
-  border: 0;
-  margin-top: 20px;
-  padding: 6px 25px;
-  background-color:#43A047;
+/***************SHOPDETAILSPAGE***************/
+
+.shopinfos small{
   color: #fff;
-  font-size: 15px;
-  border-radius: 3px;
+
 }
 
-.checkout:hover {
-  background-color: #494;
+/* vertical tabs */
+
+.service a:hover,.category ul li a:hover{
+  color: white !important;
 }
+.service a,.category ul li a{
+  font: normal normal bold 12px/18px Montserrat;
+}
+.table input{
+  width: 10%;
+}
+.table td
+{
+    padding:0 5px 0 0; /* Only right padding*/
+}
+
+
+
+

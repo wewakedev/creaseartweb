@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Super Fine Dry Cleanings</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="js-datepick/dp-light.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background: #F6F6F6;">
+
+  <!-- navbar section -->
+  <div class="container-fluid nav2">
+    
+    <script>
+      $.get("nav.html", function(data){
+          $("#navholder").replaceWith(data);
+      });
+      </script>
+      <div class="" id="navholder"></div>
+  </div>
+
+
+  </div>
+
+  <div class="container-fluid  mt-5 p-2 " style="background: #000;">
+      <div class="container">
+          <div class="row  m-4  p-1">
+              <div class="col-md-4 text-center">
+                  <img class="shopimg1" style="width: 250px; height: auto;" src="img/shop1.jpg" alt="">
+              </div>
+              <div class="col-md-4 shopinfos">
+                  <h3 style="color: #F5B8BC !important;">Super Fine Dry Cleaners</h3>
+                  <small>Sector 23, Main Market, Gurgoan</small>
+                  <div class=" d-flex justify-content-around text-white mt-2">
+                    <div><i class="fa fa-star" aria-hidden="true"></i> 4.4 <small><br> 100+ Ratings</small></div>
+                  
+                  
+                    <div> 1 Day<small><br> Delivery Time</small></div>
+                
+                  
+                    <div>1.5Km<small><br> Distance</small></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="container mt-4 mb-4" id="mainservcies">
+
+    <div class="row ">
+
+      <div class="col-md-3 service text-center ">
+          <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active d-flex justify-content-around" id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon">DRY CLEANING</a>
+            <a class="nav-link d-flex justify-content-around"  id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="false"><img src="img/laundryicon.png" alt="" class="serviceicon">LAUNDRY </a>
+            <a class="nav-link d-flex justify-content-around" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> WASH & FOLDS</a>
+            <a class="nav-link d-flex justify-content-around" id="v-pills-washiron-tab" data-toggle="pill" href="#v-pills-washiron" role="tab" aria-controls="v-pills-washiron" aria-selected="false"><img src="img/washiron.png" alt="" class="serviceicon"> WASH & IRON</a>
+          </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="row mb-1  " style="border-bottom: 1px solid #b6b3b3;">
+          <div class="col-6">
+            <small><i>Select laundry by Kg <i class="fa fa-info-circle" aria-hidden="true"></i></i> </small>
+          </div>
+          <div class="col-4 ml-auto">
+            <input type="checkbox" id="switch"class="checkbox dark-modeBtn" />
+            <label for="switch" class="toggle">
+            </label>   
+          </div>
+        </div>
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-dryclean" role="tabpanel" aria-labelledby="v-pills-dryclean-tab">
+              <div class="container category">
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="pills-men-tab" data-toggle="pill" href="#pills-men" role="tab" aria-controls="pills-men" aria-selected="true">Men</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-women-tab" data-toggle="pill" href="#pills-women" role="tab" aria-controls="pills-women" aria-selected="false">Women</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-kids-tab" data-toggle="pill" href="#pills-kids" role="tab" aria-controls="pills-kids" aria-selected="false">Kids</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="pills-household-tab" data-toggle="pill" href="#pills-household" role="tab" aria-controls="pills-household" aria-selected="false">Households</a>
+                      </li>
+                    </ul>  
+                  </div>
+                  <div class="col-12 text-center">
+                    <div class="tab-content" id="pills-tabContent">
+                      <div class="tab-pane fade show active" id="pills-men" role="tabpanel" aria-labelledby="pills-men-tab">
+
+                        <div class="container">
+                          <div class="row justify-content-around">
+
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  
+                                  <th scope="col"><small>Clothes list</small> </th>
+                                  <th scope="col"><small>Price</small> </th>
+                                  <th scope="col"><small> Quantity</small></th>
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  
+                                  <td><b> T-shirt</b> </td>
+                                  <td>
+                                    <p class="total-price">
+                                      <span><i class="fas fa-rupee-sign "></i></span>
+                                      <b><span id="price">  100</span></b>
+                                  </p>
+                                  </td>
+                                  <td>
+                                    <div class="quantitycat">
+                                    <button class="btn minus-btn disabled" type="button">-</button>
+                                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                                    <button class="btn plus-btn" type="button">+</button>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  
+                                  <td><b>Jeans</b> </td>
+                                  <td>
+                                    <p class="total-price">
+                                      <span><i class="fas fa-rupee-sign "></i></span>
+                                      <b><span id="price">  100</span></b>
+                                  </p>
+                                  </td>
+                                  <td>
+                                    <div class="quantitycat">
+                                    <button class="btn minus-btn disabled" type="button">-</button>
+                                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                                    <button class="btn plus-btn" type="button">+</button>
+                                    </div>
+                                  </td>
+                                </tr>
+                                
+                                  
+                                  
+                              </tbody>
+                            </table>
+
+                            
+                          </div>
+                        </div>
+              
+
+                        
+                      </div>
+                      <div class="tab-pane fade" id="pills-women" role="tabpanel" aria-labelledby="pills-women-tab">
+                          <div class="container">
+                            <div class="row justify-content-around">
+  
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    
+                                    <th scope="col"><small>Clothes list</small> </th>
+                                    <th scope="col"><small>Price</small> </th>
+                                    <th scope="col"><small> Quantity</small></th>
+                                    
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    
+                                    <td><b> Saree</b> </td>
+                                    <td>
+                                      <p class="total-price">
+                                        <span><i class="fas fa-rupee-sign "></i></span>
+                                        <b><span id="price">  100</span></b>
+                                    </p>
+                                    </td>
+                                    <td>
+                                      <div class="quantitycat">
+                                      <button class="btn minus-btn disabled" type="button">-</button>
+                                      <input type="text" id="quantity" class="text-center" readonly value="1">
+                                      <button class="btn plus-btn" type="button">+</button>
+                                      </div>
+                                    </td>
+                                  </tr>
+  
+                                  <tr>
+                                    
+                                    <td><b>Jeans</b> </td>
+                                    <td>
+                                      <p class="total-price">
+                                        <span><i class="fas fa-rupee-sign "></i></span>
+                                        <b><span id="price">  100</span></b>
+                                    </p>
+                                    </td>
+                                    <td>
+                                      <div class="quantitycat">
+                                      <button class="btn minus-btn disabled" type="button">-</button>
+                                      <input type="text" id="quantity" class="text-center" readonly value="1">
+                                      <button class="btn plus-btn" type="button">+</button>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  
+                                    
+                                    
+                                </tbody>
+                              </table>
+  
+                            </div>
+                          </div>
+                      </p>
+                       
+                      </div>
+                      <div class="tab-pane fade" id="pills-kids" role="tabpanel" aria-labelledby="pills-kids-tab">..c.</div>
+                      <div class="tab-pane fade" id="pills-household" role="tabpanel" aria-labelledby="pills-household-tab">..h.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-laundry" role="tabpanel" aria-labelledby="v-pills-laundry-tab">
+              <input type="text" placeholder="Order by Kg">
+            </div>
+            <div class="tab-pane fade" id="v-pills-washfolds" role="tabpanel" aria-labelledby="v-pills-washfolds-tab">..RR.</div>
+            <div class="tab-pane fade" id="v-pills-washiron" role="tabpanel" aria-labelledby="v-pills-washiron-tab">...GG</div>
+          </div>
+
+          <div>
+            <h6>Add on services</h6>
+             
+            <div class="wrapper">
+                  <div class="carousel">
+                    
+
+                    <div class=" addon">
+                      <img src="img/antiseptic 100x100.png"><br>
+                      <p>Aniseptic</p>
+                      <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
+                      <button class="addonbtn">Add+</button>
+                    
+                    </div>
+                    <div class="text-center addon">
+                      <img src="img/antiseptic 100x100.png"><br>
+                      <p>Aniseptic</p>
+                      <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
+                      <button class="addonbtn">Add+</button>
+                    
+                    </div>
+                    <div class="text-center addon">
+                      <img src="img/antiseptic 100x100.png"><br>
+                      <p>Aniseptic</p>
+                      <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
+                      <button class="addonbtn">Add+</button>
+                    
+                    </div>
+                    <div class="text-center addon">
+                      <img src="img/antiseptic 100x100.png"><br>
+                      <p>Aniseptic</p>
+                      <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
+                      <button class="addonbtn">Add+</button>
+                    
+                    </div>
+
+                    <div class="text-center addon">
+                      <img src="img/antiseptic 100x100.png"><br>
+                      <p>Aniseptic</p>
+                      <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
+                      <button class="addonbtn">Add+</button>
+                    
+                    </div>
+
+                    <div class="text-center addon">
+                      <img src="img/antiseptic 100x100.png"><br>
+                      <p>Aniseptic</p>
+                      <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
+                      <button class="addonbtn">Add+</button>
+                    
+                    </div>
+
+                    
+                  </div>
+            </div>
+            
+
+            </div>
+            
+    
+        </div>
+
+
+
+          <div class="col-md-3">
+            <div class="cartlist">
+              <h6>Cart</h6>
+            </div>
+          </div>
+      </div>
+
+      
+    
+    </div>
+    
+  </div>
+    
+        
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      //setting default attribute to disabled of minus button
+      document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+
+      //taking value to increment decrement input value
+      var valueCount
+
+      //taking price value in variable
+      var price = document.getElementById("price").innerText;
+
+      //price calculation function
+      function priceTotal() {
+          var total = valueCount * price;
+          document.getElementById("price").innerText = total
+      }
+
+      //plus button
+      document.querySelector(".plus-btn").addEventListener("click", function() {
+          //getting value of input
+          valueCount = document.getElementById("quantity").value;
+
+          //input value increment by 1
+          valueCount++;
+
+          //setting increment input value
+          document.getElementById("quantity").value = valueCount;
+
+          if (valueCount > 1) {
+              document.querySelector(".minus-btn").removeAttribute("disabled");
+              document.querySelector(".minus-btn").classList.remove("disabled")
+          }
+
+          //calling price function
+          priceTotal()
+      })
+
+      //plus button
+      document.querySelector(".minus-btn").addEventListener("click", function() {
+          //getting value of input
+          valueCount = document.getElementById("quantity").value;
+
+          //input value increment by 1
+          valueCount--;
+
+          //setting increment input value
+          document.getElementById("quantity").value = valueCount
+
+          if (valueCount == 1) {
+              document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+          }
+
+          //calling price function
+          priceTotal()
+      })
+  </script>
+    <script src="main.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script>
+//      $(document).ready(function(){
+//   $('.carousel').slick({
+//   slidesToShow: 3,
+//   dots:false,
+//   centerMode: true,
+//   arrows:true,
+//   infinite: true,
+//   prevArrow: false,
+//     nextArrow: false
+//   });
+// });
+$('.carousel').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  prevArrow: false,
+  nextArrow: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: false,
+        dots: false,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+
+// Slick version 1.5.8
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,169 +1,186 @@
 <nav class="navbar container-fluid navbar-expand-lg pr-3 pl-3">
-    <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
-        <i class="fas fa-bars " style="font-size: 30px;"></i>
-    </button>
+  <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
+      <i class="fas fa-bars " style="font-size: 30px;"></i>
+  </button>
 
-  <!-- SidebarLEFT -->
+<!-- SidebarLEFT -->
 
-  <!-- Toggle Bar -->
-      <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog leftsidebar" role="document">
-              <div class="modal-content">
-  
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
-                  </div>
-  
-                  <div class="text-center">
-                     <span><p class="modal-title" id="myModalLabel" data-toggle="modal" data-target="#modallogin" style="padding: 10px 18px; margin: 20px 70px; cursor: pointer; color: white; background: #B52421">Login</p></span> 
-                  </div>
-                  <div class="modal-body sidebar-item">
-                      <ul>
-                        <li><a class="" href="profile.html"><b>My Account </b></a></li>
-                        <li><a class="" href=""><b>Support</b></a></li>
-                        <li><a class="" href=""><b>FAQs</b></a></li>
-                        <li><a class="" href="about.html"><b>About Us</b></a></li>
-                        <li><a class="" href=""><b>Feedback</b></a></li>
-                        <li><a class="" href=""><b>Rate Us</b></a></li>
-                      </ul>
-                      <div class="sidebarbadge text-center">
-                        <img class="googlebadge" src="img/googlebadge.svg" alt="">
-                    </div>
+<!-- Toggle Bar -->
+    <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog leftsidebar" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
+                </div>
+
+                <div class="text-center">
+                   <span><p class="modal-title" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: 10px 18px; margin: 20px 70px; cursor: pointer; color: white; background: #B52421">Login</p></span> 
+                </div>
+                <div class="modal-body sidebar-item">
+                  <ul>
+                    <li><a class="" href="profile.html"><b>My Account </b></a></li>
+                    <li><a class="" href="shops.html"><b>Shops</b></a></li>
+                    <li><a class="" href=""><b>Support</b></a></li>
+                    <li><a class="" href=""><b>FAQs</b></a></li>
+                    <li><a class="" href="checkout.html"><b>Checkout</b></a></li>
+                    <li><a class="" href="about.html"><b>About Us</b></a></li>
+                    <li><a class="" href=""><b>Feedback</b></a></li>
+                    <li><a class="" href=""><b>Rate Us</b></a></li>
+                  </ul>
                     <div class="sidebarbadge text-center">
-                        <img class="iosbadge" src="img/badge-download-on-the-app-new.svg"  alt="">
-                    </div>
+                      <img class="googlebadge" src="img/googlebadge.svg" alt="">
                   </div>
-  
-              </div><!-- modal-content -->
-          </div><!-- modal-dialog -->
-      </div><!-- modal -->
-
-  <a class="navbar-brand logo" href="index.html"><img src="img/creaseart_logo.png" alt=""></a>
-  
-  <div class="collapse navbar-collapse navmenu  " id="navbarText">
-    <ul class="navbar-nav ml-auto ">
-      <li class="nav-item ml-2 mr-2 ">
-        <a class="nav-link " href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
-      </li>
-      <li class="nav-item ml-2 mr-2">
-        <a class="nav-link" href="#"><i class="fas fa-tags"></i> Offers</a>
-      </li>
-      <li class="nav-item ml-2 mr-2">
-          <a class="nav-link" href="#"><i class="fas fa-question    "></i> Help</a>
-      </li>
-      <li class="nav-item ml-2 mr-2">
-          <a class="nav-link active" href="#"><i class="fas fa-user-alt    "></i> User</a>
-      </li>
-      <li class="nav-item ml-2 mr-2">
-          <a class="nav-link" href="#"><i class="fas fa-cart-plus    "></i> Cart</a>
-      </li>   
-   </ul>
-  </div>
-  <span class="navbar-text">
-    
-
-    <!-- Button Sign up trigger modal -->
-
-          <!-- <button type="button" class="btn signbtn" data-toggle="modal" data-target="#modalsignup">
-              <a href="#" class="signbtn">Sign Up</a>
-            </button> -->
-            
-            <!-- Modal -->
-            <div class="modal fade " id="modalsignup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                      <form id="signupform" action="" method="post">
-                          <h3>Create Account</h3>
-                          
-                          <fieldset>
-                            <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-                          </fieldset>
-                          <fieldset>
-                            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-                          </fieldset>
-                          <fieldset>
-                            <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                          </fieldset>
-                          <fieldset>
-                            <input placeholder="Your Password" type="url" tabindex="4" required>
-                          </fieldset>
-                          <fieldset>
-                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                          </fieldset>
-                          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
-                          <p class="text-center"><b>or </b></p>
-                          <div class="text-center">
-                          <button class="loginBtn loginBtn--facebook">
-                            Login with Facebook
-                          </button>
-                          
-                          <button class="loginBtn loginBtn--google">
-                            Login with Google
-                          </button>
-                          </div>
-                          <p class="copyright">Already have and acoount ?<a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modallogin" title="gotologin"> Login </a></p>
-                        </form>
+                  <div class="sidebarbadge text-center">
+                      <img class="iosbadge" src="img/badge-download-on-the-app-new.svg"  alt="">
                   </div>
                 </div>
-              </div>
-            </div>
 
-            <!-- Button Login trigger modal -->
+            </div><!-- modal-content -->
+        </div><!-- modal-dialog -->
+    </div><!-- modal -->
 
+<a class="navbar-brand logo" href="index.html"><img src="img/creaseart_logo.png" alt=""></a>
 
-            <!-- <button type="button" class="btn loginbtn" data-toggle="modal" data-target="#modallogin">
-              <a href="#" class="loginbtn">Login</a>
-            </button> -->
-            
-            <!-- Modal -->
+<div class="collapse navbar-collapse navmenu  " id="navbarText">
+  <ul class="navbar-nav ml-auto ">
+    <li class="nav-item ml-2 mr-2 ">
+      <a class="nav-link " href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
+    </li>
+    <li class="nav-item ml-2 mr-2">
+      <a class="nav-link" href="#"><i class="fas fa-tags"></i> Offers</a>
+    </li>
+    <li class="nav-item ml-2 mr-2">
+        <a class="nav-link" href="#"><i class="fas fa-question    "></i> Help</a>
+    </li>
+    <li class="nav-item ml-2 mr-2">
+        <a class="nav-link" href="#"><i class="fas fa-user-alt    "></i> User</a>
+    </li>
+    <li class="nav-item ml-2 mr-2">
+        <a class="nav-link" href="#"><i class="fas fa-cart-plus    "></i> Cart</a>
+    </li>   
+ </ul>
+</div>
+<span class="navbar-text">
+  
 
+  <!-- Button Sign up trigger modal -->
 
-            <div class="modal fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
+        <!-- <button type="button" class="btn signbtn" data-toggle="modal" data-target="#modalsignup">
+            <a href="#" class="signbtn">Sign Up</a>
+          </button> -->
+          
+          <!-- RIGHT SIDEBAR -->
+
+          <div class="modal right fade" id="modalsignup" tabindex="-1" role="dialog" aria-labelledby="mysignupmodal">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                      <form id="loginform" action="" method="post">
-                      <fieldset>
+            
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+            
+                    <div class="modal-body">
+                      <form id="signupform" action="" method="post">
+                        <h3>Create Account</h3>
+                        
+                        <fieldset>
                           <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
                         </fieldset>
                         <fieldset>
-                          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Login</button>
+                          <input placeholder="Your name" type="text" tabindex="1" required autofocus>
                         </fieldset>
-                        <p class="text-center"><b>or </b></p>
-                          <div class="text-center">
-                          <button class="loginBtn loginBtn--facebook">
-                            Login with Facebook
-                          </button>
-                          
-                          <button class="loginBtn loginBtn--google">
-                            Login with Google
-                          </button>
-                          </div>
+                        <fieldset>
+                          <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                        </fieldset>
+                        <fieldset>
+                          <input placeholder="Your Password" type="url" tabindex="4" required>
+                        </fieldset>
+                        <fieldset>
+                          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                        </fieldset>
                         <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
-                        <p class="copyright">New to creaseart ? <a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modalsignup" title="gotologin">Create an account</a></p>
+                        <p class="text-center"><b>or </b></p>
+                        <div class="text-center">
+                        <button class="loginBtn loginBtn--facebook">
+                          Login with Facebook
+                        </button>
+                        
+                        <button class="loginBtn loginBtn--google">
+                          Login with Google
+                        </button>
+                        </div>
+                        <p class="copyright">Already have and acoount ?<a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modallogin" title="gotologin"> Login </a></p>
                       </form>
-                  </div>
-                </div>
-              </div>
-            </div>  
-
-
+                    </div>
             
+                </div>
+            </div>
+            </div>
 
-  </span>       
-              
-                  
+
+
+
+        
+
+
+
+
+          <!-- Button Login trigger modal -->
+
+
+          <!-- <button type="button" class="btn loginbtn" data-toggle="modal" data-target="#modallogin">
+            <a href="#" class="loginbtn">Login</a>
+          </button> -->
+          
+          <!-- LOGIN Modal -->
+
+
+          <div class="modal right fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="myloginmodal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+            
+                    <div class="modal-body">
+                      <form id="loginform" action="" method="post">
+                        <fieldset>
+                            <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                          </fieldset>
+                          <fieldset>
+                            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Login</button>
+                          </fieldset>
+                          <p class="text-center"><b>or </b></p>
+                            <div class="text-center">
+                            <button class="loginBtn loginBtn--facebook">
+                              Login with Facebook
+                            </button>
+                            
+                            <button class="loginBtn loginBtn--google">
+                              Login with Google
+                            </button>
+                            </div>
+                          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                          <p class="copyright">New to creaseart ? <a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modalsignup" title="gotologin">Create an account</a></p>
+                        </form>
+                    </div>
+            
+                </div>
+            </div>
+            </div>
+
+
+          
+
+</span>       
+            
+                
 </nav>

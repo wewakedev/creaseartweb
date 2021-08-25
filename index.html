@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
   <link rel="stylesheet" href="style.css">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -15,7 +16,11 @@
 <body>
 
   <!-- navbar section -->
- <div class="container-fluid mainsec">
+
+   
+
+  <div id="par-js">
+ <div class="container-fluid mainsec ">
   <nav class="navbar container navbar-expand-lg pr-3 pl-3">
       <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
           <i class="fas fa-bars " style="font-size: 30px;"></i>
@@ -166,7 +171,7 @@
                                   <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
                                 </fieldset>
                                 <fieldset>
-                                  <button name="submit" type="submit" id="submit" data-submit="...Sending">Login</button>
+                                  <a href=""><button name="submit" type="submit" id="submit" data-submit="...Sending">Login</button>
                                 </fieldset>
                                 <p class="text-center"><b>or </b></p>
                                   <div class="text-center">
@@ -185,7 +190,7 @@
                   
                       </div>
                   </div>
-                  </div>
+                </div>
 
 
                 
@@ -198,9 +203,9 @@
     <!-- hero section -->
 
 
-    <div class="container herosec flex-column-reverse flex-lg-row">
+    <div class="container herosec">
     <div class="row ">
-        <div class="col-md-6">
+        <div class="col-md-6 order-md-1 order-sm-2 order-2">
             <h1 style="color: #282C3F; font: Montserrat;">Laundry Solution For You</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             <div class="input-group mt-4">
@@ -217,13 +222,15 @@
                 <h6><b>Gurugram, Bengaluru, Hyderabad, Delhi</b></h6>
             </div>
         </div>
-        <div class="col-md-6 text-center ">
+        <div class="col-md-6 order-md-2 order-sm-1 order-1 text-center ">
           <img class="rotatinghero" style="width: 300px; height: 300px;" src="img/Ellipse 443.png" alt="">
         </div>
     </div>
     </div>
-
-   </div>
+    
+    
+  </div>
+  </div>
 
     <div class="workings container mt-5 ">
         <div class="workhead text-center">
@@ -289,27 +296,49 @@
       <div class="row justify-content-around partner pt-3">
           <div class="col-md-3 text-center">
               <img src="img/user.png" alt="">
+              <div class="text-left">
               <h5>
                   Users
               </h5>
-               <small><a href="">Signup</a></small>
+              <small>Lorem ipsum dolor sit amet.</small>
+              <small><span type="button" class="" data-toggle="modal" data-target="#modalsignup">
+                <a href="javascript:;" class=""><b>Sign Up</b> </a>
+              </span></small>
+               </div>
           </div>
 
           <div class="col-md-3 text-center">
               <img src="img/vendor.png" alt="">
+              <div class="text-left">
               <h5>
                   Vendor
               </h5>
-              <small><a href="">Partner with us</a></small> 
+              <small>Lorem ipsum dolor sit amet.</small>
+              <small><a href=""><b>Partner with us</b> </a></small> 
+              </div>
           </div>
 
           <div class="col-md-3 text-center">
               <img src="img/rider.png" alt="">
+              <div class="text-left">
               <h5>
                   Riders
               </h5>
-              <small><a href="">Join Us</a></small> 
+              <small>Lorem ipsum dolor sit amet.</small>
+              <small><a href=""><b>Join Us</b> </a></small>
+              </div>
           </div>
+
+          <div class="col-md-3 text-center">
+            <img src="img/francise.png" alt="">
+            <div class="text-left">
+            <h5>
+                Franchise
+            </h5>
+            <small>Lorem ipsum dolor sit amet.</small>
+            <small><a href=""><b>Join Us</b> </a></small> 
+            </div>
+        </div>
           
       </div>
   </div>

@@ -1,3 +1,202 @@
+
+/////////////////////Water JS ////////////////
+
+particlesJS('par-js',
+  
+  {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 30,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": false,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 5,
+        "direction": "top",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": false,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": false,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
+
+);
+      
+
+
+/////////////ADDONS SLIDER ////////////////
+
+
+$(document).ready(function(){
+  $('.carousel').slick({
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots:true,
+    centerMode: true,
+    responsive: [{
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // centerMode: true,
+
+      }
+
+    }, {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true,
+        infinite: true,
+
+      }
+    },  {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      }
+    }]
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Create the popover with Header Content and Footer */
 $('.popover-markup>[data-toggle="popover"]').popover({
     html: true,
@@ -59,154 +258,32 @@ $('.popover-markup>[data-toggle="popover"]').popover({
 
  //CART ITEM QUANTITY INCREMENT
 
- function incrementValue()
- {
-     var value = parseInt(document.getElementById('number').value, 10);
-     value = isNaN(value) ? 0 : value;
-     if(value<10){
-         value++;
-             document.getElementById('number').value = value;
-     }
- }
- function decrementValue()
- {
-     var value = parseInt(document.getElementById('number').value, 10);
-     value = isNaN(value) ? 0 : value;
-     if(value>1){
-         value--;
-             document.getElementById('number').value = value;
-     }
+//  function incrementValue()
+//  {
+//      var value = parseInt(document.getElementById('number').value, 10);
+//      value = isNaN(value) ? 0 : value;
+//      if(value<10){
+//          value++;
+//              document.getElementById('number').value = value;
+//      }
+//  }
+//  function decrementValue()
+//  {
+//      var value = parseInt(document.getElementById('number').value, 10);
+//      value = isNaN(value) ? 0 : value;
+//      if(value>1){
+//          value--;
+//              document.getElementById('number').value = value;
+//      }
  
- }
+//  }
+
 
 
 
  //////////////// CART ????????????///////////////////
 
-// var taxRate = 0.05;
-// var shipping = 15.0;
-// $(function() {
-//   var jsonData = [
-//     {
-//       title: "Tshirt",
-//       price: 38,
-//       quantity: 1,
-//       total: 38
-//     },
-//     {
-//       title: "商品2",
-//       price: 23.5,
-//       quantity: 1,
-//       total: 23.5
-//     },
-//     {
-//       title: "商品3",
-//       price: 100,
-//       quantity: 1,
-//       total: 100
-//     },
-//     {
-//       title: "商品4",
-//       price: 45,
-//       quantity: 1,
-//       total: 45
-//     },
-//     {
-//       title: "商品5",
-//       price: 66,
-//       quantity: 1,
-//       total: 66
-//     },
-//     {
-//       title: "商品6",
-//       price: 199,
-//       quantity: 1,
-//       total: 199
-//     }
-//   ];
-//   var html = "<tbody>";
-//   $.each(jsonData, function() {
-//     html +=
-//       '<tr class="cart-item">' +
-//       "        <td>" +
-//       '          <input type="checkbox" class="cart-item-check" checked />' +
-//       "        </td>" +
-//       "        <td>" +
-//       "          " +
-//       this.title +
-//       "        </td>" +
-//       "        <td>￥" +
-//       this.price +
-//       "</td>" +
-//       "        <td>" +
-//       '          <input class="input is-primary cart-item-qty" style="width:100px" type="number" min="1" value="' +
-//       this.quantity +
-//       '" data-price="' +
-//       this.price +
-//       '">' +
-//       "        </td>" +
-//       '        <td class="cart-item-total">￥' +
-//       this.total +
-//       "</td>" +
-//       "        <td>" +
-//       '          <a class="button is-small">删除</a>' +
-//       "        </td>" +
-//       "      </tr>";
-//   });
-//   html += "</tbody>";
-//   $(".shopping-cart").append(html);
-  
-//   recalculateCart();
-
-//   $(".cart-item-check").change(function() {
-//     recalculateCart();
-//   });
-
-//   $(".cart-item-qty").change(function() {
-//     var $this = $(this);
-//     var parent = $this.parent().parent();
-//     parent.find(".cart-item-check").prop("checked", "checked");
-//     var price = $this.attr("data-price");
-//     var quantity = $this.val();
-//     var total = price * quantity;
-//     parent.find(".cart-item-total").html(total.toFixed(2));
-//     recalculateCart();
-//   });
-
-//   $(".button").click(function() {
-//     var parent = $(this)
-//       .parent()
-//       .parent();
-//     parent.remove();
-//     recalculateCart();
-//   });
-// });
-// function recalculateCart() {
-//   var subTotal = 0;
-//   var grandTotal = 0;
-//   var tax = 0;
-//   var items = $(".cart-item");
-//   $.each(items, function() {
-//     var itemCheck = $(this).find(".cart-item-check");
-//     var itemQuantity = $(this).find(".cart-item-qty");
-//     if (itemCheck.prop("checked")) {
-//       var itemTotal = itemQuantity.val() * itemQuantity.attr("data-price");
-//       subTotal += itemTotal;
-//     }
-//   });
-//   if (subTotal > 0) {
-//     tax = subTotal * taxRate;
-//     grandTotal = subTotal + tax + shipping;
-//     $(".totals,.checkout").show();
-//   } else {
-//     $(".totals,.checkout").hide();
-//   }
-//   $("#cart-subtotal").html(subTotal.toFixed(2));
-//   $("#cart-total").html(grandTotal.toFixed(2));
-//   $("#cart-tax").html(tax.toFixed(2));
-//   $("#cart-shipping").html(shipping.toFixed(2));
-// }
-
+// 
 
 
 
