@@ -497,6 +497,7 @@ fieldset {
 .footcredit p{
   color: #fff;
   font-size: 10px;
+  text-align: center;
 }
 
 /* media queries */
@@ -754,6 +755,9 @@ fieldset {
   overflow-y: hidden;
   overflow-x: hidden;
 }
+.shopimg img {
+  width: 100%;
+}
 .filter a{
   color: #000;
   font-weight: bold;
@@ -763,14 +767,14 @@ fieldset {
 }
 .filter .dropdown-menu a:hover{
   background-color: #B52421;
+  color: #fff !important;
 }
 .vendor a:hover{
   color: #000 !important;
 }
 .rating{
   padding: 3px 8px;
-  /* background: #FFB300; */
-  background: #B52421;
+  background: #FFB300;
   color: white !important;
 }
 .vendor{
@@ -787,9 +791,23 @@ fieldset {
   top: 2px;
   left: 0px;
   padding: 10px 20px;
-  background: #b523219f;
+  background: #FFB300;
 
 }
+
+.dropdown-menu {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20%) !important;
+  transition: all .5s;
+}
+.dropdown:hover .dropdown-menu{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0%);
+}
+
 
 /***ADDONS**/
 
@@ -1173,7 +1191,7 @@ text-align: center;
   margin-left: 10px;
 }
 
-.timeline-heading { font-size: 15px; background:;}
+.timeline-heading { font-size: 15px;}
 
 /*** accordion collapse ***/
 .panel-heading, .panel-body { padding: 0; }
