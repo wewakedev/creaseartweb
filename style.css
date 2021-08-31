@@ -78,8 +78,8 @@ ul{
 	 {
 		height: 100%;
 		overflow-y: inherit;
-    background-color: #fff;
-    background-image: linear-gradient(318deg, #dc3545 0%, #f3f3f5 74%);
+    background-color: #ffcccc;
+    /* background-image: linear-gradient(318deg, #dc3545 0%, #f3f3f5 74%); */
 
 	}
 	
@@ -824,15 +824,22 @@ fieldset {
 .slick-slide{
   margin:10px;
 }
-.slick-slide img{
-  width:100%;
+/* .slick-slide img {
+  width: 50%;
+  margin: 0 auto;
+} */
+.slick-slide img {
+  display: block;
+  width: 51px;
+  height: 51px;
+  margin: 0 auto;
 }
 .addon{
   margin: 5px;
   padding: 10px 25px;
   border: 1px solid #707070;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   color: #000;
 }
 .addon small{
@@ -842,10 +849,11 @@ text-align: center;
 .addonbtn{
   font-size: .8rem;
   width: 100%;
-  padding: 5px 12px;
+  /* padding: 5px 12px; */
   color: #B52421;
   border-radius: 10px;
   border: 1px solid black;
+  font-weight: bold;
 }
 .addonbtn:hover{
   color: white;
@@ -857,7 +865,7 @@ text-align: center;
 }
 
 
-.toggle {
+.togglekg,.toggleexp{
   position : relative ;
   display : inline-block;
   width : 40px;
@@ -870,7 +878,7 @@ text-align: center;
 }
       
 /* After slide changes */
-.toggle:after {
+.togglekg:after , .toggleexp:after {
   content: '';
   position: absolute;
   width: 15px;
@@ -884,12 +892,12 @@ text-align: center;
 
 
 /* Checkbox checked effect */
-.checkbox:checked + .toggle::after {
+.checkbox:checked + .togglekg::after, .checkbox:checked + .toggleexp::after {
   left : 20px; 
 }
       
-/* Checkbox checked toggle label bg color */
-.checkbox:checked + .toggle {
+/* Checkbox checked togglekg label bg color */
+.checkbox:checked + .togglekg , .checkbox:checked + .toggleexp{
   background-color: #B52421;
 }
       
@@ -1212,10 +1220,18 @@ text-align: center;
   color: #B52421;
   border: 1px solid #000;
 }
-input#number {
+/* input#number {
   width: 8%;
+} */
+input[type="coupon"]{
+  border: 1px dashed #B52421;
+  padding: 20px 40px;
 }
-
+input[type="coupon"]::placeholder { 
+                  
+  /* Firefox, Chrome, Opera */
+  text-align: center;
+}
 .checkoutleft .btns.d-flex.justify-content-between {
   width: 50%;
 }
@@ -1226,11 +1242,23 @@ input#number {
 
 /***************SHOPDETAILSPAGE***************/
 
+.quantitycat input {
+  width: 15%;
+  text-align: center !important;
+}
+.quantitycat.text-center {
+  background: white;
+  border: 1px solid;
+  border-radius: 20px;
+  width: 20%;
+}
 .shopinfos small{
   color: #fff;
 
 }
-
+.service{
+  border-right: .5px solid #b6b3b3;
+}
 /* vertical tabs */
 
 .service a:hover,.category ul li a:hover{
@@ -1239,14 +1267,21 @@ input#number {
 .service a,.category ul li a{
   font: normal normal bold 12px/18px Montserrat;
 }
-.table input{
+/* .table input{
   width: 10%;
-}
+} */
 .table td
 {
     padding:0 5px 0 0; /* Only right padding*/
 }
 
-
-
+.checkoutbtn h6{
+  padding: 10px 30px;
+  color: #F5F5F5 !important;
+  background: #B52421;
+  letter-spacing: 0.30px
+}
+.inputkg{
+  border: 1px solid #aaa;
+}
 

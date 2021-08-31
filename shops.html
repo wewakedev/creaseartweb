@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Checkout</title>
+  <title>Shops</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="style.css">
+  <script src="//code.jquery.com/jquery.min.js"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
   <link rel="stylesheet" href="js-datepick/dp-light.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -17,193 +18,16 @@
 
   <!-- navbar section -->
   <div class="container-fluid nav2">
-    <nav class="navbar container-fluid navbar-expand-lg pr-3 pl-3">
-        <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal">
-            <i class="fas fa-bars " style="font-size: 30px;"></i>
-        </button>
-    
-      <!-- SidebarLEFT -->
-    
-      <!-- Toggle Bar -->
-          <div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog leftsidebar" role="document">
-                  <div class="modal-content">
-      
-                      <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>	
-                      </div>
-      
-                      <div class="text-center">
-                         <span><p class="modal-title" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: 10px 18px; margin: 20px 70px; cursor: pointer; color: white; background: #B52421">Login</p></span> 
-                      </div>
-                      <div class="modal-body sidebar-item">
-                          <ul>
-                            <li><a class="" href="profile.html"><b>My Account </b></a></li>
-                            <li><a class="" href=""><b>Support</b></a></li>
-                            <li><a class="" href=""><b>FAQs</b></a></li>
-                            <li><a class="" href="about.html"><b>About Us</b></a></li>
-                            <li><a class="" href=""><b>Feedback</b></a></li>
-                            <li><a class="" href=""><b>Rate Us</b></a></li>
-                          </ul>
-                          <div class="sidebarbadge text-center">
-                            <img class="googlebadge" src="img/googlebadge.svg" alt="">
-                        </div>
-                        <div class="sidebarbadge text-center">
-                            <img class="iosbadge" src="img/badge-download-on-the-app-new.svg"  alt="">
-                        </div>
-                      </div>
-      
-                  </div><!-- modal-content -->
-              </div><!-- modal-dialog -->
-          </div><!-- modal -->
-    
-      <a class="navbar-brand logo" href="index.html"><img src="img/creaseart_logo.png" alt=""></a>
-      
-      <div class="collapse navbar-collapse navmenu  " id="navbarText">
-        <ul class="navbar-nav ml-auto ">
-          <li class="nav-item ml-2 mr-2 ">
-            <a class="nav-link " href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-            <a class="nav-link" href="#"><i class="fas fa-tags"></i> Offers</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-              <a class="nav-link" href="#"><i class="fas fa-question    "></i> Help</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-              <a class="nav-link" href="#"><i class="fas fa-user-alt    "></i> User</a>
-          </li>
-          <li class="nav-item ml-2 mr-2">
-              <a class="nav-link" href="#"><i class="fas fa-cart-plus    "></i> Cart</a>
-          </li>   
-       </ul>
-      </div>
-      <span class="navbar-text">
-        
-    
-        <!-- Button Sign up trigger modal -->
-    
-              <!-- <button type="button" class="btn signbtn" data-toggle="modal" data-target="#modalsignup">
-                  <a href="#" class="signbtn">Sign Up</a>
-                </button> -->
-                
-                <!-- RIGHT SIDEBAR -->
-
-                <div class="modal right fade" id="modalsignup" tabindex="-1" role="dialog" aria-labelledby="mysignupmodal">
-                  <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                  
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Sign up</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                  
-                          <div class="modal-body">
-                            <form id="signupform" action="" method="post">
-                              <h3>Create Account</h3>
-                              
-                              <fieldset>
-                                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-                              </fieldset>
-                              <fieldset>
-                                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-                              </fieldset>
-                              <fieldset>
-                                <input placeholder="Your Email Address" type="email" tabindex="2" required>
-                              </fieldset>
-                              <fieldset>
-                                <input placeholder="Your Password" type="url" tabindex="4" required>
-                              </fieldset>
-                              <fieldset>
-                                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-                              </fieldset>
-                              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
-                              <p class="text-center"><b>or </b></p>
-                              <div class="text-center">
-                              <button class="loginBtn loginBtn--facebook">
-                                Login with Facebook
-                              </button>
-                              
-                              <button class="loginBtn loginBtn--google">
-                                Login with Google
-                              </button>
-                              </div>
-                              <p class="copyright">Already have and acoount ?<a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modallogin" title="gotologin"> Login </a></p>
-                            </form>
-                          </div>
-                  
-                      </div>
-                  </div>
-                  </div>
-
-
-
-
-              
-
-
-
-
-                <!-- Button Login trigger modal -->
-
-
-                <!-- <button type="button" class="btn loginbtn" data-toggle="modal" data-target="#modallogin">
-                  <a href="#" class="loginbtn">Login</a>
-                </button> -->
-                
-                <!-- LOGIN Modal -->
-
-
-                <div class="modal right fade" id="modallogin" tabindex="-1" role="dialog" aria-labelledby="myloginmodal">
-                  <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                  
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                  
-                          <div class="modal-body">
-                            <form id="loginform" action="" method="post">
-                              <fieldset>
-                                  <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-                                </fieldset>
-                                <fieldset>
-                                  <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Login</button>
-                                </fieldset>
-                                <p class="text-center"><b>or </b></p>
-                                  <div class="text-center">
-                                  <button class="loginBtn loginBtn--facebook">
-                                    Login with Facebook
-                                  </button>
-                                  
-                                  <button class="loginBtn loginBtn--google">
-                                    Login with Google
-                                  </button>
-                                  </div>
-                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
-                                <p class="copyright">New to creaseart ? <a href="#" target="_blank" data-dismiss="modal" data-toggle="modal" data-target="#modalsignup" title="gotologin">Create an account</a></p>
-                              </form>
-                          </div>
-                  
-                      </div>
-                  </div>
-                  </div>
-
-
-
-                
-
-      </span>       
-                  
-    </nav>
+    <script>
+      $.get("nav.html", function(data){
+          $("#navholder").replaceWith(data);
+      });
+      </script>
+      <div class="" id="navholder"></div>
   </div>
+  
 
-  <div class="container-fluid shops  p-5">
+  <div class="container shops  p-sm-2 p-md-3">
 
     <div class="row filters">
       <div class="col-md-4">
@@ -273,20 +97,20 @@
     </div>
 
     <div class="container-fluid vendors mt-4">
-      <div class="row flex-wrap justify-content-between p-2">
-        <div class="vendor m-4  p-1 shop1 "  onclick="location.href='shoppage.html'">
-          <img src="img/shop1.jpg" alt="">
+      <div class="row p-2 justify-content-around flex-wrap">
+        <div class="vendor m-1 shop1 "  onclick="location.href='shoppage.html'">
+          <div class="shopimg"><img src="img/shop1.jpg" alt=""></div>
           <span class="offerbadge"><b>30% Off</b></span>
           <p><b>Super Fine Dry Cleaners</b></p>
           <div class="services text-secondary">
-            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px;">
+            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px; width: 70%;font-family: 'Montserrat';">
               <li><a href="shoppage.html">Drycleaning</a></li>
               <li><a href="">Laundry</a></li>
               <li><a href="">Wash & Fold</a></li>
             </ul>
           </div>
-          <div class="services extradetails ">
-            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px;">
+          <div class="services text-secondary extradetails ">
+            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px; font-family: 'Montserrat';">
               <li ><a href="" class="rating"><span><i class="fa fa-star" aria-hidden="true"></i></span> 4.2</a></li>
               <li><a href="">1 Day</a></li>
               <li><a href="">1.5 Km</a></li>
@@ -294,19 +118,19 @@
           </div>
         </div>
 
-        <div class="vendor m-4 p-1 shop1">
-          <img src="img/shop2.jpg" alt="">
+        <div class="vendor m-1 shop1 "  onclick="location.href='shoppage.html'">
+          <div class="shopimg"><img src="img/shop1.jpg" alt=""></div>
           <span class="offerbadge"><b>30% Off</b></span>
           <p><b>Super Fine Dry Cleaners</b></p>
           <div class="services text-secondary">
-            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px;">
-              <li><a href="">Drycleaning</a></li>
+            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px; width: 70%;font-family: 'Montserrat';">
+              <li><a href="shoppage.html">Drycleaning</a></li>
               <li><a href="">Laundry</a></li>
               <li><a href="">Wash & Fold</a></li>
             </ul>
           </div>
-          <div class="services extradetails ">
-            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px;">
+          <div class="services text-secondary extradetails ">
+            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px; font-family: 'Montserrat';">
               <li ><a href="" class="rating"><span><i class="fa fa-star" aria-hidden="true"></i></span> 4.2</a></li>
               <li><a href="">1 Day</a></li>
               <li><a href="">1.5 Km</a></li>
@@ -314,19 +138,19 @@
           </div>
         </div>
 
-        <div class="vendor m-4 p-1 shop1">
-          <img src="img/shop3.jpg" alt="">
+        <div class="vendor m-1 shop1 "  onclick="location.href='shoppage.html'">
+          <div class="shopimg"><img src="img/shop1.jpg" alt=""></div>
           <span class="offerbadge"><b>30% Off</b></span>
           <p><b>Super Fine Dry Cleaners</b></p>
           <div class="services text-secondary">
-            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px;">
-              <li><a href="">Drycleaning</a></li>
+            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px; width: 70%;font-family: 'Montserrat';">
+              <li><a href="shoppage.html">Drycleaning</a></li>
               <li><a href="">Laundry</a></li>
               <li><a href="">Wash & Fold</a></li>
             </ul>
           </div>
-          <div class="services extradetails ">
-            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px;">
+          <div class="services text-secondary extradetails ">
+            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px; font-family: 'Montserrat';">
               <li ><a href="" class="rating"><span><i class="fa fa-star" aria-hidden="true"></i></span> 4.2</a></li>
               <li><a href="">1 Day</a></li>
               <li><a href="">1.5 Km</a></li>
@@ -334,19 +158,19 @@
           </div>
         </div>
 
-        <div class="vendor m-4  p-1 shop1">
-          <img src="img/shop2.jpg" alt="">
+        <div class="vendor m-1 shop1 "  onclick="location.href='shoppage.html'">
+          <div class="shopimg"><img src="img/shop1.jpg" alt=""></div>
           <span class="offerbadge"><b>30% Off</b></span>
           <p><b>Super Fine Dry Cleaners</b></p>
           <div class="services text-secondary">
-            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px;">
-              <li><a href="">Drycleaning</a></li>
+            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px; width: 70%;font-family: 'Montserrat';">
+              <li><a href="shoppage.html">Drycleaning</a></li>
               <li><a href="">Laundry</a></li>
               <li><a href="">Wash & Fold</a></li>
             </ul>
           </div>
-          <div class="services extradetails ">
-            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px;">
+          <div class="services text-secondary extradetails ">
+            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px; font-family: 'Montserrat';">
               <li ><a href="" class="rating"><span><i class="fa fa-star" aria-hidden="true"></i></span> 4.2</a></li>
               <li><a href="">1 Day</a></li>
               <li><a href="">1.5 Km</a></li>
@@ -354,19 +178,19 @@
           </div>
         </div>
 
-        <div class="vendor m-4  p-1 shop1">
-          <img src="img/shop3.jpg" alt="" >
+        <div class="vendor m-1 shop1 "  onclick="location.href='shoppage.html'">
+          <div class="shopimg"><img src="img/shop1.jpg" alt=""></div>
           <span class="offerbadge"><b>30% Off</b></span>
           <p><b>Super Fine Dry Cleaners</b></p>
           <div class="services text-secondary">
-            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px;">
-              <li><a href="">Drycleaning</a></li>
+            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px; width: 70%;font-family: 'Montserrat';">
+              <li><a href="shoppage.html">Drycleaning</a></li>
               <li><a href="">Laundry</a></li>
               <li><a href="">Wash & Fold</a></li>
             </ul>
           </div>
-          <div class="services extradetails ">
-            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px;">
+          <div class="services text-secondary extradetails ">
+            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px; font-family: 'Montserrat';">
               <li ><a href="" class="rating"><span><i class="fa fa-star" aria-hidden="true"></i></span> 4.2</a></li>
               <li><a href="">1 Day</a></li>
               <li><a href="">1.5 Km</a></li>
@@ -374,25 +198,33 @@
           </div>
         </div>
 
-        <div class="vendor m-4  p-1 shop1">
-          <img src="img/shop1.jpg" alt="">
+        <div class="vendor m-1 shop1 "  onclick="location.href='shoppage.html'">
+          <div class="shopimg"><img src="img/shop1.jpg" alt=""></div>
           <span class="offerbadge"><b>30% Off</b></span>
           <p><b>Super Fine Dry Cleaners</b></p>
           <div class="services text-secondary">
-            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px;">
-              <li><a href="">Drycleaning</a></li>
+            <ul class="d-flex justify-content-between" style="font-size: 12px;padding-left: 0px; width: 70%;font-family: 'Montserrat';">
+              <li><a href="shoppage.html">Drycleaning</a></li>
               <li><a href="">Laundry</a></li>
               <li><a href="">Wash & Fold</a></li>
             </ul>
           </div>
-          <div class="services extradetails ">
-            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px;">
+          <div class="services text-secondary extradetails ">
+            <ul class="d-flex justify-content-around" style="font-size: 12px; width: 50%;padding-left: 0px; font-family: 'Montserrat';">
               <li ><a href="" class="rating"><span><i class="fa fa-star" aria-hidden="true"></i></span> 4.2</a></li>
               <li><a href="">1 Day</a></li>
               <li><a href="">1.5 Km</a></li>
             </ul>
           </div>
         </div>
+
+        
+        
+
+        
+
+        
+        
 
       </div>
 

@@ -25,10 +25,10 @@
       </script>
       <div class="" id="navholder"></div>
   </div>
-  </div>
+  
 
 
-  <div class="container-fluid mt-5 checkoutsection" >
+  <div class="container mt-5 checkoutsection" >
 
   <div class="row">
 
@@ -54,7 +54,7 @@
                             <div class="timeline-content">
                                 <p class="text-secondary">Account To place your order now, log in to your existing account or sign up.</p>
                                 <div class="btns d-flex justify-content-between" style="width: %; ">
-                                    <button type="button" class="btn" style="padding: 5px 15px; border: 1px solid;" data-toggle="modal" data-target="#modalsignup">
+                                    <button type="button" class="btn" style="padding: 5px 15px; border: 1px solid;" data-toggle="modal" data-target="#modallogin">
                                       <p class="text-secondary " style="font-size: 10px;">Have an account?</p>
                                       <a href="#" class=""><h6 style="line-height: 2px;">LOGIN</h6></a>
                                     </button>
@@ -261,65 +261,84 @@
       </ul>
 
       <div class="success text-center text-secondary">Thank You. Your Order has been received <span type="" class="" data-toggle="modal" data-target="#vieworder">
-        <a href="" class=""><b>View Orders</b> </a>
+        <a href="javascript:;" class=""><b>View Orders</b> </a>
       </span>
       </button></div>
       </div>
-    <div class="col-md-4 checkoutright">
-      <div class="cartheader m-2 pb-2" style="border-bottom: 1px solid #aaa;">
-        <h5>CART</h5>
-        <div class="totalitems text-secondary"><span>6</span> ITEMS</div>
-      </div>
-      <div class="itemlist">
-        <div class="tshirt">
-          <span>Tshirt</span> 
-         
-          <input type="button" onclick="decrementValue()" value="-" />
-          <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
-          <input type="button" onclick="incrementValue()" value="+" /><span class="price">Rs 120</span>
-          </div> 
-          </div>
-         <div class="shopping-cart-wrapper">
-  <table class="table is-fullwidth shopping-cart">
-    <thead>
-      <tr>
-        <th><abbr title="Position"></abbr></th>
-        <th></th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Total</th>
-        <th></th>
-      </tr>
-    </thead>
-  </table>
-  <div class="totals">
-    <div class="totals-item">
-      <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">Rs 120</div>
-    </div>
-    <div class="totals-item">
-      <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax">Rs 20</div>
-    </div>
-    <div class="totals-item">
-      <label>Shipping</label>
-      <div class="totals-value" id="cart-shipping">Rs 10</div>
-    </div>
-    <div class="totals-item totals-item-total">
-      <label>Grand Total</label>
-      <div class="totals-value" id="cart-total">Rs 160</div>
-    </div>
-  </div>
-  <button class="checkout">Checkout</button>
-</div>
-         
+      <div class="col-md-3">
+        <div class="cartlist" style="border-bottom: 1px solid #b6b3b3; padding-bottom: 10px;">
+          <h5>Cart</h5>
+          <small class="text-secondary"> 6 ITEMS</small>
         </div>
+        <div class="selecteditems">
+          <div class="item1 m-2 d-flex justify-content-between">
+            <small>Tshirt</small>
+            <!-- <div class="quantitycat text-center">
+              <button class="btn minus-btn disabled" type="button">-</button>
+              <input type="text" id="quantity" class="text-center" readonly value="1">
+              <button class="btn plus-btn" type="button">+</button>
+              </div> -->
+            <small><i class="fa fa-rupee-sign    "></i> 120</small>
+          </div>
+
+          <div class="item1 m-2 d-flex justify-content-between">
+            <small>Tshirt</small>
+            <!-- <div class="quantitycat text-center">
+              <button class="btn minus-btn disabled" type="button">-</button>
+              <input type="text" id="quantity" class="text-center" readonly value="1">
+              <button class="btn plus-btn" type="button">+</button>
+              </div> -->
+            <small><i class="fa fa-rupee-sign    "></i> 120</small>
+          </div>
+
+          <div class="item1 m-2 d-flex justify-content-between">
+            <small>Tshirt</small>
+            <!-- <div class="quantitycat text-center">
+              <button class="btn minus-btn disabled" type="button">-</button>
+              <input type="text" id="quantity" class="text-center" readonly value="1">
+              <button class="btn plus-btn" type="button">+</button>
+              </div> -->
+            <small><i class="fa fa-rupee-sign    "></i> 120</small>
+          </div>
+
+
+        </div>
+
+        <div class="addcoupon text-center mt-4">
+          <input type="coupon" value="" placeholder="ADD COUPON">
+        </div>
+
+        <div class="totalcart mt-4">
+          <h5>Bill Details</h5>
+          <div class="item1 m-2 d-flex justify-content-between">
+            <small class="text-secondary">Item Total</small>
+            <!-- <div class="quantitycat text-center">
+              <button class="btn minus-btn disabled" type="button">-</button>
+              <input type="text" id="quantity" class="text-center" readonly value="1">
+              <button class="btn plus-btn" type="button">+</button>
+              </div> -->
+            <small><i class="fas fa-rupee-sign    "></i> 310 </small>
+          </div>
+          <div class="subtotal m-2 d-flex justify-content-between">
+            <small class="text-secondary">Delivery Fee</small>
+            <small><b></b><i class="fas fa-rupee-sign    "></i>50</b> </small>
+          </div>
+          <div class="subtotal m-2 d-flex justify-content-between">
+            <small class="text-secondary">Tax & Charges</small>
+            <small><b></b><i class="fas fa-rupee-sign    "></i>10</b> </small>
+          </div>
+        </div>
+
+        <!-- <div class="checkoutbtn text-center">
+          <a href="checkout.html"><h6><b>Checkout</b> <i class="fas fa-arrow-right    "></i></h6></a>
+        </div> -->
+        <div class="total d-flex justify-content-between" style="border-top: 1px solid #b6b3b3; border-bottom: 1px solid #b6b3b3; padding: 10px 5px;">
+          <small class=""><b>Total Pay</b> </small>
+          <small><i class="fas fa-rupee-sign    "></i> <b>370</b></small>
+        </div>
+
       </div>
-      <h5  >Total Item (<span class="total">5</span>)</h5>
       
-      </div>
-  
-    </div>
 
           
 
@@ -339,7 +358,7 @@
         <div class="modal-content">
     
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+              <h5 class="modal-title" id="exampleModalLongTitle">Your Orders</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>

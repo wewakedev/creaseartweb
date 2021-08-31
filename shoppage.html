@@ -40,14 +40,15 @@
               <div class="col-md-4 shopinfos">
                   <h3 style="color: #F5B8BC !important;">Super Fine Dry Cleaners</h3>
                   <small>Sector 23, Main Market, Gurgoan</small>
-                  <div class=" d-flex justify-content-around text-white mt-2">
-                    <div><i class="fa fa-star" aria-hidden="true"></i> 4.4 <small><br> 100+ Ratings</small></div>
+                  <div class=" d-flex justify-content-between text-white mt-2">
+                    <div><i class="fa fa-star" aria-hidden="true"></i> 4.4 <small class="text-secondary"><br> 100+ Ratings</small></div>
+                    
+                   
                   
-                  
-                    <div> 1 Day<small><br> Delivery Time</small></div>
+                    <div> 1 Day<small class="text-secondary"><br> Delivery Time</small></div>
                 
                   
-                    <div>1.5Km<small><br> Distance</small></div>
+                    <div>1.5Km<small class="text-secondary"><br> Distance</small></div>
                   </div>
               </div>
           </div>
@@ -61,21 +62,42 @@
 
       <div class="col-md-3 service text-center ">
           <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link active d-flex justify-content-around" id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon">DRY CLEANING</a>
-            <a class="nav-link d-flex justify-content-around"  id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="false"><img src="img/laundryicon.png" alt="" class="serviceicon">LAUNDRY </a>
-            <a class="nav-link d-flex justify-content-around" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> WASH & FOLDS</a>
-            <a class="nav-link d-flex justify-content-around" id="v-pills-washiron-tab" data-toggle="pill" href="#v-pills-washiron" role="tab" aria-controls="v-pills-washiron" aria-selected="false"><img src="img/washiron.png" alt="" class="serviceicon"> WASH & IRON</a>
+            <a class="nav-link active d-flex justify-content-around " id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon"><span class="align-self-center">DRY CLEANING</span> </a>
+            <a class="nav-link d-flex justify-content-around"  id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="false"><img src="img/laundryicon.png" alt="" class="serviceicon"><span class="align-self-center">LAUNDRY</span> </a>
+            <a class="nav-link d-flex justify-content-around" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> <span class="align-self-center">WASH & FOLDS</span></a>
+            <a class="nav-link d-flex justify-content-around" id="v-pills-washiron-tab" data-toggle="pill" href="#v-pills-washiron" role="tab" aria-controls="v-pills-washiron" aria-selected="false"><img src="img/washiron.png" alt="" class="serviceicon"> <span class="align-self-center">WASH & IRON</span></a>
           </div>
       </div>
       
       <div class="col-md-6">
+
+        <script>
+          $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip({
+                  placement : 'top'
+              });
+          });
+          </script>
+
+
         <div class="row mb-1  " style="border-bottom: 1px solid #b6b3b3;">
           <div class="col-6">
-            <small><i>Select laundry by Kg <i class="fa fa-info-circle" aria-hidden="true"></i></i> </small>
+            <small><i><b>EXPRESS DELIVERY </b> <i class="fa fa-info-circle" aria-hidden="true"aria-hidden="true" data-toggle="tooltip" data-original-title="Delivery Within 24hrs"></i></i> </small>
           </div>
           <div class="col-4 ml-auto">
-            <input type="checkbox" id="switch"class="checkbox dark-modeBtn" />
-            <label for="switch" class="toggle">
+            <input type="checkbox" id="switchexp"class="checkbox dark-modeBtn" />
+            <label for="switchexp" class="toggleexp">
+            </label>   
+          </div>
+        </div>
+
+        <div class="row mb-1  " style="border-bottom: 1px solid #b6b3b3;">
+          <div class="col-6">
+            <small><i><b> Select Laundry by KGs</b> <i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></i> </small>
+          </div>
+          <div class="col-4 ml-auto">
+            <input type="checkbox" id="switchkg"class="checkbox dark-modeBtn" />
+            <label for="switchkg" class="togglekg">
             </label>   
           </div>
         </div>
@@ -223,18 +245,149 @@
   
                             </div>
                           </div>
-                      </p>
+
                        
                       </div>
-                      <div class="tab-pane fade" id="pills-kids" role="tabpanel" aria-labelledby="pills-kids-tab">..c.</div>
-                      <div class="tab-pane fade" id="pills-household" role="tabpanel" aria-labelledby="pills-household-tab">..h.</div>
+                      <div class="tab-pane fade" id="pills-kids" role="tabpanel" aria-labelledby="pills-kids-tab">
+                        <div class="container">
+                          <div class="row justify-content-around">
+
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  
+                                  <th scope="col"><small>Clothes list</small> </th>
+                                  <th scope="col"><small>Price</small> </th>
+                                  <th scope="col"><small> Quantity</small></th>
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  
+                                  <td><b>Shorts</b> </td>
+                                  <td>
+                                    <p class="total-price">
+                                      <span><i class="fas fa-rupee-sign "></i></span>
+                                      <b><span id="price">  100</span></b>
+                                  </p>
+                                  </td>
+                                  <td>
+                                    <div class="quantitycat">
+                                    <button class="btn minus-btn disabled" type="button">-</button>
+                                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                                    <button class="btn plus-btn" type="button">+</button>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  
+                                  <td><b>Shirts</b> </td>
+                                  <td>
+                                    <p class="total-price">
+                                      <span><i class="fas fa-rupee-sign "></i></span>
+                                      <b><span id="price">  100</span></b>
+                                  </p>
+                                  </td>
+                                  <td>
+                                    <div class="quantitycat">
+                                    <button class="btn minus-btn disabled" type="button">-</button>
+                                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                                    <button class="btn plus-btn" type="button">+</button>
+                                    </div>
+                                  </td>
+                                </tr>
+                                
+                                  
+                                  
+                              </tbody>
+                            </table>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pills-household" role="tabpanel" aria-labelledby="pills-household-tab">
+                        <div class="container">
+                          <div class="row justify-content-around">
+
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  
+                                  <th scope="col"><small>Clothes list</small> </th>
+                                  <th scope="col"><small>Price</small> </th>
+                                  <th scope="col"><small> Quantity</small></th>
+                                  
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  
+                                  <td><b>Bedsheets</b> </td>
+                                  <td>
+                                    <p class="total-price">
+                                      <span><i class="fas fa-rupee-sign "></i></span>
+                                      <b><span id="price">  100</span></b>
+                                  </p>
+                                  </td>
+                                  <td>
+                                    <div class="quantitycat">
+                                    <button class="btn minus-btn disabled" type="button">-</button>
+                                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                                    <button class="btn plus-btn" type="button">+</button>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  
+                                  <td><b>Blanket</b> </td>
+                                  <td>
+                                    <p class="total-price">
+                                      <span><i class="fas fa-rupee-sign "></i></span>
+                                      <b><span id="price">  100</span></b>
+                                  </p>
+                                  </td>
+                                  <td>
+                                    <div class="quantitycat">
+                                    <button class="btn minus-btn disabled" type="button">-</button>
+                                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                                    <button class="btn plus-btn" type="button">+</button>
+                                    </div>
+                                  </td>
+                                </tr>
+                                
+                                  
+                                  
+                              </tbody>
+                            </table>
+
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="tab-pane fade" id="v-pills-laundry" role="tabpanel" aria-labelledby="v-pills-laundry-tab">
-              <input type="text" placeholder="Order by Kg">
+              <div class="container text-center">
+                <div><small><i class="fas fa-rupee-sign    "></i> 120</small> <small class="text-dark">per kg</small></div>
+                <div class="inputkg my-3 p-2">
+                  <div class="inputkghead">
+                    <h6>Laundry/Kg</h6>
+                  </div>
+                  <div class="quantitykg">
+                    <button class="btn minus-btn disabled" type="button">-</button>
+                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                    <button class="btn plus-btn" type="button">+</button>
+                    </div>
+                    <div class="text-secondary"><em>Minimum oder value: 2kg</em> </div>
+                  <!-- <input type="text" placeholder="Order by Kg"> -->
+                </div>
+
+              </div>
             </div>
             <div class="tab-pane fade" id="v-pills-washfolds" role="tabpanel" aria-labelledby="v-pills-washfolds-tab">..RR.</div>
             <div class="tab-pane fade" id="v-pills-washiron" role="tabpanel" aria-labelledby="v-pills-washiron-tab">...GG</div>
@@ -255,20 +408,20 @@
                     
                     </div>
                     <div class="text-center addon">
-                      <img src="img/antiseptic 100x100.png"><br>
-                      <p>Aniseptic</p>
+                      <img src="img/emulsifier_icon.png"><br>
+                      <p>Emulsifier</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <button class="addonbtn">Add+</button>
                     
                     </div>
                     <div class="text-center addon">
-                      <img src="img/antiseptic 100x100.png"><br>
-                      <p>Aniseptic</p>
+                      <img src="img/neutralizer_icon.png"><br>
+                      <p>Neutralizer</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <button class="addonbtn">Add+</button>
                     
                     </div>
-                    <div class="text-center addon">
+                    <div class=" addon">
                       <img src="img/antiseptic 100x100.png"><br>
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
@@ -305,9 +458,66 @@
 
 
           <div class="col-md-3">
-            <div class="cartlist">
-              <h6>Cart</h6>
+            <div class="cartlist" style="border-bottom: 1px solid #b6b3b3; padding-bottom: 10px;">
+              <h5>Cart</h5>
+              <small class="text-secondary"> 6 ITEMS</small>
             </div>
+            <div class="selecteditems">
+              <div class="item1 m-2 d-flex justify-content-between">
+                <small>Tshirt</small>
+                <!-- <div class="quantitycat text-center">
+                  <button class="btn minus-btn disabled" type="button">-</button>
+                  <input type="text" id="quantity" class="text-center" readonly value="1">
+                  <button class="btn plus-btn" type="button">+</button>
+                  </div> -->
+                <small><i class="fa fa-rupee-sign    "></i> 120</small>
+              </div>
+
+              <div class="item1 m-2 d-flex justify-content-between">
+                <small>Tshirt</small>
+                <!-- <div class="quantitycat text-center">
+                  <button class="btn minus-btn disabled" type="button">-</button>
+                  <input type="text" id="quantity" class="text-center" readonly value="1">
+                  <button class="btn plus-btn" type="button">+</button>
+                  </div> -->
+                <small><i class="fa fa-rupee-sign    "></i> 120</small>
+              </div>
+
+              <div class="item1 m-2 d-flex justify-content-between">
+                <small>Tshirt</small>
+                <!-- <div class="quantitycat text-center">
+                  <button class="btn minus-btn disabled" type="button">-</button>
+                  <input type="text" id="quantity" class="text-center" readonly value="1">
+                  <button class="btn plus-btn" type="button">+</button>
+                  </div> -->
+                <small><i class="fa fa-rupee-sign    "></i> 120</small>
+              </div>
+
+              
+
+              
+            </div>
+
+            <div class="totalcart my-5">
+              <div class="item1 m-2 d-flex justify-content-between">
+                <small><b>Addon</b> </small>
+                <!-- <div class="quantitycat text-center">
+                  <button class="btn minus-btn disabled" type="button">-</button>
+                  <input type="text" id="quantity" class="text-center" readonly value="1">
+                  <button class="btn plus-btn" type="button">+</button>
+                  </div> -->
+                <small><b><i class="fas fa-rupee-sign    "></i> 50</b> </small>
+              </div>
+              <div class="subtotal m-2 d-flex justify-content-between">
+                <small class="text-secondary"><b>Subtotal</b> </small>
+                <small><b><i class="fas fa-rupee-sign    "></i> 310</b> </small>
+              </div>
+            </div>
+
+            <div class="checkoutbtn text-center">
+              <a href="checkout.html"><h6><b>Checkout</b> <i class="fas fa-arrow-right    "></i></h6></a>
+            </div>
+
           </div>
       </div>
 
