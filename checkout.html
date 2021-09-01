@@ -167,15 +167,18 @@
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel">
                         <div class="panel-body">
                             <div class="timeline-content">
-                                <div class="datepicker">
-                                  <div class="pickupdate">
-                                    <div class="form-group">
-                                      <input type="text" id="input-pop" placeholder="Popup"/>
-                                      <script>
-                                        
-                                      </script>
-                                      
-                                    </div>	
+                                <div class="datepicker row">
+                                  <div class="pickupdate col-6">
+                                    <form action="">
+                                      <label for="Pickup"><i class="fas fa-calendar-alt    "></i>  <small>Select your Pickup Date & Time</small></label><br>
+                                      <input type="datetime-local" id="pickupdate" name="pickup" onkeydown="return false" >                         
+                                    </form>
+                                  </div>
+                                  <div class="dropdate col-6">
+                                    <form action="">
+                                      <label for="Pickup"><i class="fas fa-calendar-alt    "></i> <small>Select your Drop Date & Time</small></label><br>
+                                      <input type="datetime-local" id="pickupdate" name="pickup" onkeydown="return false">                         
+                                    </form>
                                   </div>
                                 </div>
                             </div>

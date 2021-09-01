@@ -440,6 +440,10 @@ fieldset {
   color: #fff;
   font-weight: 900;
 }
+.offer{
+  background-image: url(img/couponbg.png);
+  background-repeat: round;
+}
 .shopdetails{
   position: absolute;
   bottom: 5%;
@@ -728,18 +732,21 @@ fieldset {
   }
 } */
 .container.offers img {
-  width: 30px;
+  width: 50%;
   height: auto;
 }
 .offer{
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
   margin: 0px;
 }
 .coupon{
   padding: 2px 3px;
   border: 1px solid #aaa;
   color: #B52421;
+}
+.couponlogo{
+  border-right: 3px dashed #aaa;
 
 }
 .blog{
@@ -830,8 +837,8 @@ fieldset {
 } */
 .slick-slide img {
   display: block;
-  width: 51px;
-  height: 51px;
+  width: 30px;
+  height: 30px;
   margin: 0 auto;
 }
 .addon{
@@ -844,6 +851,12 @@ fieldset {
 }
 .addon small{
 text-align: center;
+}
+.addontitle {
+  padding: 10px 20px;
+  /* border: 1px solid #aaa; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 10px;
 }
 
 .addonbtn{
@@ -1238,6 +1251,39 @@ input[type="coupon"]::placeholder {
 .checkoutleft  .paymentgates a:hover{
   color: #fff !important;
 }
+
+input[type="datetime-local"] {
+  position: relative;
+  padding: 10px;
+  font-size: .7rem;
+  width: 100%;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+  /* display: none; */
+}
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: none;
+  z-index: 1;
+}
+
+input[type="date"]:before {
+  color: transparent;
+  background: none;
+  display: block;
+  font-family: 'FontAwesome';
+  content: '\f073';
+  
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 6px;
+  color: #999;
+} */
 
 
 /***************SHOPDETAILSPAGE***************/
