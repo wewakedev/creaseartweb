@@ -526,7 +526,18 @@
     </div>
     
   </div>
+
+
+    <!-- Footer -->
     
+  <div class="">
+    <script>
+      $.get("footer.html", function(data){
+          $("#footerjs").replaceWith(data);
+      });
+      </script>
+      <div class="container-fluid " id="footerjs" ></div>
+  </div>
         
 
  <!-- Optional JavaScript -->

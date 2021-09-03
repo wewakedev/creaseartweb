@@ -95,7 +95,7 @@ ul{
     -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
        -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
          -o-transition: opacity 0.3s linear, right 0.3s ease-out;
-            transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3 ease-out;
   }
 
   .modal.right.fade.in .modal-dialog {
@@ -108,7 +108,7 @@ ul{
 		-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
 		   -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
 		     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
-		        transition: opacity 0.3s linear, left 0.3s ease-out;
+		        transition: opacity 0.3s linear, left 0.3s ease-out
 	}
 	
 	.modal.left.fade.in .modal-dialog{
@@ -401,11 +401,12 @@ fieldset {
     margin-top: 50px;
 }
 .icons i {
-    padding: 10px;
-    background: #F5B8BC;
-    font-size: 25px;
-    color: #000;
-    border-radius: 10px;
+  padding: 0.6rem;
+  background: #F5B8BC;
+  font-size: 1rem;
+  color: #000;
+  border-radius: 10px;
+  margin: 2rem .2rem 0rem 0rem;
 }
 .bottomlinks{
     padding: 20px 2px;
@@ -503,7 +504,9 @@ fieldset {
   font-size: 10px;
   text-align: center;
 }
-
+.footer h4{
+  color: #fff !important;
+}
 /* media queries */
 
 @media only screen and (max-width: 500px) {
@@ -768,13 +771,19 @@ fieldset {
 .filter a{
   color: #000;
   font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+
+}
+.filter .dropdown-item{
+  font-size: .65rem;
 }
 .filter .dropdown-toggle:hover{
-  color: #B52421 !important;
+  color: #000 !important;
 }
 .filter .dropdown-menu a:hover{
-  background-color: #B52421;
-  color: #fff !important;
+  background-color: #fff;
+  /* color: #fff !important; */
 }
 .vendor a:hover{
   color: #000 !important;
@@ -801,8 +810,31 @@ fieldset {
   background: #FFB300;
 
 }
+.dropdown-menu .dropdown-item::selection{
+  background-color: #fff;
+}
+.dropdown-menu{
+  min-width: 8rem !important;
+}
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s !important;
 
-.dropdown-menu {
+  max-height: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropdown.show .dropdown-menu {
+  max-height: 200px;
+  opacity: 1;
+  background: rgb(233 236 239 / 87%);
+}
+/* .dropdown-menu {
   display: block;
   opacity: 0;
   visibility: hidden;
@@ -813,7 +845,7 @@ fieldset {
   opacity: 1;
   visibility: visible;
   transform: translateY(0%);
-}
+} */
 
 
 /***ADDONS**/
@@ -1261,7 +1293,7 @@ input[type="datetime-local"] {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
-  /* display: none; */
+  /*   */
 }
 
 /* input[type="date"]::-webkit-calendar-picker-indicator {
@@ -1331,3 +1363,11 @@ input[type="date"]:before {
   border: 1px solid #aaa;
 }
 
+.tab-pane.fade {
+  transition: all 0.2s;
+  transform: translateY(1rem);
+}
+
+.tab-pane.fade.show {
+  transform: translateY(0rem);
+}

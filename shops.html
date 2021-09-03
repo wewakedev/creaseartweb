@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="//code.jquery.com/jquery.min.js"></script>
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
-  <link rel="stylesheet" href="js-datepick/dp-light.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -29,51 +28,51 @@
 
   <div class="container shops  p-sm-2 p-md-3">
 
-    <div class="row filters">
-      <div class="col-md-4">
+    <div class="row text-center filters">
+      <div class="col-md-3">
         <span><p><b>Filters</b></p></span>
       </div>
 
       <div class="col-md-8 d-flex justify-content-around">
         
         <div class="dropdown filter">
-          <a class=" dropdown-toggle" href="#" role="button"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class=" dropdown-toggle" href="#" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
             Laundry Type
           </a>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Washing Machine</a>
             <a class="dropdown-item" href="#">Hand Wash</a>
           </div>
         </div>
         <div class="dropdown filter">
-          <a class=" dropdown-toggle" href="#" role="button"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class=" dropdown-toggle" href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Ratings
           </a>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">4.5+ <span><i class="fa fa-star" aria-hidden="true"></i></span></a>
             <a class="dropdown-item" href="#">3+ <span><i class="fa fa-star" aria-hidden="true"></i></span></a>
             <a class="dropdown-item" href="#">Below 3 <span><i class="fa fa-star" aria-hidden="true"></i></span></a>
           </div>
         </div>
         <div class="dropdown filter">
-          <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class=" dropdown-toggle" href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Delivery
           </a>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">Self Pickup</a>
             <a class="dropdown-item" href="#">Home Delivery</a>
           </div>
         </div>
 
         <div class="dropdown filter">
-          <a class=" dropdown-toggle" href="#" role="button"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class=" dropdown-toggle" href="#" role="button"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Distance
           </a>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">Within 1km</a>
             <a class="dropdown-item" href="#">2-4km</a>
             <a class="dropdown-item" href="#">More than 4km</a>
@@ -81,11 +80,11 @@
         </div>
 
         <div class="dropdown filter">
-          <a class=" dropdown-toggle" href="#" role="button"  id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class=" dropdown-toggle" href="#" role="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Offers
           </a>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">20% Off</a>
             <a class="dropdown-item" href="#">50% Off</a>
             <a class="dropdown-item" href="#">Free Delivery</a>
@@ -93,10 +92,11 @@
         </div>
 
         
+        
       </div>
     </div>
 
-    <div class="container-fluid vendors mt-4">
+    <div class="container vendors mt-4">
       <div class="row p-2 justify-content-around flex-wrap">
         <div class="vendor m-3 shop1 "  onclick="location.href='shoppage.html'">
           <div class="shopimg"><img src="img/shop1.jpg" alt=""></div>
@@ -234,53 +234,14 @@
 
     <!-- footer section -->
 
-   <div class="container-fluid mt-5" style="background: #1C1C1C;">
-
-    <div class="container pt-5 footer">
-        <div class="row p-2 d-flex justify-content-end align-item-center">
-            <div class="col-md-8 footlogo">
-                <img src="img/creaseart_logo.png" alt="">
-            </div>
-            <div class="col-md-4 icons">
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-                <i class="fab fa-instagram" aria-hidden="true"></i>
-
-            </div>
-        </div>
-        <div class="row mt-5 mb-5">
-            <div class="col-md-5">
-                <h4 style="color: white;"><b>About Creaseart</b></h4>
-                <p style="color: #ADABAC;">Creaseart Application is an innovative and beneficial app designed by our company in an effort to modernise the laundry & dry-cleaning industry. 
-                   It also offers the consumers to identify the right vendor for their cleaning needs.</p>
-            </div>
-            <div class="col-md-3">
-                <h4 style="color: white;"><b>Important Links</b></h4>
-
-                <ul class="links" style="color: #ADABAC;">
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Help & Support</a> </li>
-                    <li><a href="">Offers</a>  </li>
-                    <li><a href="">Become a Partner</a>  </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <img src="img/googlebadge.svg" style="width: 200px;" alt="">
-                <img src="img/badge-download-on-the-app-new.svg" style="width: 200px;"alt="">
-            </div>
-        </div>
+    <div class="">
+      <script>
+        $.get("footer.html", function(data){
+            $("#footerjs").replaceWith(data);
+        });
+        </script>
+        <div class="container-fluid " id="footerjs" ></div>
     </div>
-            
-            <div class="bottomlinks p-3 container" style=" border-top: 1px solid  #ADABAC;border-bottom: 1px solid  #ADABAC";>
-                <span class="btlinks" style="padding: 5px 10px; font-size: 18px;"> <a href="">Privacy</a></span>
-                <span class="btlinks" style="padding: 5px 10px; font-size: 18px;"> <a href="">Terms</a></span>
-                <span class="btlinks" style="padding: 5px 10px; font-size: 18px;"> <a href="">Blogs</a></span>
-                <span class="btlinks" style="padding: 5px 10px; font-size: 18px;"> <a href="">Sitemap</a></span>
-            </div>
-            <div class="footcredit p-3 text-center container-fluid" style="font-size: 15px; color: #ADABAC;">
-                <p>By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. © 2008-2020 - Creaseart Pvt Ltd. All rights reserved.</p>
-            </div>
   
 
 

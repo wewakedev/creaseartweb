@@ -9,10 +9,10 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="style.css">
   <script src="//code.jquery.com/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
-  <link rel="stylesheet" href="js-datepick/dp-light.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body style="background: #F6F6F6;">
 
@@ -36,36 +36,34 @@
       
       <ul class="timeline panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <li class="timeline-line"></li>
-  
-        <li class="timeline-item">
+
+          <li class="timeline-item">
             <div class="timeline-badge"><a href="#"></a></div>
             <div class="timeline-panel">
                 <div class="panel">
-                    <div class="panel-heading isOpen">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <div class="timeline-heading">Account <i class="fa fa-check-circle" aria-hidden="true"></i><div class="timeline-date username">Vivek Rawat</div>
-                                </div> <span class="expand-icon-wrap"></span>
-                            </a>
-                        </h4>
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="timeline-heading">Account <i class="fa fa-check-circle" aria-hidden="true"></i><div class="timeline-date username">Vivek Rawat</div>
+                            </div> <span class="expand-icon-wrap"></span>
+                        </a>
+                      </h4>
                     </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel">
+                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel">
                         <div class="panel-body">
                             <div class="timeline-content">
-                                <p class="text-secondary">Account To place your order now, log in to your existing account or sign up.</p>
-                                <div class="btns d-flex justify-content-between" style="width: %; ">
-                                    <button type="button" class="btn" style="padding: 5px 15px; border: 1px solid;" data-toggle="modal" data-target="#modallogin">
-                                      <p class="text-secondary " style="font-size: 10px;">Have an account?</p>
-                                      <a href="#" class=""><h6 style="line-height: 2px;">LOGIN</h6></a>
-                                    </button>
-                                    <button type="button" class="btn" style="padding: 5px 15px; background: #B52421;" data-toggle="modal" data-target="#modalsignup">
-                                      <p class="text-white" style="font-size: 10px;">New to Creaseart?</p>
-                                      <a href="#" class=""><h6 style="line-height: 2px;">SIGN UP</h6></a>
-                                    </button>
-                                </div>
-  
+                              <p class="text-secondary">Account To place your order now, log in to your existing account or sign up.</p>
+                              <div class="btns d-flex justify-content-between" style="width: %; ">
+                                  <button type="button" class="btn" style="padding: 5px 15px; border: 1px solid;" data-toggle="modal" data-target="#modallogin">
+                                    <p class="text-secondary " style="font-size: 10px;">Have an account?</p>
+                                    <a href="#" class=""><h6 style="line-height: 2px;">LOGIN</h6></a>
+                                  </button>
+                                  <button type="button" class="btn" style="padding: 5px 15px; background: #B52421;" data-toggle="modal" data-target="#modalsignup">
+                                    <p class="text-white" style="font-size: 10px;">New to Creaseart?</p>
+                                    <a href="#" class=""><h6 style="line-height: 2px;">SIGN UP</h6></a>
+                                  </button>
+                              </div>
                             </div>
-                           
                         </div>
                     </div>
                 </div>
@@ -368,6 +366,7 @@
             </div>
     
             <div class="modal-body">
+
               
             </div>
     
@@ -375,17 +374,31 @@
     </div>
   </div>
 
+<!-- footer -->
+
+
+<div class="">
+  <script>
+    $.get("footer.html", function(data){
+        $("#footerjs").replaceWith(data);
+    });
+    </script>
+    <div class="container-fluid " id="footerjs" ></div>
+</div>
+
 
 
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
     <script src="main.js"></script>
-    <!-- <script src="js-datepick/datepicker.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+
+  </body>
 </html>
