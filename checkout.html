@@ -38,7 +38,7 @@
         <li class="timeline-line"></li>
 
           <li class="timeline-item">
-            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-badge"><i class="fa fa-user-circle" aria-hidden="true"></i></div>
             <div class="timeline-panel">
                 <div class="panel">
                     <div class="panel-heading">
@@ -71,7 +71,7 @@
         </li>
   
         <li class="timeline-item">
-            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-badge"><i class="fa fa-map-marker    "></i></div>
             <div class="timeline-panel">
                 <div class="panel">
                     <div class="panel-heading">
@@ -152,7 +152,7 @@
         </li>
   
         <li class="timeline-item">
-            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-badge"><i class="far fa-calendar    "></i></div>
             <div class="timeline-panel">
                 <div class="panel">
                     <div class="panel-heading">
@@ -187,7 +187,7 @@
         </li>
   
         <li class="timeline-item">
-            <div class="timeline-badge"><a href="#"></a></div>
+            <div class="timeline-badge"><i class="far fa-credit-card    "></i></div>
             <div class="timeline-panel">
                 <div class="panel">
                     <div class="panel-heading">
@@ -366,10 +366,149 @@
             </div>
     
             <div class="modal-body">
+              <div class="ordersum my-3">
+                <div >
+                  <h5>Order Summary</h5>
+                  <small><b>Super Fine Dry Cleaners</b></small><br>
+                  <small>Sec-23, Gurgoan</small>
+                </div>
+                <div>
+                  <small><b>Pickup Time</b></small><br>
+                  <small>Tue, 5 April 12:00pm</small>
+                </div>
+                <div>
+                  <small><b>Delivery Time</b></small><br>
+                  <small>Wed, 6 April 12:00pm</small>
+                </div>
+              </div>
 
-              
+              <div class="orderstat my-3">
+                <div>
+                  <h5>Order Status</h5>
+                </div>
+                <div>
+                  <div id="timeline-wrap">
+                    <div id="ordertimeline"></div>
+                    
+                    <!-- This is the individual marker-->
+                    <div class="marker mfirst timelineicon one">
+                        <i class="fas fa-check    "></i>
+                        <small>Confirm</small>
+                    </div>
+                    <!-- / marker -->
+                  
+                    <!-- This is the individual marker-->
+                    <div class="marker m2 timelineicon two">
+                      <i class="fas fa-check    "></i>
+                      <small>Pickup</small>
+                    </div>
+                    <!-- / marker -->
+      
+                    
+                    <!-- This is the individual marker-->
+                    <div class="marker m3 timelineicon three">
+                      <i class="fas fa-check    "></i>
+                      <small>Laundry</small>
+                    </div>
+                    <!-- / marker -->
+                  
+                    
+                    <!-- This is the individual marker-->
+                    <div class="marker mlast timelineicon four">
+                      <i class="fas fa-check    "></i>
+                      <small>Delivered</small>
+                    </div>  
+                    <!-- / marker -->
+                  
+                  
+                   
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h5>Order Summary</h5>
+
+                <div class="text-secondary servicecat"><small> Wash & Fold</small>
+                <div class=" m-2 d-flex justify-content-between">
+                  
+                  <small class="text-secondary">2 x Tshirt</small>
+                  <!-- <div class="quantitycat text-center">
+                    <button class="btn minus-btn disabled" type="button">-</button>
+                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                    <button class="btn plus-btn" type="button">+</button>
+                    </div> -->
+                  <small><i class="fas fa-rupee-sign    "></i> 240 </small>
+                </div>
+                <div class=" m-2 d-flex justify-content-between">
+                  <small class="text-secondary">2 x Jeans</small>
+                  <small><i class="fas fa-rupee-sign    "></i>100</b> </small>
+                </div>
+                </div>
+
+                <div class="text-secondary servicecat"><small>Dry Clean</small>
+                <div class=" m-2 d-flex justify-content-between">
+                  <small class="text-secondary">1 x Saree</small>
+                  <small><i class="fas fa-rupee-sign    "></i>120</b> </small>
+                </div>
+                </div>
+
+              </div>
+              <div>
+                
+
+                <div class="text-secondary orderitemtotal">
+                <div class=" mt-3 d-flex justify-content-between ">
+                  
+                  <h6 class="">Items Total</h6>
+                  <!-- <div class="quantitycat text-center">
+                    <button class="btn minus-btn disabled" type="button">-</button>
+                    <input type="text" id="quantity" class="text-center" readonly value="1">
+                    <button class="btn plus-btn" type="button">+</button>
+                    </div> -->
+                  <h6><i class="fas fa-rupee-sign    "></i> 460 </h6>
+                </div>
+                <div class=" m-2 d-flex justify-content-between text-secondary">
+                  <small class="text-secondary">Promo Discount %</small>
+                  <small>- <i class="fas fa-rupee-sign    "></i>60</b> </small>
+                </div>
+                
+
+                <div class=" m-2 d-flex justify-content-between ">
+                  <small class="text-secondary">Delivery</small>
+                  <small><b>FREE</b> </small>
+                
+                </div>
+                <div class=" m-2 d-flex justify-content-between text-secondary">
+                  <small class="text-secondary">Tax(GST)</small>
+                  <small><i class="fas fa-rupee-sign    "></i>40</b> </small>
+                </div>
+                </div>
+              </div>
+              <div class=" mt-3 d-flex justify-content-between">
+                <h6>Total</h6>
+                <h6><i class="fas fa-rupee-sign    "></i>440</h6>
+              </div>
+
+              <div class="orderdsumdetails my-3">
+                <div >
+                  <h5>Order Details</h5>
+                  <small><b>Order Number</b></small><br>
+                  <small>5577884</small>
+                </div>
+                <div>
+                  <small><b>Payment Mode</b></small><br>
+                  <small>Net Banking</small>
+                </div>
+                <div>
+                  <small><b>Order Date</b></small><br>
+                  <small>Mon, 4 April 12:00pm</small>
+                </div>
+              </div>
+
+
             </div>
-    
+            
         </div>
     </div>
   </div>
