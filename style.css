@@ -124,8 +124,8 @@ ul{
 	}
 
   .modal-header {
-    border-bottom-color: rgb(238, 238, 238);
     background-color: rgb(255 255 255);
+    border: none !important;
 }
 
 
@@ -177,10 +177,11 @@ fieldset {
 #signupform input[type="url"],
 #signupform textarea {
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid transparent;
   background: #FFF;
   margin: 0 0 10px;
   padding: 14px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 #signupform input[type="text"]:hover,
@@ -357,6 +358,8 @@ fieldset {
     opacity: 1;  
     font-size: 20px;
     padding: 10px 25px;
+    /* border-radius: 20px; */
+
 }
 .mainsec{
     /* background-color: #eec0c6;
@@ -372,6 +375,9 @@ fieldset {
 }
 .rotatinghero{
   animation: rotation 2s infinite linear;
+  
+    width: 300px;
+    height: 300px;
 }
 @keyframes rotation {
   from {
@@ -385,12 +391,12 @@ fieldset {
 #par-js{
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   background-image: linear-gradient(315deg, #dc3545 0%, #f3f3f5 74%);
   
 }
 .herosec{
-    margin-top: 100px;
+    margin-top: 60px;
 }
 .googlebadge,.iosbadge{
     width: 200px;
@@ -399,6 +405,10 @@ fieldset {
 .workings img{
     width: 250px;
     height: auto;
+}
+.workings p {
+  margin: 1rem 2rem;
+  font-size: .9rem;
 }
 .appsec{
     margin-top: 100px;
@@ -415,27 +425,47 @@ fieldset {
   margin: 2rem .2rem 0rem 0rem;
 }
 .bottomlinks{
-    padding: 20px 2px;
+    padding: 20px;
    
 }
-.btlinks{
-    margin: 5px 40px;
-}
+
 
 .partner img{
   width: 100%;
   height: auto;
 
 }
-.input-group {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  width: 100%;
+.inputlocationfield{
+
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    width: 65%;
+}
+
+.submitlocbtn{
+  background : #B52421 0% 0% no-repeat padding-box; color: white; padding: 5px 10px; 
+  height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  /* margin-left: -130px; */
+}
+.submitlocbtn:active{
+  color: #000;
 }
 .nearbybox{
   position: relative;
@@ -461,16 +491,18 @@ fieldset {
   padding: 2px 15px;
   border-radius: 20px;
   color: #fff;
+  margin: 2px 18px !important;
   background-color: #F79D5C;
-  font-size: .8rem;
+  font-size: .7rem;
 }
 .shopdetails .ratings{
   border: none !important;
   padding: 2px 15px;
   border-radius: 20px;
+  margin: 2px 18px !important;
   color: #000;
   background-color:#FCFC62;
-  font-size: .8rem;
+  font-size: .7rem;
 }
 .shopdet .shopname{
   color: #fff  !important;
@@ -499,6 +531,14 @@ fieldset {
   bottom: 20%;
   z-index: 5;
 }
+
+
+
+/* /FOOTER/ */
+
+ul.links {
+  margin-left: -40px;
+}
 .footer a, .bottomlinks a{
   color: #fafafa !important;
 }
@@ -513,7 +553,24 @@ fieldset {
 .footer h4{
   color: #fff !important;
 }
+
+
 /* media queries */
+
+
+
+
+
+@media only screen and (max-width: 450px){
+  .navbar-text{
+    display: none !important;
+  }
+}
+
+
+
+
+
 
 @media only screen and (max-width: 500px) {
     .herosec{
@@ -534,6 +591,21 @@ fieldset {
     .abouthero img{
       height: 150px !important;
     }
+    .rotatinghero{
+      width: 150px ;
+      height: 150px ;
+    }
+    .herosec .row{
+      text-align: center;
+    }
+    .herosec h1{
+      font-size: 1.5rem !important;
+    }
+    .inputlocationfield,.submitlocbtn{
+      font-size: .6rem;
+      padding: .475rem .75rem;
+
+    }
 }
 
 
@@ -541,7 +613,23 @@ fieldset {
 .checkoutleft .btns.d-flex.justify-content-between{
   width: 100% !important;
 }
+#par-js{
+  height: 100vh;
 }
+.workings img {
+  width: 165px;
+}
+}
+@media only screen and (min-width: 1200px){
+  #par-js{
+    height: 70vh;
+  }
+  
+  
+}
+
+
+
 
 
 /*************************** MY ACCOUNT*************************************/
@@ -560,6 +648,9 @@ fieldset {
 }
 .nav2 .navbar{
   justify-content: flex-start;
+}
+.navbar{
+  /* flex-wrap: nowrap !important; */
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -773,7 +864,39 @@ fieldset {
 }
 .shopimg img {
   width: 100%;
+  border-radius: 10px;
+  padding: 5px;
 }
+.services img{
+  width: 12px;
+  margin: .1rem;
+}
+
+/* Search box */
+
+.locationicon{
+  margin-right:-1.5rem;
+  position: relative;
+}
+input[type=locationsearch] {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: .8rem;
+  background-color: white;
+  padding: 5px 20px 5px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=locationsearch]:focus {
+  outline: none; /*to remove the focus outline in chrome */
+  width: 300px;
+}
+
+
+
 .filter a{
   color: #000;
   font-weight: bold;
@@ -802,6 +925,7 @@ fieldset {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 5px 10px;
   position: relative;
+  border-radius: 10px;
 }
 .vendor:hover{
   box-shadow: rgba(0, 0, 0, 0.952) 0px 3px 8px;
@@ -811,9 +935,20 @@ fieldset {
   position: absolute;
   top: 2px;
   left: 0px;
-  padding: 10px 20px;
+  font-family: 'poppins';
+  padding: 5px 20px;
   background: #FFB300;
 
+}
+.distancebadge{
+  position: absolute;
+  bottom: 45%;
+  right: 10%;
+  padding: 5px 10px;
+  font-family: 'poppins';
+  font-size: .7rem;
+  background: #ffffffce;
+  border-radius: 5px;
 }
 .dropdown-menu .dropdown-item::selection{
   background-color: #fff;
@@ -1191,30 +1326,7 @@ text-align: center;
 .timeline-item.block:nth-child(even), .timeline-item.block:nth-child(odd) {
   padding-bottom: 0;
 }
-/* .timeline-item.block:nth-child(even):after, .timeline-item.block:nth-child(even):before, .timeline-item.block:nth-child(odd):after, .timeline-item.block:nth-child(odd):before, .timeline-item:nth-child(even):after, .timeline-item:nth-child(even):before, .timeline-item:nth-child(odd):after, .timeline-item:nth-child(odd):before {
-  left: 19px;
-  top: 10px;
-  border: 0;
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-right: 12px solid #ccc;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.timeline-item.block:nth-child(even):after, .timeline-item.block:nth-child(odd):after, .timeline-item:nth-child(even):after, .timeline-item:nth-child(odd):after {
-  left: 20px;
-  top: 11px;
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-  border-right: 11px solid #fff;
-}
-.timeline-item.block:nth-child(even)>.timeline-badge, .timeline-item.block:nth-child(odd)>.timeline-badge, .timeline-item:nth-child(even)>.timeline-badge, .timeline-item:nth-child(odd)>.timeline-badge {
-  top: 12px;
-  left: -6px;
-  right: auto;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-} */
+
 }@media (max-width:480px) {
   .timeline {
   padding: 0;
@@ -1226,13 +1338,7 @@ text-align: center;
   display: block;
   padding: 0 0 20px!important;
 }
-/* .timeline-item.block:nth-child(even), .timeline-item.block:nth-child(odd), .timeline-item:nth-child(even), .timeline-item:nth-child(odd) {
-  float: none;
-  clear: both;
-}
-.timeline-item.block:nth-child(even):after, .timeline-item.block:nth-child(even):before, .timeline-item.block:nth-child(odd):after, .timeline-item.block:nth-child(odd):before, .timeline-item.timeline-poster>.timeline-badge, .timeline-item:nth-child(even):after, .timeline-item:nth-child(even):before, .timeline-item:nth-child(odd):after, .timeline-item:nth-child(odd):before {
-  display: none;
-} */
+
 .timeline-item>.timeline-badge {
   top: -8px!important;
   left: 50%!important;

@@ -122,6 +122,11 @@ particlesJS('par-js',
 
 );
       
+//////////////Search Location///////////
+
+$("#search-icon").css("border-top-left-radius", "2em").css("border-bottom-left-radius", "2em").css("background", "rgba(255, 255, 255, 0.1)");
+$("#booking-button").css("border-top-right-radius", "2em").css("border-bottom-right-radius", "2em");
+
 
 
 /////////////ADDONS SLIDER ////////////////
