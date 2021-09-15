@@ -22,7 +22,7 @@
                 <div class="modal-body sidebar-item">
                   <ul>
                     <li><a class="" href="profile.html"><b>My Account </b></a></li>
-                    <li><a class="" href="shops.html"><b>Order Here</b></a></li>
+                    <li><a class="" data-toggle="modal" data-target="#enterpin" data-dismiss="modal" href=""><b>Order Here</b></a></li>
                     <li><a class="" href=""><b>Support</b></a></li>
                     <li><a class="" href=""><b>FAQs</b></a></li>
                     <li><a class="checkoutnav" href="checkout.html"><b>Checkout</b></a></li>
@@ -188,4 +188,54 @@
 </span>       
             
                 
+<!-- MODAL pincode pop up -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="enterpin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <div>
+          <img src="img/creaseart_logo-1.png" alt="">
+        </div>
+        <div class="my-4">
+          <p style="color: #B52421;"><b>Enter your Pincode to find vendors near you.</b> </p>
+        </div>
+        <div>
+          <div class="my-2">
+            <input type="pincode" placeholder="Pin Code">
+          </div>
+          <div class="my-2">
+            <button class="pinsubmitbtn" onclick="location.href = 'shops.html';" type="submit">Submit</button>
+          </div>
+          <style>
+            input[type="pincode"] {
+               padding: .5rem 3rem;
+               text-align: center;
+               border: none;
+               width: 60%;
+               box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 1px -18px inset;
+            }
+            .pinsubmitbtn{
+              padding: .5rem 3rem;
+              width: 60%;
+              box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            }
+          </style>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </nav>

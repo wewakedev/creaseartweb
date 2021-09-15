@@ -413,6 +413,7 @@ fieldset {
 .appsec{
     margin-top: 100px;
 }
+
 .hitappsec{
     margin-top: 50px;
 }
@@ -509,6 +510,7 @@ fieldset {
 }
 .shopdet h6{
   color: #fff !important;
+  font-size: .8rem;
 }
 /* .nearbyshops img{
   width: 250px;
@@ -565,6 +567,9 @@ ul.links {
   .navbar-text{
     display: none !important;
   }
+  .appsec  h1{
+    font-size: 1.5rem ;
+  }
 }
 
 
@@ -620,9 +625,9 @@ ul.links {
   width: 165px;
 }
 }
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1000px){
   #par-js{
-    height: 70vh;
+    height: 80vh;
   }
   
   
@@ -652,7 +657,9 @@ ul.links {
 .navbar{
   /* flex-wrap: nowrap !important; */
 }
-
+.fade {
+  transition: opacity .15s linear !important;
+}
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   color: #fff !important;
   font-weight: bold;
@@ -723,114 +730,7 @@ ul.links {
   padding: 4px;
 }
 
-* The element to hover over */
-.qs {
-  background-color: #02bdda;
-  border-radius: 16px;
-  color: #e3fbff;
-  cursor: default;
-  display: inline-block;
-  font-family: 'Helvetica',sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  height: 30px;
-  line-height: 30px;
-  position: relative;
-  text-align: center;
-  width: 30px;
-  
-}
-.popover-markup .qs{
-  color: #B52421;
-  padding: 1px 2px;
-}
-.qs .popover {
-  background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 5px;
-  bottom: 42px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-  color: #fff;
-  display: none;
-  font-size: 12px;
-  font-family: 'Helvetica',sans-serif;
-  top: -95px;
-  left: -65px;
-  padding: 7px 10px;
-  position: absolute;
-  width: 300px;
-  z-index: 4;
-  height:400px;
-  cursor: pointer;
-  text-align: left;
-  overflow-y: auto;
-}
-/* .qs .popover:before {
-  border-top: 7px solid rgba(0, 0, 0, 0.85);
-  border-right: 7px solid transparent;
-  border-left: 7px solid transparent;
-  bottom: -7px;
-  content: '';
-  display: block;
-  left: 50%;
-  margin-left: -7px;
-  position: absolute;
-} */
- .qs:hover .popover {
-  display: block;
-  -webkit-animation: fade-in .3s linear 1, move-up .3s linear 1;
-  -moz-animation: fade-in .3s linear 1, move-up .3s linear 1;
-  -ms-animation: fade-in .3s linear 1, move-up .3s linear 1;
-  
-}
 
-/* @-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-ms-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes move-up {
-  from {
-    bottom: 30px;
-  }
-  to {
-    bottom: 42px;
-  }
-}
-@-moz-keyframes move-up {
-  from {
-    bottom: 30px;
-  }
-  to {
-    bottom: 42px;
-  }
-}
-@-ms-keyframes move-up {
-  from {
-    bottom: 30px;
-  }
-  to {
-    bottom: 42px;
-  }
-} */
 .container.offers img {
   width: 50%;
   height: auto;
@@ -879,7 +779,7 @@ ul.links {
   position: relative;
 }
 input[type=locationsearch] {
-  width: 200px;
+  width: 180px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -892,7 +792,7 @@ input[type=locationsearch] {
 
 input[type=locationsearch]:focus {
   outline: none; /*to remove the focus outline in chrome */
-  width: 300px;
+  width: 250px;
 }
 
 
@@ -1563,11 +1463,12 @@ transition: all 300ms ease;
     padding:0 5px 0 0; /* Only right padding*/
 }
 
-.checkoutbtn h6{
+.checkoutbtn h6, .pinsubmitbtn{
   padding: 10px 30px;
   color: #F5F5F5 !important;
   background: #B52421;
-  letter-spacing: 0.30px
+  letter-spacing: 0.30px;
+  border: none;
 }
 .inputkg{
   border: 1px solid #aaa;
