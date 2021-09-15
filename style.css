@@ -676,18 +676,56 @@ ul.links {
   padding: 10px 30px;
   margin: 3px;
 }
+/* FEEDBACKS */
 
-.edittabs{
+.feeds{
+  background: #F5B8BC56;
+  padding-right: 0px !important;
+}
+form .input-textarea {
+  width: 45em;
+  height: 10em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.feedsubmitbtn{
+  padding: .5rem 3rem;
+  background: #B52421;
+  border: transparent;
+  color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-#acdetails{
+
+.feeds .nav-pills .nav-link {
+  padding: 10px 30px;
+  margin-right: 0px;
+}
+.feeds .nav-link.active, .nav-pills .show>.nav-link {
+  color: #B52421 !important;
+  font-weight: bold;
+  background-color: #fff !important;
+}
+.feeds .nav-pills .nav-link:hover {
+  background-color: #fff;
+  transition: all 0.6s ease-out 0s;
+}
+.edittabs,.feeds{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#feedbacks .nav-pills a:hover{
+  color: #B52421 !important;
+}
+#acdetails,#feedbacks{
   background-color: #fff;
 }
-#acdetails .nav-pills .nav-link{
+#acdetails .nav-pills .nav-link, #feedbacks .nav-pills .nav-link{
   font-weight: bold !important;
 }
 #acdetails .nav-pills a:hover{
   color: #fff !important;
+  background: #fff !important;
 }
 .tabcon input[type="phone"],.tabcon input[type="email"],.tabcon input[type="password"]{
   border:none !important;
