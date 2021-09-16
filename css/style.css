@@ -482,6 +482,7 @@ fieldset {
   background-image: url(img/couponbg.png);
   background-repeat: round;
 }
+
 .shopdetails{
   position: absolute;
   bottom: 5%;
@@ -790,12 +791,95 @@ form .input-textarea {
 .blog{
   padding: 0px !important;
 }
+.blog img{
+    width: 100%;
+    border-radius: 10px;
+    
+}
 
+/***************************BLOGS***********************************/
+.pagetitlebanner{
+  height: 40vh;
+  background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.blogcontent small{
+  font-family: 'Montserrat';
+}
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
 
+/* .container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+} */
+.card {
+  display: block; 
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); 
+    transition: box-shadow .25s; 
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover; 
+  transition: all .25s ease;
+} 
+.card-content {
+  padding:5px 15px;
+  text-align:left;
+}
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+/* .card-read-more {
+  border-top: 1px solid #D4D4D4;
+} */
+.card-read-more button {
+  padding: .3rem 1rem;
+  background: #B52421;
+  border: transparent;
+  color: #fff;
+  letter-spacing: 0.2rem;
+  /* margin: .5rem 0rem; */
+}
+.blogdetails ul{
+  display: flex;
+  margin-left: -2rem;
 
+}
 /**************************** SHOPS ********************************/
 
-
+/* .vendor{
+  width: 300px;
+  height: auto;
+} */
 .shops{
   overflow-y: hidden;
   overflow-x: hidden;
@@ -859,7 +943,7 @@ input[type=locationsearch]:focus {
   background: #FFB300;
   color: white !important;
 }
-.vendor{
+.vendor,.blog{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 5px 10px;
   position: relative;

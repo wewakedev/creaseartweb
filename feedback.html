@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
     
       <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/style.css">
       <script src="//code.jquery.com/jquery.min.js"></script>
       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
       <link rel="stylesheet" href="js-datepick/dp-light.css">
@@ -27,7 +27,7 @@
           <div class="" id="navholder"></div>
       </div>
     
-      <div class="feedbacktitle m-5">
+      <div class="feedbacktitle container my-4">
         <h3 style="color: #fff !important;">Feedback</h3>
         <p class="" style="color: blanchedalmond;">Your feedback matters to us</p>
       </div>
@@ -249,11 +249,28 @@
     
     
         </div>
+      </div>
+  
+
           
+
+          <!-- footer section -->
+
+        <div class="">
+          <script>
+            $.get("footer.html", function(data){
+                $("#footerjs").replaceWith(data);
+            });
+            </script>
+            <div class="container-fluid " id="footerjs" ></div>
+        </div>
+
+
+
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     
-        <script src="main.js"></script>
+        <script src="js/main.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     
