@@ -423,8 +423,9 @@ fieldset {
   font-size: 1rem;
   color: #000;
   border-radius: 10px;
-  margin: 2rem .2rem 0rem 0rem;
+  margin: .2rem ;
 }
+
 .bottomlinks{
     padding: 20px;
    
@@ -565,9 +566,9 @@ ul.links {
 
 
 @media only screen and (max-width: 450px){
-  .navbar-text{
-    display: none !important;
-  }
+  /* .logsignbtns{
+    display: none ;
+  } */
   .appsec  h1{
     font-size: 1.5rem ;
   }
@@ -776,7 +777,7 @@ form .input-textarea {
 }
 .offer{
   padding: 10px;
-  /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 0px;
 }
 .coupon{
@@ -796,22 +797,120 @@ form .input-textarea {
     border-radius: 10px;
     
 }
+/*********************faqs*************************/
+
+.faqtabs {
+  max-width: 400px;
+  margin: 30px auto;
+}
+.faqcon{
+  padding: 1rem !important;
+}
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+  margin: .6rem 0rem;
+}
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #eee;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "▼";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "▲";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion-option {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 15px 0;
+}
+
+.accordion-option .title {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-option .toggle-accordion {
+  float: right;
+  font-size: 16px;
+  color: #6a6c6f;
+}
+
+.faq-sec .nav-link.active{
+  color: #B52421 !important;
+  background: transparent !important;
+  border-bottom: 1px solid #B52421 !important;
+}
+.nav-tabs .nav-link {
+  border: none !important;
+}
+
+
+
+/*********FORM***********/
+
+
+
 
 /***************************BLOGS***********************************/
+
 .pagetitlebanner{
   height: 40vh;
   background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
 }
+
+
 .blogcontent small{
   font-family: 'Montserrat';
 }
-.wrapper {
+
+/* .wrapper {
   display: table;
   height: 100%;
   width: 100%;
-}
+} */
 
 /* .container-fostrap {
   display: table-cell;
