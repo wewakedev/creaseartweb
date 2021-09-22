@@ -496,7 +496,7 @@ fieldset {
   color: #fff;
   margin: 2px 18px !important;
   background-color: #F79D5C;
-  font-size: .7rem;
+  font-size: .6rem;
 }
 .shopdetails .ratings{
   border: none !important;
@@ -505,7 +505,7 @@ fieldset {
   margin: 2px 18px !important;
   color: #000;
   background-color:#FCFC62;
-  font-size: .7rem;
+  font-size: .6rem;
 }
 .shopdet .shopname{
   color: #fff  !important;
@@ -566,9 +566,9 @@ ul.links {
 
 
 @media only screen and (max-width: 450px){
-  /* .logsignbtns{
-    display: none ;
-  } */
+  .navbar-text{
+    display: none !important ;
+  }
   .appsec  h1{
     font-size: 1.5rem ;
   }
@@ -599,8 +599,8 @@ ul.links {
       height: 150px !important;
     }
     .rotatinghero{
-      width: 150px ;
-      height: 150px ;
+      width: 200px ;
+      height: 200px ;
     }
     .herosec .row{
       text-align: center;
@@ -727,7 +727,7 @@ form .input-textarea {
 }
 #acdetails .nav-pills a:hover{
   color: #fff !important;
-  background: #fff !important;
+  /* background: #fff !important; */
 }
 .tabcon input[type="phone"],.tabcon input[type="email"],.tabcon input[type="password"]{
   border:none !important;
