@@ -437,10 +437,21 @@ fieldset {
   height: auto;
 
 }
-.inputlocationfield{
+.supportcall , .mailsupport, .chatsupport{
+  padding: 2rem 4rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  /* margin: 1rem 2rem; */
+  box-sizing: border-box;
+  
+}
+.supportcall:hover,.mailsupport:hover,.chatsupport:hover{
+  border:1px solid #B52421;
+  transition: 2ms ease-in;
+}
+.inputlocationfield,.supportinput{
 
     height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
+    padding: .375rem 1.5rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -451,11 +462,12 @@ fieldset {
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     width: 65%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.submitlocbtn{
+.submitlocbtn,.searchsupport{
   background : #B52421 0% 0% no-repeat padding-box; color: white; padding: 5px 10px; 
-  height: calc(1.5em + .75rem + 2px);
+  height: calc(2em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1.1rem;
     font-weight: 400;
@@ -466,9 +478,15 @@ fieldset {
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   /* margin-left: -130px; */
 }
-.submitlocbtn:active{
+.submitlocbtn:active,.searchsupport:active{
   color: #000;
 }
+/* .searchsupport{
+  padding: .2rem .65rem;
+  font-size: 1rem;
+  position: relative;
+  left: -7%;
+} */
 .nearbybox{
   position: relative;
 }
@@ -1018,7 +1036,7 @@ input[type=locationsearch]:focus {
 
 
 
-.filter a{
+/* .filter a{
   color: #000;
   font-weight: bold;
   font-size: 13px;
@@ -1032,7 +1050,16 @@ input[type=locationsearch]:focus {
 }
 .filter .dropdown-menu a:hover{
   background-color: #fff;
-  /* color: #fff !important; */
+} */
+.subfilters span{
+  font-size: .8rem;
+  padding: .2rem .5rem;
+  background: #e0d9e08f;
+  border-radius: 5px;
+  
+}
+.filters{
+  border-bottom: 2px solid #aaa;
 }
 .vendor a:hover{
   color: #000 !important;
@@ -1337,7 +1364,7 @@ text-align: center;
 }
 .timeline-item>.timeline-badge>i {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: .35rem;
   background-color: #fff;
   /* border-radius: 50%; */
