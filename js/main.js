@@ -283,7 +283,9 @@ $('.popover-markup>[data-toggle="popover"]').popover({
 
 
 
-  // DATE PICKER
+  // riderslidersection
+
+  
 
 
 

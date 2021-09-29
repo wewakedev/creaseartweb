@@ -22,7 +22,7 @@ opacity: 1;
 html,body{
     scroll-behavior: smooth;
     overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     overflow-y: auto;
 }
 button:focus {outline:0 !important;
@@ -138,11 +138,17 @@ ul{
 #signupform input[type="tel"],
 #signupform input[type="url"], #loginform input[type="tel"]
 #signupform textarea,
-#signupform button[type="submit"] {
+#signupform button[type="submit"],
+#riderform input[type="text"],
+#riderform input[type="email"],
+#riderform input[type="tel"],
+#riderform input[type="url"], #loginform input[type="tel"]
+#riderform textarea,#riderform input[type="license"],
+#riderform button[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
 
-#signupform , #loginform{
+#signupform , #loginform, #riderform{
   /* background: #F9F9F9; */
   padding: 25px;
   margin:  0;
@@ -175,12 +181,19 @@ fieldset {
 #signupform input[type="email"],
 #signupform input[type="tel"], #loginform input[type="tel"],
 #signupform input[type="url"],
-#signupform textarea {
+#signupform textarea,
+#riderform input[type="text"],
+#riderform input[type="email"],
+#riderform input[type="tel"], #loginform input[type="tel"],
+#riderform input[type="url"],
+#riderform input[type="license"],
+#riderform textarea,#riderform select[type="vehicle"] {
   width: 100%;
   border: 1px solid transparent;
   background: #FFF;
   margin: 0 0 10px;
   padding: 14px;
+  font-size: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -188,7 +201,13 @@ fieldset {
 #signupform input[type="email"]:hover,
 #signupform input[type="tel"]:hover, #loginform input[type="tel"]:hover,
 #signupform input[type="url"]:hover,
-#signupform textarea:hover {
+#signupform textarea:hover,
+#riderform input[type="text"]:hover,
+#riderform input[type="email"]:hover,
+#riderform input[type="tel"]:hover, #loginform input[type="tel"]:hover,
+#riderform input[type="url"]:hover,
+#riderform input[type="license"]:hover,
+#riderform textarea:hover,#riderform select[type="vehicle"]:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
   -moz-transition: border-color 0.3s ease-in-out;
   transition: border-color 0.3s ease-in-out;
@@ -201,7 +220,7 @@ fieldset {
   resize: none;
 }
 
-#signupform button[type="submit"] , #loginform button[type="submit"] {
+#signupform button[type="submit"] , #loginform button[type="submit"],#riderform button[type="submit"] {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -686,7 +705,17 @@ ul.links {
 .workings img {
   width: 165px;
 }
+.riderheadsubtext{
+  font-size: .7rem;
 }
+.riderheadtitle{
+  font-size: 2rem;
+}
+.guidearrow::after{
+  display: none;
+}
+}
+
 @media only screen and (min-width: 1000px){
   #par-js{
     height: 80vh;
@@ -716,9 +745,9 @@ ul.links {
 .nav2 .navbar{
   justify-content: flex-start;
 }
-.navbar{
-  /* flex-wrap: nowrap !important; */
-}
+/* .navbar{
+  flex-wrap: nowrap !important;
+} */
 .fade {
   transition: opacity .15s linear !important;
 }
@@ -745,13 +774,19 @@ ul.links {
   padding-right: 0px !important;
 }
 form .input-textarea {
-  width: 45em;
+  width: 100%;
   height: 10em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 20px;
   border-radius: 10px;
 }
-
+.tab1body img, .tab2body img, .tab3body img,.tab4body img {
+  width: 3rem;
+  margin-right: .4rem;
+}
+.tab1body, .tab2body, .tab3body, .tab4body {
+  padding: 0px !important;
+}
 .feedsubmitbtn{
   padding: .5rem 3rem;
   background: #B52421;
@@ -904,15 +939,15 @@ form .input-textarea {
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
-  content: "▼";
+  content: "▲";
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .panel-default>.panel-heading a[aria-expanded="false"]:after {
-  content: "▲";
+  content: "▼";
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 .accordion-option {
@@ -1190,9 +1225,9 @@ input[type=locationsearch]:focus {
   width:100%;
   margin:0px auto;
 }
-.slick-slide{
+/* .slick-slide{
   margin:10px;
-}
+} */
 /* .slick-slide img {
   width: 50%;
   margin: 0 auto;
@@ -1203,7 +1238,8 @@ input[type=locationsearch]:focus {
   height: 30px;
   margin: 0 auto;
 }
-.addon{
+.addon,.ridercards,.guides
+{
   margin: 5px;
   padding: 10px 25px;
   border: 1px solid #707070;
@@ -1587,9 +1623,9 @@ input[type="datetime-local"] {
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
-  /*   */
-}
+/* input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
+
+} */
 
 /* input[type="date"]::-webkit-calendar-picker-indicator {
   color: transparent;
@@ -1771,4 +1807,114 @@ transition: all 300ms ease;
 
 .tab-pane.fade.show {
   transform: translateY(0rem);
+}
+
+/***********************  RIDER PROVIDER XD *************/
+
+
+.ridercards{
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 1.3rem;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+.guides{
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 2rem;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  line-height: 1rem;
+}
+.ridercards img,.guides img{
+  font-size: 5rem;
+}
+
+.requirementslist li::before{
+    content: "\2022";
+    color: #B52421;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+.guideborder{
+  border-top: 1px solid #B52421;
+  border-bottom: 1px solid #B52421;
+  border-right: 1px dashed #B52421;
+  border-left: 1px dashed #B52421;
+}
+
+  .signuphead,.guidetitle,.guides,.riderheadsubtext,.faqtitle {
+    position: relative;
+}
+
+
+.signuphead:after, .riderheadsubtext:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -4px; 
+  left: 1.5%;
+  width: 18%;
+  background: #B52421;
+}
+.faqtitle:after{
+
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -4px; 
+  right: 45%;
+  left: 45%;
+  width: 10%;
+  background: #B52421;
+
+}
+.riderheadsubtext:after {
+  position: absolute;
+  content: '';
+  height: 4px;
+  bottom: -30%; 
+  left: 0%;
+  width: 25%;
+  background: #fff;
+
+}
+.guidetitle:after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  bottom: -4px; 
+  left: 45%;
+  right: 45%;
+  width: 10%;
+  background: #B52421;
+}
+
+.guidearrow::after{
+  content: "\27F6";
+  position: absolute;
+  right: -20%;
+  font-size: 2.5rem;
+  color: #B52421;
+  width: 2rem;
+  top: 40%;
+
+}
+.guides small{
+  font-size: .7rem;
+}
+.slick-prev:before, .slick-next:before {
+  color: #B52421 !important;
+}
+.riderform{
+  background: #fff;
+  padding: 20px 10px;
+  border: 1px solid #B52421;
+  border-radius: 1rem;
 }
