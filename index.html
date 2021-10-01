@@ -107,7 +107,7 @@
                               <h3>Create Account</h3>
                               
                               <fieldset>
-                                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                                <input placeholder="Your Phone Number" type="tel"  pattern="^\d{10}$" required>
                               </fieldset>
                               <fieldset>
                                 <input placeholder="Your name" type="text" tabindex="1" required autofocus>
@@ -116,7 +116,7 @@
                                 <input placeholder="Your Email Address" type="email" tabindex="2" required>
                               </fieldset>
                               <fieldset>
-                                <input placeholder="Your Password" type="url" tabindex="4" required>
+                                <input placeholder="Your Password" type="password" tabindex="4" required>
                               </fieldset>
                               <fieldset>
                                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
@@ -172,7 +172,7 @@
                           <div class="modal-body">
                             <form id="loginform" action="" method="post">
                               <fieldset>
-                                  <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                                  <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3"pattern="^\d{10}$" required>
                                 </fieldset>
                                 <fieldset>
                                   <a href=""><button name="submit" type="submit" id="submit" data-submit="...Sending">Login</button>

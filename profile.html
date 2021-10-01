@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/style.css">
   <script src="//code.jquery.com/jquery.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="js-datepick/dp-light.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -35,13 +35,13 @@
     <div class="container mt-4 mb-4" id="acdetails">
 
         <div class="row ">
-            <div class="col-md-3 pb-3 pt-3 edittabs">
+            <!-- <div class="col-md-3 pb-3 pt-3 edittabs">
                 <div class="text-center">
                     <img src="img/profile picture.png" alt="">
                     <h6 class="username">Vivek</h6>
                     <p class="location">Gurgugram,Haryana</p>
                 </div>
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <div class="nav  flex-row nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                   <a class="nav-link active" id="v-pills-editpfp-tab" data-toggle="pill" href="#v-pills-editpfp" role="tab" aria-controls="v-pills-editpfp" aria-selected="true">Edit Profile</a>
                   <a class="nav-link" id="v-pills-orders-tab" data-toggle="pill" href="#v-pills-orders" role="tab" aria-controls="v-pills-orders" aria-selected="false">My Orders</a>
                   <a class="nav-link" id="v-pills-address-tab" data-toggle="pill" href="#v-pills-address" role="tab" aria-controls="v-pills-address" aria-selected="false">Manage Address</a>
@@ -50,39 +50,82 @@
                     
                     
     
+            </div> -->
+            <div class="col-md-3">
+              <div class="avatar-upload">
+                <div class="avatar-edit">
+                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                    <label for="imageUpload"></label>
+                </div>
+                <div class="avatar-preview">
+                    <div id="imagePreview" style="background-image: url('img/profile\ picture.png');">
+                    </div>
+                </div>
+                <div class="text-center my-2">
+                  <h6 class="username"><b>Vivek Rawat</b> </h6>
+                  <small class="location">Gurgugram , Haryana</small>
+              </div>
+            </div>
+            <script>
+                   function readURL(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                            $('#imagePreview').hide();
+                            $('#imagePreview').fadeIn(650);
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+                $("#imageUpload").change(function() {
+                    readURL(this);
+                });
+            </script>
             </div>
 
             <div class="col-md-9 tabcon">
-                <div class="tab-content" id="v-pills-tabContent">
-                  <div class="tab-pane fade show active m-3 p-3" id="v-pills-editpfp" role="tabpanel" aria-labelledby="v-pills-editpfp-tab">
-                    <div class="tab1title mb-5">
-                        <h1>Edit Profile</h1>
+              
+                  <div class="nav justify-content-center flex-row nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-editpfp-tab" data-toggle="pill" href="#v-pills-editpfp" role="tab" aria-controls="v-pills-editpfp" aria-selected="true">Edit Profile</a>
+                    <a class="nav-link" id="v-pills-orders-tab" data-toggle="pill" href="#v-pills-orders" role="tab" aria-controls="v-pills-orders" aria-selected="false">My Orders</a>
+                    <a class="nav-link" id="v-pills-address-tab" data-toggle="pill" href="#v-pills-address" role="tab" aria-controls="v-pills-address" aria-selected="false">Manage Address</a>
+                    <!-- <a class="nav-link" id="v-pills-coupons-tab" data-toggle="pill" href="#v-pills-coupons" role="tab" aria-controls="v-pills-coupons" aria-selected="false">Coupons & Offers</a> -->
+                  </div>
+  
+              
+
+                <div class="tab-content my-5 px-3" id="v-pills-tabContent" style="background: #fff; border-radius: 1rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                  <div class="tab-pane fade show active p-3" id="v-pills-editpfp" role="tabpanel" aria-labelledby="v-pills-editpfp-tab">
+                    <div class="tab1title ">
+                        <h4>Edit Profile</h4>
                     </div>
                     
                     <form action="">
                         <fieldset>
-                            <label> <h5>Phone Number</h5> </label> <br>
+                            <label> <h6>Phone Number</h6> </label> <br>
                                 <input placeholder="+91 9999000011" type="phone" tabindex="3" required readonly> <span><b>Change</b></span>
                         </fieldset>
 
                         <fieldset>
-                            <label> <h5>Email Id</h5> </label> <br>
+                            <label> <h6>Email Id</h6> </label> <br>
                                 <input placeholder="xyz@gmail.com" type="email" tabindex="3" required readonly> <span><b>Change</b></span>
                         </fieldset>
 
                         <fieldset>
-                            <label> <h5>Password</h5> </label> <br>
+                            <label> <h6>Password</h6> </label> <br>
                                 <input placeholder="*********" type="password" tabindex="3" required readonly> <i class="fa fa-eye-slash" style="margin-left: -30px;" id="togglepassword" aria-hidden="true"></i> &nbsp;<span><b>Change</b></span>
                         </fieldset>
                     </form>
+                    <button class="savechangesbtn" type="submit" style="margin:0 auto;">Submit</button>
                       
                   </div>
-                  <div class="tab-pane fade mt-2" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                  <div class="tab-pane fade p-3" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
 
-                    <div class="ordertab">
-                        <h1>My Orders</h1>
+                    <div class="tab2title mb-5 ">
+                      <h4> Your Orders</h4>
                     </div>
-                    <div class="container m-1 orderdeats ">
+                    <div class="container my-3 orderdeats ">
                         <div class="row justify-content-between ">
                             <div class="orderinfo col-8 m-1 ">
                               
@@ -118,7 +161,7 @@
                     </div>
 
 
-                    <div class="container m-1 orderdeats ">
+                    <div class="container my-3 orderdeats ">
                       <div class="row justify-content-between ">
                           <div class="orderinfo col-8 m-1 ">
                             
@@ -155,9 +198,9 @@
 
                         
                   </div>
-                  <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab">
+                  <div class="tab-pane fade  p-3" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab">
                         <div class="tab2title mb-5">
-                          <h1>Manage Address</h1>
+                          <h4>Manage Address</h4>
                         </div>
                         <div class="container">
                                 <div class="row">
@@ -203,67 +246,7 @@
                         </div>
                   </div>
 
-                  <div class="tab-pane fade" id="v-pills-coupons" role="tabpanel" aria-labelledby="v-pills-coupons-tab">
-                    <div class="tab3title mb-5">
-                        <h1>Coupons & Offers</h1>
-                    </div>
-
-                    <div class="container offers">
-                        <div class="row justify-content-space-between">
-
-
-                          <div class="col-md-5 m-2 p-4 offer">
-                            <div class="row">
-                              <div class="col-5 ml-auto couponlogo d-flex justify-content-center align-items-center">
-                                  <img src="img/creaseart_logo@2x.png" alt="">
-                              </div>
-                              <div class="col-7 mr-auto">
-                                <h4>Creaseart</h4>
-                                <div>
-                                  <span><b><i class="fas fa-rupee-sign "></i></b></span><span style="font-size: 3em;"><b>10</b> </span><span><b>Coupon</b></span>
-                                </div>
-                                <small style="font-size: .6em;"class="text-secondary">Valid until 19 September 2021</small>
-                              </div>
-                            </div>
-                          </div>
-
-                            <div class="col-md-5 m-2 p-4 offer">
-                              <div class="row">
-                                <div class="col-5 ml-auto couponlogo d-flex justify-content-center align-items-center">
-                                    <img src="img/creaseart_logo@2x.png" alt="">
-                                </div>
-                                <div class="col-7 mr-auto">
-                                  <h4>Creaseart</h4>
-                                  <div>
-                                    <span><b><i class="fas fa-rupee-sign "></i></b></span><span style="font-size: 3em;"><b>10</b> </span><span><b>Coupon</b></span>
-                                  </div>
-                                  <small style="font-size: .6em;"class="text-secondary">Valid until 19 September 2021</small>
-                                </div>
-                              </div>
-                            </div>
-                              
-                              
-    
-
-
-
-
-
-
-
-
-
-
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-                   </div>
+                  
                 </div>
                 
             </div>
@@ -276,6 +259,19 @@
 
 
     </div>
+
+    <!-- footer section -->
+
+  <div class="">
+    <script>
+      $.get("footer.html", function(data){
+          $("#footerjs").replaceWith(data);
+      });
+      </script>
+      <div class="container-fluid " id="footerjs" ></div>
+  </div>
+
+
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -284,6 +280,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

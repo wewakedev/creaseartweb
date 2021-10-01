@@ -6,7 +6,8 @@ h1,h2,h3,h4,h5,h6{
   font-family: 'Poppins', sans-serif;
   color: #282C3F !important;
 }
-p{
+
+p,small{
 /* font: normal normal normal 16px/20px poppins;
 letter-spacing: 0.25px; */
 font-family: 'Montserrat';
@@ -53,13 +54,14 @@ ul{
 .sidebar-item ul{
   color: #282C3F;
   list-style-type: none;
+  padding: 0px;
 }
 .sidebar-item ul li a:hover{
   color: #B52421 !important;
 }
 .sidebar-item ul li {
   padding: 5px 10px;
-  margin: 10px auto;
+  margin: 1.5rem auto;
   cursor: pointer;
 }
 .modal.left .modal-dialog,.modal.right .modal-dialog
@@ -85,7 +87,7 @@ ul{
 	
 	.modal.left .modal-body,.modal.right .modal-body
      {
-		padding: 15px 15px 80px;
+		padding: 1px 15px 80px;
 	}
 
   /*RIGHT*/
@@ -136,13 +138,14 @@ ul{
     #signupform input[type="text"],
 #signupform input[type="email"],
 #signupform input[type="tel"],
-#signupform input[type="url"], #loginform input[type="tel"]
+#signupform input[type="password"], #loginform input[type="tel"]
 #signupform textarea,
 #signupform button[type="submit"],
 #riderform input[type="text"],
 #riderform input[type="email"],
 #riderform input[type="tel"],
-#riderform input[type="url"], #loginform input[type="tel"]
+#riderform input[type="vehiclenum"],
+ #loginform input[type="tel"]
 #riderform textarea,#riderform input[type="license"],
 #riderform button[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
@@ -150,7 +153,7 @@ ul{
 
 #signupform , #loginform, #riderform{
   /* background: #F9F9F9; */
-  padding: 25px;
+  padding: .6rem;
   margin:  0;
   /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); */
 }
@@ -180,12 +183,12 @@ fieldset {
 #signupform input[type="text"],
 #signupform input[type="email"],
 #signupform input[type="tel"], #loginform input[type="tel"],
-#signupform input[type="url"],
+#signupform input[type="password"],
 #signupform textarea,
 #riderform input[type="text"],
 #riderform input[type="email"],
 #riderform input[type="tel"], #loginform input[type="tel"],
-#riderform input[type="url"],
+#riderform input[type="vehiclenum"],
 #riderform input[type="license"],
 #riderform textarea,#riderform select[type="vehicle"] {
   width: 100%;
@@ -200,12 +203,12 @@ fieldset {
 #signupform input[type="text"]:hover,
 #signupform input[type="email"]:hover,
 #signupform input[type="tel"]:hover, #loginform input[type="tel"]:hover,
-#signupform input[type="url"]:hover,
+#signupform input[type="password"]:hover,
 #signupform textarea:hover,
 #riderform input[type="text"]:hover,
 #riderform input[type="email"]:hover,
 #riderform input[type="tel"]:hover, #loginform input[type="tel"]:hover,
-#riderform input[type="url"]:hover,
+#riderform input[type="vehiclenum"]:hover,
 #riderform input[type="license"]:hover,
 #riderform textarea:hover,#riderform select[type="vehicle"]:hover {
   -webkit-transition: border-color 0.3s ease-in-out;
@@ -454,6 +457,7 @@ fieldset {
 .partner img{
   width: 100%;
   height: auto;
+  border-radius: .5rem;
 
 }
 .supportcall , .mailsupport, .chatsupport{
@@ -767,6 +771,73 @@ ul.links {
   padding: 10px 30px;
   margin: 3px;
 }
+
+.avatar-upload {
+  position: relative;
+  max-width: 205px;
+  margin: 1rem auto;
+}
+.avatar-upload .avatar-edit {
+  position: absolute;
+  right: 12px;
+  z-index: 1;
+  top: 10px;
+}
+.avatar-upload .avatar-edit input {
+  display: none;
+}
+.avatar-upload .avatar-edit input + label {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 0;
+  border-radius: 100%;
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+.avatar-upload .avatar-edit input + label:hover {
+  background: #f1f1f1;
+  border-color: #d6d6d6;
+}
+.avatar-upload .avatar-edit input + label:after {
+  content: "\f040";
+  font-family: 'FontAwesome';
+  color: #757575;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+}
+.avatar-upload .avatar-preview {
+  width: 192px;
+  height: 192px;
+  position: relative;
+  border-radius: 100%;
+  border: 6px solid #F8F8F8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.avatar-upload .avatar-preview > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+
+
+
+
+
 /* FEEDBACKS */
 
 .feeds{
@@ -787,7 +858,7 @@ form .input-textarea {
 .tab1body, .tab2body, .tab3body, .tab4body {
   padding: 0px !important;
 }
-.feedsubmitbtn{
+.feedsubmitbtn,.savechangesbtn{
   padding: .5rem 3rem;
   background: #B52421;
   border: transparent;
@@ -814,7 +885,7 @@ form .input-textarea {
 #feedbacks .nav-pills a:hover{
   color: #B52421 !important;
 }
-#acdetails,#feedbacks{
+#feedbacks{
   background-color: #fff;
 }
 #acdetails .nav-pills .nav-link, #feedbacks .nav-pills .nav-link{
@@ -971,7 +1042,7 @@ form .input-textarea {
   color: #6a6c6f;
 }
 
-.faq-sec .nav-link.active{
+.faq-sec .nav-link.active, .coupon-sec .nav-link.active{
   color: #B52421 !important;
   background: transparent !important;
   border-bottom: 1px solid #B52421 !important;
@@ -1912,9 +1983,47 @@ transition: all 300ms ease;
 .slick-prev:before, .slick-next:before {
   color: #B52421 !important;
 }
-.riderform{
+.riderformmain{
   background: #fff;
   padding: 20px 10px;
   border: 1px solid #B52421;
   border-radius: 1rem;
+}
+
+/******VENDOR & Creaseart COUPON*********/
+
+.vendoroffer,.creaseartoffer{
+  border-radius: .5em;
+}
+.offertagdeat,.creaseartoffertag{
+  margin-top: -.8rem;
+}
+.vendoroffertag{
+  border: 1px solid #000;
+  width: 8rem;
+  margin: 1rem 0rem;
+}
+.creaseartoffertag{
+  width: 8rem;
+  margin: 1rem 0rem;
+}
+.vendoroffertag h4{
+  margin-bottom: -1.8rem;
+}
+.vendoroffertag small{
+  font-size: .6rem;
+}
+.offertagdeat small,.offertagdeat a,.creaseartoffertagdeat small,.creaseartoffertagdeat a{
+  font-size: .7rem;
+}
+.copyoffer{
+  color: #FF8800;
+  border: 1px solid #FF8800; 
+  padding: .2rem .4rem; 
+  margin: .3rem 0px; 
+  width: 6rem;
+  font-size: 0.7rem;
+}
+.couponoffers button:focus{
+  background-color: #E76F51;
 }

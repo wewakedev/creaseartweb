@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body style="background: #F6F6F6;">
+  <style>
+    input[type=locationsearch],.locationicon{
+      display: none;
+    }
+  </style>
 
   <!-- navbar section -->
   <div class="container-fluid nav2">
@@ -45,7 +50,7 @@
               voluptas nisi sed! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, expedita?</p>
           </div>
   
-          <div class="col-md-4 riderform">
+          <div class="col-md-4 riderformmain">
             <div class="formtitle">
               <h5>Become a Rider</h5>
               <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia?</small>
@@ -56,20 +61,23 @@
                 <input placeholder="Your name" type="text" tabindex="1" required autofocus>
               </fieldset>
               <fieldset>
-                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="2"  pattern="^\d{10}$" required>
               </fieldset>
               <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                <input placeholder="Your Email Address" type="email" tabindex="3" required>
               </fieldset>
               <fieldset>
-                <select name="vehicle" id="cars" type="vehicle">
+                <select name="vehicle" id="cars" type="vehicle" required>
                   <option value="" disabled selected>Select your vehicle</option>
                   <option value="motorbike">Motorcycle</option>
                   <option value="bicycle">Bicycle</option>   
                 </select>
               </fieldset>
               <fieldset>
-                <input placeholder="Enter Driving License" type="license" tabindex="2" required>
+                <input placeholder="Enter Vehicle Number" type="vehiclenum" tabindex="4" required>
+              </fieldset>
+              <fieldset>
+                <input placeholder="Enter Driving License" type="license" tabindex="5" required>
               </fieldset>
               <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

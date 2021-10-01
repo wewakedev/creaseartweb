@@ -55,7 +55,7 @@
       <a class="nav-link " href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
     </li>
     <li class="nav-item ml-2 mr-2">
-      <a class="nav-link" href="#"><i class="fas fa-tags"></i> Offers</a>
+      <a class="nav-link" href="offers.html"><i class="fas fa-tags"></i> Offers</a>
     </li>
     <li class="nav-item ml-2 mr-2">
         <a class="nav-link" href="#"><i class="fas fa-question    "></i> Help</a>
@@ -94,7 +94,7 @@
                     <h3>Create Account</h3>
                     
                     <fieldset>
-                      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3"  pattern="^\d{10}$" required>
                     </fieldset>
                     <fieldset>
                       <input placeholder="Your name" type="text" tabindex="1" required autofocus>
@@ -103,7 +103,7 @@
                       <input placeholder="Your Email Address" type="email" tabindex="2" required>
                     </fieldset>
                     <fieldset>
-                      <input placeholder="Your Password" type="url" tabindex="4" required>
+                      <input placeholder="Your Password" type="password" tabindex="4" required>
                     </fieldset>
                     <fieldset>
                       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
