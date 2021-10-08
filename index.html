@@ -44,7 +44,9 @@
                       
                       <div class="modal-body sidebar-item">
                           <ul>
-                            <li><span><p class="" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: 10px 18px; margin: 0rem 5rem 0rem 0rem; cursor: pointer; color: white; background: #B52421">Login / Signup</p></span> </li>
+                            <li><span><p class="" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: .8rem 1.6rem;
+                              margin: 0rem 7rem 0rem 0rem; cursor: pointer; color: white; background: #B52421">Login / Signup</p></span> </li>
+                              <hr>
                             <li><img src="img/ham/myaccount.svg" alt="">&nbsp; <a class="" href="profile.html"><b>My Account </b></a></li>
                             <li><img src="img/ham/orderhere.svg" alt=""> &nbsp;<a class="" data-toggle="modal" data-target="#enterpin" data-dismiss="modal" href=""><b>Order Here</b></a></li>
                             <li><img src="img/ham/support.svg" alt="">&nbsp; <a class="" href="support.html"><b>Support</b></a></li>
@@ -53,6 +55,14 @@
                             <li><img src="img/ham/about.svg" alt="">&nbsp; <a class="" href="about.html"><b>About Us</b></a></li>
                             <li><img src="img/ham/feed.svg" alt="">&nbsp; <a class="" href="feedback.html"><b>Feedback</b></a></li>
                             <li><img src="img/ham/rateus.svg" alt="">&nbsp; <a class="" href=""><b>Rate Us</b></a></li>
+                            <hr>
+                            <li> <a class="" href="#"><b>Products</b></a></li>
+                            <hr>
+                            <ul style="margin-left: 2rem;">
+                              <li><a href="drive.html"><b>Drive</b> </a></li>
+                              <li><a href="selfdrive.html"><b>Self Delivery</b> </a></li>
+                              <li><a href="#"><b>Starter Kit</b> </a></li>
+                            </ul>
                           </ul>
                           
                           <div class="sidebarbadge text-center">
@@ -85,7 +95,7 @@
         <!-- Button Sign up trigger modal -->
 
               <button type="button" class="btn signbtn" data-toggle="modal" data-target="#modalsignup">
-                  <a href="#" class="signbtn">Sign Up</a>
+                  <a href="#" class="signbtn"><b>Sign Up</b> </a>
                 </button>
                 
 
@@ -121,7 +131,6 @@
                               <fieldset>
                                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
                               </fieldset>
-                              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
                               <p class="text-center"><b>or </b></p>
                               <div class="text-center">
                               <button class="loginBtn loginBtn--facebook">
@@ -152,7 +161,7 @@
 
 
                 <button type="button" class="btn loginbtn" data-toggle="modal" data-target="#modallogin">
-                  <a href="#" class="loginbtn">Login</a>
+                  <a href="#" class="loginbtn"><b>Login</b> </a>
                 </button>
                 
                 <!-- LOGIN Modal -->
@@ -207,11 +216,11 @@
     <!-- hero section -->
 
 
-    <div class="container herosec " >
+    <div class="container herosec align-items-center " >
     <div class="row " >
         <div class="col-md-6 my-3 order-md-1 order-sm-2 order-2">
             <h1 style="color: #282C3F; font: Montserrat;">Laundry Solution For You</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <small><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b> </small>
             <div class="inputlocation mt-4">
                 <div class="searchlocation">
                   <input type=""  class="inputlocationfield" />
@@ -226,10 +235,10 @@
             <div class="cities mt-3">
                 <h4 class="text-secondary">POPULAR CITIES IN INDIA</h4>
                 <div class="d-flex justify-content-between">
-                  <div><a href="#"><b>Gurgoan</b></a></div>
-                  <div><a href="#"><b>Delhi</b></a></div>
-                  <div><a href="#"><b>Hyderabad</b></a></div>
-                  <div><a href="#"><b>Banglore</b></a></div>
+                  <div><a href="#"><small><b>Gurgoan</b> </small></a></div>
+                  <div><a href="#"><small><b>Delhi</b></small></a></div>
+                  <div><a href="#"><small><b>Hyderabad</b></small></a></div>
+                  <div><a href="#"><small><b>Banglore</b></small></a></div>
                 </div>
             </div>
         </div>
@@ -307,47 +316,49 @@
       <div class="row justify-content-around partner pt-3">
           <div class="col-md-3 col-6 my-2 text-center">
               <img src="img/user.png" alt="">
-              <div class="text-left mt-3">
+              <div class="mt-3">
               <h5>
                   Users
               </h5>
               <small>Lorem ipsum dolor sit amet.</small>
-              <small><span type="button" class="" data-toggle="modal" data-target="#modalsignup">
+              <div><small class="homesign"><span type="" data-toggle="modal" data-target="#modalsignup">
                 <a href="javascript:;" class=""><b>Sign Up</b> </a>
-              </span></small>
+              </span></small></div>
+              
                </div>
           </div>
 
           <div class="col-md-3 col-6 my-2 text-center">
               <img src="img/vendor.png" alt="">
-              <div class="text-left mt-3">
+              <div class="mt-3">
               <h5>
                   Vendor
               </h5>
               <small>Lorem ipsum dolor sit amet.</small>
-              <small><a href=""><b>Partner with us</b> </a></small> 
+              <div><small><a class="homepartner" href="vendor.html"><b>Partner with us</b> </a></small></div>
               </div>
           </div>
 
           <div class="col-md-3 col-6 my-2 text-center">
               <img src="img/rider.png" alt="">
-              <div class="text-left mt-3">
+              <div class="mt-3">
               <h5>
                   Riders
               </h5>
               <small>Lorem ipsum dolor sit amet.</small>
-              <small><a href="rider.html"><b>Join Us</b> </a></small>
+              <div><small><a class="homerider" href="rider.html"><b>Join Us</b> </a></small></div>
+              
               </div>
           </div>
 
           <div class="col-md-3 col-6 my-2 text-center">
             <img src="img/franchise.png" alt="">
-            <div class="text-left mt-3">
+            <div class="mt-3">
             <h5>
                 Franchise
             </h5>
             <small>Lorem ipsum dolor sit amet.</small>
-            <small><a href=""><b>Join Us</b> </a></small> 
+            <div><small><a class="homefranchise" href=""><b>Coming Soon</b> </a></small></div>
             </div>
         </div>
           

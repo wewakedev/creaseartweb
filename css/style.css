@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
@@ -21,7 +22,7 @@ opacity: 1;
   color: #B52421;
 }
 html,body{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     overflow-x: hidden;
     /* font-family: 'Poppins', sans-serif; */
     overflow-y: auto;
@@ -54,6 +55,8 @@ ul{
 .sidebar-item ul{
   color: #282C3F;
   list-style-type: none;
+  font-family: 'Roboto', sans-serif !important; 
+  font-size: 1rem;
   padding: 0px;
 }
 .sidebar-item ul li a:hover{
@@ -63,6 +66,7 @@ ul{
   padding: 5px 10px;
   margin: 1.5rem auto;
   cursor: pointer;
+  /* border-bottom: 1px solid #ced4da; */
 }
 .modal.left .modal-dialog,.modal.right .modal-dialog
  {
@@ -87,7 +91,7 @@ ul{
 	
 	.modal.left .modal-body,.modal.right .modal-body
      {
-		padding: 1px 15px 80px;
+      padding: 1rem 1rem 15rem;
 	}
 
   /*RIGHT*/
@@ -141,17 +145,17 @@ ul{
 #signupform input[type="password"], #loginform input[type="tel"]
 #signupform textarea,
 #signupform button[type="submit"],
-#riderform input[type="text"],
-#riderform input[type="email"],
-#riderform input[type="tel"],
-#riderform input[type="vehiclenum"],
+#riderform input[type="text"],#selfdriveform input[type="shopname"],
+#riderform input[type="email"],#selfdriveform input[type="shopemail"],
+#riderform input[type="tel"],#selfdriveform input[type="shoptel"],
+#riderform input[type="vehiclenum"],#selfdriveform input[type="shopadd"],
  #loginform input[type="tel"]
 #riderform textarea,#riderform input[type="license"],
-#riderform button[type="submit"] {
+#riderform button[type="submit"],#selfdriveform input[type="submit"] {
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
 
-#signupform , #loginform, #riderform{
+#signupform , #loginform, #riderform, #selfdriveform {
   /* background: #F9F9F9; */
   padding: .6rem;
   margin:  0;
@@ -190,7 +194,9 @@ fieldset {
 #riderform input[type="tel"], #loginform input[type="tel"],
 #riderform input[type="vehiclenum"],
 #riderform input[type="license"],
-#riderform textarea,#riderform select[type="vehicle"] {
+#riderform textarea,#riderform select[type="vehicle"],
+#selfdriveform input[type="shopname"],#selfdriveform input[type="shopemail"],
+#selfdriveform input[type="shoptel"],#selfdriveform input[type="shopadd"] {
   width: 100%;
   border: 1px solid transparent;
   background: #FFF;
@@ -223,7 +229,7 @@ fieldset {
   resize: none;
 }
 
-#signupform button[type="submit"] , #loginform button[type="submit"],#riderform button[type="submit"] {
+#signupform button[type="submit"] , #loginform button[type="submit"],#riderform button[type="submit"],#selfdriveform button[type='submit'] {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -374,12 +380,12 @@ fieldset {
 }
 
 .loginbtn , .signbtn{
-    font: normal normal normal 31px/37px Poppins;
+    font: normal normal normal 25px/30px Roboto;
     letter-spacing: 0px;
     color: black;
     opacity: 1;  
     font-size: 20px;
-    padding: 10px 25px;
+    padding: .8rem 1.5rem;
     /* border-radius: 20px; */
 
 }
@@ -460,6 +466,15 @@ fieldset {
   border-radius: .5rem;
 
 }
+.homesign a,.homerider,.homepartner,.homefranchise{
+  padding: .3rem .6rem;
+  color: #fff !important;
+  background: #B52421;
+  border-radius: .2rem;
+}
+.homesign a:hover,.homerider:hover,.homepartner:hover,.homefranchise:hover{
+  color: #fff !important;
+}
 .supportcall , .mailsupport, .chatsupport{
   padding: 2rem 4rem;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -471,6 +486,7 @@ fieldset {
   border:1px solid #B52421;
   transition: 2ms ease-in;
 }
+
 .inputlocationfield,.supportinput{
 
     height: calc(1.5em + .75rem + 2px);
@@ -649,8 +665,11 @@ ul.links {
 
 
 @media only screen and (max-width: 450px){
-  .navbar-text{
+  .navbar-text button.signbtn,.navbar-text button.loginbtn{
     display: none !important ;
+  }
+  .mainsec .navbar{
+    display: inherit !important; 
   }
   .appsec  h1{
     font-size: 1.5rem ;
@@ -704,7 +723,7 @@ ul.links {
   width: 100% !important;
 }
 #par-js{
-  height: 100vh;
+  height: 90vh;
 }
 .workings img {
   width: 165px;
@@ -720,7 +739,7 @@ ul.links {
 }
 }
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1200px){
   #par-js{
     height: 80vh;
   }
@@ -740,7 +759,8 @@ ul.links {
   color: #B52421 !important;
 }
 .navmenu ul li a{
-  font-weight: bold;
+  font-weight: 800;
+  font-family: 'Roboto';
 }
 .container-fluid.nav2 {
   box-shadow: 0px 2px 30px black;
@@ -858,7 +878,7 @@ form .input-textarea {
 .tab1body, .tab2body, .tab3body, .tab4body {
   padding: 0px !important;
 }
-.feedsubmitbtn,.savechangesbtn{
+.feedsubmitbtn,.savechangesbtn,.ctavendorbtn,.registerbtn{
   padding: .5rem 3rem;
   background: #B52421;
   border: transparent;
@@ -1006,18 +1026,19 @@ form .input-textarea {
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"] {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .panel-default>.panel-heading a[aria-expanded="true"]:after {
-  content: "▲";
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+  /* content: "▲"; */
+  content: "▼";
+  /* -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg); */
 }
 
 .panel-default>.panel-heading a[aria-expanded="false"]:after {
   content: "▼";
-  -webkit-transform: rotate(90deg);
+  -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 
@@ -1309,6 +1330,17 @@ input[type=locationsearch]:focus {
   height: 30px;
   margin: 0 auto;
 }
+.slick-current{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.vendorproduct{
+  margin: 3rem;
+  border-radius: 1rem;
+}
+.vendorproduct img{
+  width: 100%;
+  height: auto;
+}
 .addon,.ridercards,.guides
 {
   margin: 5px;
@@ -1318,6 +1350,16 @@ input[type=locationsearch]:focus {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   color: #000;
 }
+img.vendordash {
+  width: 20rem;
+}
+img.vendorapp{
+  width: 10rem;
+}
+/* .vendorapps img:nth-child(1){
+  width: 50%;
+} */
+
 .addon small{
 text-align: center;
 }
@@ -1650,7 +1692,7 @@ text-align: center;
 
 /*** accordion collapse ***/
 .panel-heading, .panel-body { padding: 0; }
-.panel-heading.isOpen {color: #aaa;  }
+.panel-heading.isOpen {color: #B52421 !important;  }
 
 .panel-title a:hover{
   color: black !important;
@@ -1883,7 +1925,7 @@ transition: all 300ms ease;
 /***********************  RIDER PROVIDER XD *************/
 
 
-.ridercards{
+.ridercards,.vendorguide{
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 1.3rem;
@@ -1900,9 +1942,15 @@ transition: all 300ms ease;
   border-radius: 10px;
   line-height: 1rem;
 }
-.ridercards img,.guides img{
-  font-size: 5rem;
+.riderheadbg,.vendorguidebg{
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     width: 100%;
 }
+.vendorcards img{
+  margin:1rem .5rem;}
+
 
 .requirementslist li::before{
     content: "\2022";
@@ -1925,7 +1973,7 @@ transition: all 300ms ease;
 }
 
 
-.signuphead:after, .riderheadsubtext:after {
+.signuphead:after {
   position: absolute;
   content: '';
   height: 2px;
@@ -1946,14 +1994,14 @@ transition: all 300ms ease;
   background: #B52421;
 
 }
-.riderheadsubtext:after {
+/* .riderheadsubtext:after {
   position: absolute;
   content: '';
   height: 4px;
   bottom: -30%; 
   left: 0%;
   width: 25%;
-  background: #fff;
+  background: #fff; */
 
 }
 .guidetitle:after {
@@ -1983,7 +2031,7 @@ transition: all 300ms ease;
 .slick-prev:before, .slick-next:before {
   color: #B52421 !important;
 }
-.riderformmain{
+.riderformmain,.selfdriveformmain{
   background: #fff;
   padding: 20px 10px;
   border: 1px solid #B52421;
@@ -2026,4 +2074,44 @@ transition: all 300ms ease;
 }
 .couponoffers button:focus{
   background-color: #E76F51;
+}
+
+
+/* CREASEART DRIVE  */
+
+.driveworkings .drivework span{
+
+  font-weight: bold;
+  color: white;
+  background: #B52421;
+  border-radius: 50%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+.driveworkings .drivework p{
+
+  margin-top: 2rem !important;
+}
+.drivework span{
+  position: relative;
+  margin: 1rem ;
+}
+/* .drivework:nth-child(1) span:after{
+  content: "";
+  border-top: .02rem dashed #B52421;
+  min-width: 30rem;
+  height: 1rem;
+  display: flex;
+  position: absolute;
+  left:1rem;
+  top: 50%;
+  z-index: -1;
+} */
+.whydrive .row img,.whyselfdrive .row img{
+  width: 80%;
+  height: auto;
+}
+.sdworkings img{
+  width: 80%;
+  height: auto;
 }
