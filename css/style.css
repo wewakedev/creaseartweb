@@ -142,7 +142,7 @@ ul{
     #signupform input[type="text"],
 #signupform input[type="email"],
 #signupform input[type="tel"],
-#signupform input[type="password"], #loginform input[type="tel"]
+#signupform input[type="password"], #loginform input[type="tel"], #loginform input[type="password"],
 #signupform textarea,
 #signupform button[type="submit"],
 #riderform input[type="text"],#selfdriveform input[type="shopname"],
@@ -186,7 +186,7 @@ fieldset {
 
 #signupform input[type="text"],
 #signupform input[type="email"],
-#signupform input[type="tel"], #loginform input[type="tel"],
+#signupform input[type="tel"], #loginform input[type="tel"], #loginform input[type="password"],
 #signupform input[type="password"],
 #signupform textarea,
 #riderform input[type="text"],
@@ -208,7 +208,7 @@ fieldset {
 
 #signupform input[type="text"]:hover,
 #signupform input[type="email"]:hover,
-#signupform input[type="tel"]:hover, #loginform input[type="tel"]:hover,
+#signupform input[type="tel"]:hover, #loginform input[type="tel"]:hover, #loginform input[type="password"]:hover,
 #signupform input[type="password"]:hover,
 #signupform textarea:hover,
 #riderform input[type="text"]:hover,
@@ -715,6 +715,9 @@ ul.links {
       padding: .475rem .75rem;
 
     }
+    .whydrive,.whyselfdrive {
+      text-align: center;
+  }
 }
 
 
@@ -1330,7 +1333,7 @@ input[type=locationsearch]:focus {
   height: 30px;
   margin: 0 auto;
 }
-.slick-current{
+.slick-initialized .slick-slide{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .vendorproduct{
@@ -1928,7 +1931,8 @@ transition: all 300ms ease;
 .ridercards,.vendorguide{
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 1.3rem;
+  margin: 1rem;
+  padding: 1rem;
   width: 300px;
   height: auto;
   border-radius: 10px;
