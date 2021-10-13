@@ -283,14 +283,8 @@ $('.popover-markup>[data-toggle="popover"]').popover({
 
 
 
-  // riderslidersection
 
-  
-
-
-
-
- //////////////// CART ????????????///////////////////
+ //////////////// Auto Complete Address ///////////////////
 
 // 
 

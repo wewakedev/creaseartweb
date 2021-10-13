@@ -718,6 +718,9 @@ ul.links {
     .whydrive,.whyselfdrive {
       text-align: center;
   }
+  #vendordashboard,#vendorapps{
+    text-align: center;
+  }
 }
 
 
@@ -881,12 +884,25 @@ form .input-textarea {
 .tab1body, .tab2body, .tab3body, .tab4body {
   padding: 0px !important;
 }
-.feedsubmitbtn,.savechangesbtn,.ctavendorbtn,.registerbtn{
-  padding: .5rem 3rem;
+.feedsubmitbtn,.savechangesbtn,.ctavendorbtn,.registerbtn,.vendorformsubmitbtn{
+  padding: .4rem 2rem;
   background: #B52421;
   border: transparent;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.moproducts{
+  padding: .3rem .6rem;
+  background: #B52421;
+  border: transparent;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.moproducts a:hover{
+  color: #fff !important;
+}
+.ctavendortext2 h4,.ctavendortext2 small{
+  color: #fff !important;
 }
 
 .feeds .nav-pills .nav-link {
@@ -920,10 +936,10 @@ form .input-textarea {
 }
 .tabcon input[type="phone"],.tabcon input[type="email"],.tabcon input[type="password"]{
   border:none !important;
-  width: 60%;
+  width: 100%;
   border-bottom: 1px solid #888 !important;
   padding: 10px;
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
 }
 .tabcon fieldset{
   margin: 30px 5px;
@@ -1077,7 +1093,29 @@ form .input-textarea {
 
 
 
-/*********FORM***********/
+/*********VendorFORM***********/
+
+#vendorsignform sup{
+  color:#B52421;
+  font-weight: bold;
+}
+#vendorsignform input{
+  background: linear-gradient(0deg, #F1F2F5, #F1F2F5);
+border: 0.5px solid #AFAFAF;
+box-sizing: border-box;
+border-radius: 3px;
+}
+#vendorsignform label{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 800;
+line-height: 22px;
+font-size: .8rem;
+/* identical to box height */
+
+
+color: #000000;
+}
 
 
 
@@ -1208,21 +1246,6 @@ input[type=locationsearch]:focus {
 
 
 
-/* .filter a{
-  color: #000;
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 18px;
-}
-.filter .dropdown-item{
-  font-size: .65rem;
-}
-.filter .dropdown-toggle:hover{
-  color: #000 !important;
-}
-.filter .dropdown-menu a:hover{
-  background-color: #fff;
-} */
 .subfilters span{
   font-size: .8rem;
   padding: .2rem .5rem;
@@ -1327,6 +1350,47 @@ input[type=locationsearch]:focus {
   width: 50%;
   margin: 0 auto;
 } */
+
+
+.slider-nav-thumbnails .slick-slide {
+	opacity: 0.5;
+}
+
+.slider-nav-thumbnails .slick-slide.slick-active {
+	opacity: 1;
+  background: green;
+}
+
+iframe {
+  width: 100%; height: 100%;
+}
+
+.content {
+  font-size: 18px;
+  padding: 20px;
+  text-align:center;
+  color: white;
+}
+.one {
+  background: blue;
+}
+.two {
+  background: red;
+}
+.three {
+  background: purple;
+}
+.four {
+  background: green;
+}
+.five {
+  background: pink;
+}
+.two, .three, .four, .five {
+  display:none;
+}
+
+
 .slick-slide img {
   display: block;
   width: 30px;
@@ -1354,7 +1418,7 @@ input[type=locationsearch]:focus {
   color: #000;
 }
 img.vendordash {
-  width: 20rem;
+  width: 100%;
 }
 img.vendorapp{
   width: 10rem;
@@ -1886,9 +1950,11 @@ transition: all 300ms ease;
   color: #fff;
 
 }
-.service{
+/* .service{
   border-right: .5px solid #b6b3b3;
-}
+} */
+
+
 /* vertical tabs */
 
 .service a:hover,.category ul li a:hover{
@@ -1927,7 +1993,22 @@ transition: all 300ms ease;
 
 /***********************  RIDER PROVIDER XD *************/
 
-
+.vendorbenifits{
+  margin: 1rem;
+}
+.vendorbenifits img{
+  width: 50%;
+  margin: 2rem .5rem;
+}
+.vendorguide img{
+  margin: 1rem .5rem;
+}
+.vendorguide:nth-child(even){
+  border: 2px dashed #3DEEFF;
+}
+.vendorguide:nth-child(odd){
+  border: 2px dashed #B52421;
+}
 .ridercards,.vendorguide{
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -1965,11 +2046,17 @@ transition: all 300ms ease;
     margin-left: -1em;
   }
   
-.guideborder{
+.guideborder:nth-child(odd){
   border-top: 1px solid #B52421;
   border-bottom: 1px solid #B52421;
   border-right: 1px dashed #B52421;
   border-left: 1px dashed #B52421;
+}
+.guideborder:nth-child(even) {
+  border-top: 1px solid #282C3F;
+  border-bottom: 1px solid #282C3F;
+  border-right: 1px dashed #282C3F;
+  border-left: 1px dashed #282C3F;
 }
 
   .signuphead,.guidetitle,.guides,.riderheadsubtext,.faqtitle {

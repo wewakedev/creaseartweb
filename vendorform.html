@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Signup as Vendor</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background: #F6F6F6;">
+      
+  
+    <div class="container vendorformheading my-5">
+
+       <h3>
+           <b>Supplier/Vendor to Complete and Sign</b> 
+       </h3> 
+       <small><Span>*</Span>denotes compulsory field. Application will be rejected unless these fields are completed.</small> <hr>
+    </div>
+
+   
+    
+<!---------------------------------------------- FORM A SUPPLIER INFO ------------------------------------------------->
+
+
+    <div class="container my-5">
+        <form action="#" method="POST" id="vendorsignform">
+
+            <div class="container my-5 p-4" style="background-color: #fff; border-radius: .4rem;">
+            
+                <h5 class="my-3"> <b>(A) Supplier/Vendor Information</b></h5>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="legalname">Legal Name<sup>*</sup></label>
+                      <input type="text" class="form-control" placeholder="" id="legalname">
+                    </div>
+                  </div>
+                  <!--  col-md-6   -->
+            
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="tradename">Trading Name <sup>*</sup> </label>
+                      <input type="text" class="form-control" placeholder="" id="tradename">
+                    </div>
+                  </div>
+                  <!--  col-md-6   -->
+                </div>
+            
+            
+                <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="taxid">Tax ID/GST <sup>*</sup></label>
+                        <input type="text" class="form-control" placeholder="" id="taxid">
+                      </div>
+            
+            
+                    </div>
+                    <!--  col-md-6   -->
+            
+                    <div class="col-md-6">
+            
+                        <div class="enitityradio">
+                          <label for="contact-preference">Legal Entity Status<sup>*</sup>(Please tick)</label>
+                          <div class=" row justify-content-between px-3">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="enpublic" id="pubcomp">
+                                  <label class="form-check-label" for="pubcomp">
+                                    Public Company
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="enprivate" id="pvtcomp">
+                                  <label class="form-check-label" for="pvtcomp">
+                                    Private Company
+                                  </label>
+                              </div>
+                          </div>
+                          
+                          <div class="row justify-content-between px-3">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="enpartnership" id="partnership">
+                                  <label class="form-check-label" for="partnership">
+                                    Partnership
+                                  </label>
+                              </div>
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="ensoletrader" id="soletrader">
+                                  <label class="form-check-label" for="soletrader">
+                                    Sole Trader
+                                  </label>
+                              </div>
+                          </div>
+      
+                          <div class="row px-3">
+                              <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="entrust" id="trustcomp">
+                                  <label class="form-check-label" for="trustcomp">
+                                    Trust
+                                  </label>
+                              </div>
+                              
+                            </div>
+                          
+                        </div>
+              
+      
+                    </div>
+                  <!--  col-md-6   -->
+                </div>
+
+
+            </div>
+
+<!---------------------------------------------- FORM B CONTACT INFO ------------------------------------------------->
+
+            <hr class="my-5">
+      
+
+            <div class="container my-5 p-4" style="background-color: #fff; border-radius: .4rem;">
+            
+                <h5 class="my-3"> <b>(B) Contact Information</b></h5>
+
+                <div class="row">
+                    <div class="col-md-8">
+              
+                      <div class="form-group">
+                        <label for="supadd">Supplier/Vendor Address <sup>*</sup></label>
+                        <input type="venadd" class="form-control" id="venadd" placeholder="">
+                      </div>
+                    </div>
+              
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label for="vencity">City <sup>*</sup></label>
+                        <input type="vencity" class="form-control" id="vencity" placeholder="">
+                      </div>
+              
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="venpin">Pin Code<sup>*</sup></label>
+                          <input type="venpin" class="form-control" id="venpin" placeholder="">
+                        </div>
+                    </div>
+              
+                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="venstate">City <sup>*</sup></label>
+                          <input type="venstate" class="form-control" id="venstate" placeholder="">
+                        </div>
+                
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="venmobile">Mobile Number<sup>*</sup></label>
+                          <input type="venmobile" class="form-control" id="venmobile" placeholder="">
+                        </div>
+                
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="venmail">Email<sup>*</sup></label>
+                            <input type="mail" class="form-control" id="venmail" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5">
+                
+    <!-- OWNER ADDRESS -->
+
+                <div class="row">
+                    <div class="col-md-8">
+              
+                      <div class="form-group">
+                        <label for="ownadd">Owner Address<sup>*</sup></label>&nbsp;
+                        <span><input type="checkbox" id="copydetails"  onclick="autoFilAddress()"> Same as above</span>
+                         
+                        <input type="ownadd" class="form-control" id="ownadd" placeholder="">
+                      </div>
+                    </div>
+              
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label for="owncity">City <sup>*</sup></label>
+                        <input type="owncity" class="form-control" id="owncity" placeholder="">
+                      </div>
+              
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="ownpin">Pin Code<sup>*</sup></label>
+                          <input type="ownpin" class="form-control" id="ownpin" placeholder="">
+                        </div>
+                    </div>
+              
+                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="ownstate">City <sup>*</sup></label>
+                          <input type="ownstate" class="form-control" id="ownstate" placeholder="">
+                        </div>
+                
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="ownmobile">Mobile Number<sup>*</sup></label>
+                          <input type="ownmobile" class="form-control" id="ownmobile" placeholder="">
+                        </div>
+                
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="ownemail">Email<sup>*</sup></label>
+                            <input type="mail" class="form-control" id="ownmail" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+<!---------------------------------------------- FORM C PAYMENT CLASSES ------------------------------------------------->
+
+
+            <div class="container my-5 p-4" style="background-color: #fff; border-radius: .4rem;">
+            
+                <h5 class="my-3"> <b>(C) Payment Information</b></h5>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="banknum">Bank Account Number <sup>*</sup></label>
+                          <input type="banknum" class="form-control" id="banknum" placeholder="">
+                        </div>
+                    </div>
+              
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="ifscnum">IFSC <sup>*</sup></label>
+                          <input type="ifscnum" class="form-control" id="ifscnum" placeholder="">
+                        </div>
+                
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6">
+              
+                      <div class="form-group">
+                        <label for="bankname">Bank & Branch Name * <sup>*</sup></label>
+                        <input type="bankname" class="form-control" id="bankname" placeholder="">
+                      </div>
+                    </div>
+              
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="acholdername">Account Holder Name * <sup>*</sup></label>
+                        <input type="acholdername" class="form-control" id="acholdername" placeholder="">
+                      </div>
+              
+                    </div>
+                </div>
+
+
+                <small><b>Mode of payment selected * <sup>*</sup> </b> </small><br><br>
+                
+                <div class="row ">
+                    <div class="col-md-9 d-flex justify-content-between flex-wrap">
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="paycheckopt" id="paycheckopt">
+                                <label class="form-check-label" for="paycheckopt">
+                                  Cheque
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="payrtgsopt" id="payrtgsopt">
+                                <label class="form-check-label" for="payrtgsopt">
+                                  RTGS
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="paynetbankopt" id="paynetbankopt">
+                                <label class="form-check-label" for="paynetbankopt">
+                                  Net Banking
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="paytpaytmopt" id="paytpaytmopt">
+                                <label class="form-check-label" for="paytpaytmopt">
+                                  Paytm
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+            </div>
+
+<!---------------------------------------------- FORM D SERVICE CLASSES ------------------------------------------------->
+
+            <div class="container my-5 p-4" style="background-color: #fff; border-radius: .4rem;">
+            
+                <h5 class="my-3"> <b>(D) Service Classification</b></h5>
+
+
+                <small><b>What service you are offering? <sup>*</sup> </b> </small>
+
+                <div class="row my-3 ">
+                    <div class="col-md-12 d-flex justify-content-between flex-wrap">
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="drycleanopt" id="drycleanopt">
+                                <label class="form-check-label" for="drycleanopt">
+                                  Drycleaning
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="wnfopt" id="wnfopt">
+                                <label class="form-check-label" for="wnfopt">
+                                  Wash & Fold
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="wniopt" id="wniopt">
+                                <label class="form-check-label" for="wniopt">
+                                  Wash & Iron
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="laundryopt" id="laundryopt">
+                                <label class="form-check-label" for="laundryopt">
+                                  Laundry
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <small><b>What is the basis of the discount offered?</b> </small>
+
+                <div class="row my-3 ">
+                    <div class="col-md-12 d-flex justify-content-between flex-wrap">
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="oderbaseopt" id="oderbaseopt">
+                                <label class="form-check-label" for="oderbaseopt">
+                                  Order Based
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="invoicebasedopt" id="invoicebasedopt">
+                                <label class="form-check-label" for="invoicebasedopt">
+                                  Invoice Based
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="clothcatopt" id="clothcatopt">
+                                <label class="form-check-label" for="clothcatopt">
+                                  Cloth Category Based
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="eachclothopt" id="eachclothopt">
+                                <label class="form-check-label" for="eachclothopt">
+                                  Each Cloth Based
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="otheropt" id="otheropt">
+                                <label class="form-check-label" for="otheropt">
+                                  Others (Please Specify)
+                                </label>
+                                <div class="otherinput">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+                <small><b>Do you have your own logistic? *<sup>*</sup> </b> </small>
+
+                <div class="row my-3 ">
+                    <div class="col-md-6 d-flex justify-content-between flex-wrap">
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="yesopt" id="yesopt" onclick="yestologistics()">
+                                <label class="form-check-label" for="yesopt">
+                                  Yes
+                                </label>
+                            </div>
+                        </div>
+                        <script>
+                            function yestologistics() {
+                              var yesopt = document.getElementById("yesopt");
+                              var text = document.getElementById("yesoptform");
+                              if (yesopt.checked == true){
+                                text.style.display = "block";
+                              } else {
+                                 text.style.display = "none";
+                              }
+                            }
+                        </script>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="noopt" id="noopt">
+                                <label class="form-check-label" for="noopt">
+                                  No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- If YES to Own Logistics -->
+
+                <div class="row my-3" id="yesoptform" style="display: none;">
+                    <div class="container my-3">
+                        <small><b>How would you manage logistics? Which type of vehile you use for pick & Drop facility?</b> </small><br>
+                    </div>
+                    <div class="col-md-12 d-flex justify-content-between flex-wrap">
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="logbicycle" id="logbicycle">
+                                <label class="form-check-label" for="logbicycle">
+                                  Bicycle
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="twowheellog" id="twowheellog">
+                                <label class="form-check-label" for="twowheellog">
+                                   2 Wheeler
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="threewheellog" id="threewheellog">
+                                <label class="form-check-label" for="threewheellog">
+                                  3 Wheeler
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="fourwheellog" id="fourwheellog">
+                                <label class="form-check-label" for="fourwheellog">
+                                  4 Wheeler
+                                </label>
+                               
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+
+                    <div class="container my-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <small><b>Do you have Vechile Registration Certificate ?</b> </small><br>
+
+                                <div class="row my-3 ">
+                                    <div class="col-md-6 d-flex justify-content-between flex-wrap">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="yesvreg" id="yesvreg">
+                                                <label class="form-check-label" for="yesvreg">
+                                                  Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                     
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="novreg" id="novreg">
+                                                <label class="form-check-label" for="novreg">
+                                                  No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <small><b>Do you have Vechile Insurance No.? <sup>*</sup></b> </small><br>
+
+                                <div class="row my-3 ">
+                                    <div class="col-md-6 d-flex justify-content-between flex-wrap">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="yesvin" id="yesvin">
+                                                <label class="form-check-label" for="yesvin">
+                                                  Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                     
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="novin" id="novin">
+                                                <label class="form-check-label" for="novin">
+                                                  No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <small><b>Enter your Vechile Registration Certificate</b> </small><br>
+
+                                <div class="form-group">
+                                    <input type="vregcert" class="form-control" id="vregcert" placeholder="">
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <small><b>Enter your Vechile Insurance No. <sup>*</sup></b> </small><br>
+
+                                <div class="form-group">
+                                    <input type="vinnum" class="form-control" id="vinnum" placeholder="">
+                                </div>
+                                
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <small><b>Is your Rider 18 year old *</b> </small><br>
+
+                                <div class="row my-3 ">
+                                    <div class="col-md-6 d-flex justify-content-between flex-wrap">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="yesageopt" id="yesageopt">
+                                                <label class="form-check-label" for="yesageopt">
+                                                  Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                     
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="noageopt" id="noageopt">
+                                                <label class="form-check-label" for="noageopt">
+                                                  No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <small><b>Enter Birth Certificate or any document with you D.O.B. <sup>*</sup></b> </small><br>
+
+                                <div class="row my-3 ">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <input type="vinnum" class="form-control" id="venriderdob" placeholder="">
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <small><b>Do you have a license number <sup>*</sup></b> </small><br>
+
+                                <div class="row my-3 ">
+                                    <div class="col-md-6 d-flex justify-content-between flex-wrap">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="yeslicenseopt" id="yeslicenseopt">
+                                                <label class="form-check-label" for="yeslicenseopt">
+                                                  Yes
+                                                </label>
+                                            </div>
+                                        </div>
+                                     
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="nolicenseopt" id="nolicenseopt">
+                                                <label class="form-check-label" for="nolicenseopt">
+                                                  No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <small><b>Enter your license number *<sup>*</sup></b> </small><br>
+
+                                <div class="row my-3 ">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <input type="vinnum" class="form-control" id="lincensenum" placeholder="">
+                                            </div>
+                                        </div>
+                                     
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <small><b>What’s the radius of distance (in kms) you can cover for present and future order requirements?</b> </small>
+
+                        <div class="row my-3 ">
+                            <div class="col-md-12 d-flex justify-content-between flex-wrap">
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="onekmopt" id="onekmopt">
+                                        <label class="form-check-label" for="onekmopt">
+                                          Upto 1km
+                                        </label>
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="threekmopt" id="threekmopt">
+                                        <label class="form-check-label" for="threekmopt">
+                                            0 to 3 kms 
+                                        </label>
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="fivekmopt" id="fivekmopt">
+                                        <label class="form-check-label" for="fivekmopt">
+                                            0 to 5 kms 
+                                        </label>
+                                    </div>
+                                </div>
+        
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="fivepluskmopt" id="fivepluskmopt">
+                                        <label class="form-check-label" for="fivepluskmopt">
+                                            More than 5 kms
+                                        </label>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+
+
+
+
+                    </div><!-- if Yes hidden form ends -->
+                    
+                    
+                    
+
+
+
+                    
+                </div>
+
+                
+            </div>
+
+
+
+          
+      
+      
+          
+      
+          <div class="agreeterms text-center">
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="allagreeopt" id="allagreeopt">
+                    <label class="form-check-label" for="allagreeopt">
+                        I hereby decalare that all the information I have filled is correct.
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="tncopt" id="tncopt">
+                    <label class="form-check-label" for="tncopt">
+                        Please read our T&C before proceeding
+                    </label>
+                </div>
+
+            </div>
+          </div>
+      
+      
+          <div class="vendorformsubmission text-center">
+            <button type="submit" class="vendorformsubmitbtn">Submit</button>
+          </div>
+          
+        </form>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
