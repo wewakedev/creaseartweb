@@ -769,7 +769,7 @@ ul.links {
   font-family: 'Roboto';
 }
 .container-fluid.nav2 {
-  box-shadow: 0px 2px 30px black;
+  box-shadow: 0rem .03rem .5rem black;
   background-color: #fff;
 }
 .nav2 .navbar{
@@ -1095,11 +1095,43 @@ form .input-textarea {
 
 /*********VendorFORM***********/
 
+div#yesoptform {
+  display:none;
+}
+input#show:checked ~ div#yesoptform {
+display:block;
+}
+
+
+input#hide:checked ~ div#yesoptform {
+  display:none;
+}
+
 #vendorsignform sup{
   color:#B52421;
   font-weight: bold;
 }
-#vendorsignform input{
+#vendorsignform input[type="radio"] {
+  -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+  -moz-appearance: checkbox;    /* Firefox */
+  -ms-appearance: checkbox;     /* not currently supported */
+}
+#vendorsignform input[type="file"]{
+
+  font-size: .8rem; 
+  border: none !important;
+  background: none;
+}
+#vendorsignform textarea{
+
+ padding: 1rem;
+ font-size: .8rem;
+ font-family: 'Montserrat';
+}
+/* input #file-upload-button{
+  background: #00B2FF !important;
+} */
+#vendorsignform input,#vendorsignform textarea{
   background: linear-gradient(0deg, #F1F2F5, #F1F2F5);
 border: 0.5px solid #AFAFAF;
 box-sizing: border-box;
@@ -1239,7 +1271,7 @@ input[type=locationsearch] {
   transition: width 0.4s ease-in-out;
 }
 
-input[type=locationsearch]:focus {
+input[type=locationsearch]:focus{
   outline: none; /*to remove the focus outline in chrome */
   width: 250px;
 }
@@ -1293,7 +1325,7 @@ input[type=locationsearch]:focus {
   background: #ffffffce;
   border-radius: 5px;
 }
-.dropdown-menu .dropdown-item::selection{
+/* .dropdown-menu .dropdown-item::selection{
   background-color: #fff;
 }
 .dropdown-menu{
@@ -1310,12 +1342,13 @@ input[type=locationsearch]:focus {
   display: block;
   overflow: hidden;
   opacity: 0;
-}
+} */
 
 .dropdown.show .dropdown-menu {
   max-height: 200px;
   opacity: 1;
-  background: rgb(233 236 239 / 87%);
+  padding: 1rem;
+  background: rgb(245 245 245);
 }
 /* .dropdown-menu {
   display: block;
@@ -2205,4 +2238,26 @@ transition: all 300ms ease;
 .sdworkings img{
   width: 80%;
   height: auto;
+}
+
+/**************************** PRODUCT LIST PAGE **********************/
+
+
+.productitemdeats{
+  text-align: center;
+}
+.productitemdeats p:nth-child(2){
+  color: gray;
+  font-weight: bold;
+}
+
+.productitemdeats p:nth-child(1){
+  color:#B52421;
+  font-weight: 900;
+}
+.productimg img{
+  margin: .5rem;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
 }
