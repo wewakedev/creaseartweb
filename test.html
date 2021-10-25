@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Testing</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background:#fff;">
+  <style>
+    input[type=locationsearch],.locationicon{
+      display: none;
+    }
+  </style>
+
+  <!-- navbar section -->
+  <div class="container-fluid nav2">
+    <script>
+      $.get("nav2.html", function(data){
+          $("#navholder2").replaceWith(data);
+      });
+      </script>
+      <div class="" id="navholder2"></div>
+  
+      
+  </div>
+  
+
+
+<script>
+    /* Set rates + misc */
+var taxRate = 0.05;
+var shippingRate = 15.00; 
+var fadeTime = 300;
+
+
+/* Assign actions */
+$('.product-quantity input').change( function() {
+  updateQuantity(this);
+});
+
+$('.product-removal button').click( function() {
+  removeItem(this);
+});
+
+
+/* Recalculate cart */
+function recalculateCart()
+{
+  var subtotal = 0;
+  
+  /* Sum up row totals */
+  $('.product').each(function () {
+    subtotal += parseFloat($(this).children('.product-line-price').text());
+  });
+  
+  /* Calculate totals */
+  var tax = subtotal * taxRate;
+  var shipping = (subtotal > 0 ? shippingRate : 0);
+  var total = subtotal + tax + shipping;
+  
+  /* Update totals display */
+  $('.totals-value').fadeOut(fadeTime, function() {
+    $('#cart-subtotal').html(subtotal.toFixed(2));
+    $('#cart-tax').html(tax.toFixed(2));
+    $('#cart-shipping').html(shipping.toFixed(2));
+    $('#cart-total').html(total.toFixed(2));
+    if(total == 0){
+      $('.checkout').fadeOut(fadeTime);
+    }else{
+      $('.checkout').fadeIn(fadeTime);
+    }
+    $('.totals-value').fadeIn(fadeTime);
+  });
+}
+
+
+/* Update quantity */
+function updateQuantity(quantityInput)
+{
+  /* Calculate line price */
+  var productRow = $(quantityInput).parent().parent();
+  var price = parseFloat(productRow.children('.product-price').text());
+  var quantity = $(quantityInput).val();
+  var linePrice = price * quantity;
+  
+  /* Update line price display and recalc cart totals */
+  productRow.children('.product-line-price').each(function () {
+    $(this).fadeOut(fadeTime, function() {
+      $(this).text(linePrice.toFixed(2));
+      recalculateCart();
+      $(this).fadeIn(fadeTime);
+    });
+  });  
+}
+
+
+/* Remove item from cart */
+function removeItem(removeButton)
+{
+  /* Remove row from DOM and recalc cart total */
+  var productRow = $(removeButton).parent().parent();
+  productRow.slideUp(fadeTime, function() {
+    productRow.remove();
+    recalculateCart();
+  });
+}
+</script>
+  
+
+
+
+
+
+
+
+
+
+<div class="productexec my-5 light-bg">
+  <div class="container">
+    <!-- <div class="section-title">
+      <small>MODERN FRAMEWORK BOOTSTRAP 4</small>
+      <h3>HORIZONTAL TABS</h3>
+    </div>     -->
+    <ul class="nav nav-tabs productcart-sec nav-justified">
+      <li class="nav-item productorderselected">
+        <a class="nav-link disabled" data-toggle="" href=""><small>Order Selected </small></a>
+      </li>
+      <li class="nav-item productcart">
+      <a class="nav-link active " data-toggle="tab" href="#tabcart"><small>Cart</small></a>
+      </li>
+      <li class="nav-item addresstobuy">
+      <a class="nav-link" data-toggle="tab" id="addtab" href="#tabadd"><small>Address</small></a>
+      </li>
+      <li class="nav-item productpayment">
+      <a class="nav-link" data-toggle="tab" href="#tabpay"><small>Payment & Review</small></a>
+      </li>
+    </ul>
+    <div class="tab-content">
+    <div class="tab-pane " id="">
+      none
+
+
+    </div>
+
+
+    <div class="tab-pane fade show active" id="tabcart">
+    
+      <h3 style="color: #B52421 !important; text-align: center; margin: 2rem .5rem;">Cart</h3>
+      <div class="shopping-cart container my-5 p-3" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+
+        <div class="column-labels row">
+          <label class="col-2 proimage ">Item</label>
+          <label class="col-3 prodetails"></label>
+          <label class="col-2 proprice ">Price </label>
+          <label class="col-2 proquantity">Quantity</label>
+          <label class="col-1 proline-price">Total</label>
+        </div>
+      
+        
+      
+        <div class="product container">
+          <div class=" col-1 text-center product-image">
+            <img src="img/products/productstainremo.jpg">
+          </div>
+          <div class="product-details text-center col-4   ">
+            <div class="product-title"><small><b>Stain Remover</b> </small> </div>
+            <!-- <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p> -->
+          </div>
+          <div class="product-price col-2 text-center"><small>200</small> </div>
+          <div class="product-quantity text-center col-2">
+            <input type="number" value="0" min="1">
+          </div>
+          <!-- <div class="product-removal">
+            <button class="remove-product">
+              <small><i class="fa fa-trash" aria-hidden="true"></i></small> 
+            </button>
+          </div> -->
+          <div class="product-line-price text-center col-1"><small>0</small> </div>
+        </div>
+      
+        <div class="totals">
+          <div class="totals-item">
+            <label><small>Subtotal</small> </label>
+            <div class="totals-value" id="cart-subtotal">0</div>
+          </div>
+          <div class="totals-item">
+            <label><small> Tax (5%)</small></label>
+            <div class="totals-value" id="cart-tax"><small>3.60</small> </div>
+          </div>
+          <div class="totals-item">
+            <label><small>Shipping</small> </label>
+            <div class="totals-value" id="cart-shipping"><small> 0</small></div>
+          </div>
+          <div class="totals-item totals-item-total">
+            <label><small><b>Grand Total</b></small> </label>
+            <div class="totals-value" id="cart-total"><small>0</small> </div>
+          </div>
+        </div>
+            
+            <button class="produtproceed"><a data-toggle="tab" href="#tabadd"><small> Proceed</small></a> </button>
+      
+      </div>
+      
+      
+      <script>
+          /* Set rates + misc */
+      var taxRate = 0.05;
+      var shippingRate = 15.00; 
+      var fadeTime = 300;
+      
+      
+      /* Assign actions */
+      $('.product-quantity input').change( function() {
+        updateQuantity(this);
+      });
+      
+      $('.product-removal button').click( function() {
+        removeItem(this);
+      });
+      
+      
+      /* Recalculate cart */
+      function recalculateCart()
+      {
+        var subtotal = 0;
+        
+        /* Sum up row totals */
+        $('.product').each(function () {
+          subtotal += parseFloat($(this).children('.product-line-price').text());
+        });
+        
+        /* Calculate totals */
+        var tax = subtotal * taxRate;
+        var shipping = (subtotal > 0 ? shippingRate : 0);
+        var total = subtotal + tax + shipping;
+        
+        /* Update totals display */
+        $('.totals-value').fadeOut(fadeTime, function() {
+          $('#cart-subtotal').html(subtotal.toFixed(2));
+          $('#cart-tax').html(tax.toFixed(2));
+          $('#cart-shipping').html(shipping.toFixed(2));
+          $('#cart-total').html(total.toFixed(2));
+          if(total == 0){
+            $('.checkout').fadeOut(fadeTime);
+          }else{
+            $('.checkout').fadeIn(fadeTime);
+          }
+          $('.totals-value').fadeIn(fadeTime);
+        });
+      }
+      
+      
+      /* Update quantity */
+      function updateQuantity(quantityInput)
+      {
+        /* Calculate line price */
+        var productRow = $(quantityInput).parent().parent();
+        var price = parseFloat(productRow.children('.product-price').text());
+        var quantity = $(quantityInput).val();
+        var linePrice = price * quantity;
+        
+        /* Update line price display and recalc cart totals */
+        productRow.children('.product-line-price').each(function () {
+          $(this).fadeOut(fadeTime, function() {
+            $(this).text(linePrice.toFixed(2));
+            recalculateCart();
+            $(this).fadeIn(fadeTime);
+          });
+        });  
+      }
+      
+      
+      /* Remove item from cart */
+      function removeItem(removeButton)
+      {
+        /* Remove row from DOM and recalc cart total */
+        var productRow = $(removeButton).parent().parent();
+        productRow.slideUp(fadeTime, function() {
+          productRow.remove();
+          recalculateCart();
+        });
+      }
+      </script>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- footer section -->
+
+    <div class="">
+        <script>
+         $.get("footer.html", function(data){
+             $("#footerjs").replaceWith(data);
+         });
+        </script>
+        <div class="container-fluid " id="footerjs" ></div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  </body>
+</html>
