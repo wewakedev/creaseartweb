@@ -136,10 +136,41 @@ ul{
 
 
 
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+.datetimebtn input[type=radio],.deliveryaddbtn input[type="radio"] {
+    display:none;
+    margin:10px;
+}
+.datetimebtn label{
+  font-size: small;
+}
+/*
+  Change the look'n'feel of labels (which are adjacent to radiobuttons).
+  Add some margin, padding to label
+*/
+.datetimebtn input[type=radio] + label, .deliveryaddbtn input[type="radio"] + label {
+  font-size: .8rem;
+  padding: .2rem .5rem;
+  background: #e0d9e08f;
+  border-radius: 5px;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+.datetimebtn input[type=radio]:checked + label,.deliveryaddbtn  input[type="radio"]:checked + label {
+   background-image: none;
+    background-color:#B52421;
+    color: #fff !important;
+}
+
 
     /* Signup / Login MODAL */
 
-    #signupform input[type="text"],
+    #signupform input[type="text"],input[type="date"],
 #signupform input[type="email"],
 #signupform input[type="tel"],
 #signupform input[type="password"], #loginform input[type="tel"], #loginform input[type="password"],
@@ -184,7 +215,7 @@ fieldset {
   width: 100%;
 }
 
-#signupform input[type="text"],
+#signupform input[type="text"],input[type="date"],
 #signupform input[type="email"],
 #signupform input[type="tel"], #loginform input[type="tel"], #loginform input[type="password"],
 #signupform input[type="password"],
@@ -745,11 +776,15 @@ ul.links {
 }
 }
 
-@media only screen and (min-width: 1200px){
+/* @media only screen and (min-width: 1200px){
   #par-js{
     height: 80vh;
   }
-  
+   */
+  @media only screen and (min-width: 1600px){
+    #par-js{
+      height: 60vh;
+    }
   
 }
 
@@ -782,7 +817,7 @@ ul.links {
   transition: opacity .15s linear !important;
 }
 .service .nav-pills a img{
-  width:2rem;
+  width:1.5rem;
   margin: .3rem;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -794,9 +829,7 @@ ul.links {
   background-color: #B52421;
   transition: .6s ease-out;
 }
-/* .nav-pills .nav-item{
-  margin:2px 0px;
-} */
+
 .nav-pills .nav-link{
   padding: .4rem .8rem;
   margin: 1px;
@@ -900,7 +933,6 @@ form .input-textarea {
   background: #59A5D8;
   border-radius: 5px;
 }
-.
 .moproducts{
   padding: .3rem .6rem;
   background: #B52421;
@@ -1438,7 +1470,9 @@ iframe {
   display:none;
 }
 
-
+#neutralizerinfo{
+  position: absolute;
+}
 .slick-slide img {
   display: block;
   width: 30px;
@@ -1482,7 +1516,7 @@ text-align: center;
   padding: 10px 20px;
   /* border: 1px solid #aaa; */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  border-radius: 10px;
+  border-radius: .5rem;
 }
 
 .addonbtn{
@@ -1502,8 +1536,17 @@ text-align: center;
   margin-bottom: 0rem;
   font-size:.8rem;
 }
+.addon{
+  position: relative;
+  border-radius: .5rem;
+  padding: 1rem 1.4rem;
 
-
+}
+.addon .addoninfoicon {
+  position:absolute;
+  top: 2%;
+  right: 2%;
+}
 .togglekg,.toggleexp{
   position : relative ;
   display : inline-block;
@@ -1813,16 +1856,11 @@ text-align: center;
   color: black !important;
 }
 
-.delivbtn{
-  padding: 8px 16px;
-  background: #B52421;
-  color: #fff;
-  border: none;
-}
 .addbtn{
-  padding: 8px 16px;
-  color: #B52421;
-  border: 1px solid #000;
+  padding: .2rem 1rem;
+  border: none;
+  background-color:#B52421;
+  color: #fff !important;
 }
 /* input#number {
   width: 8%;
@@ -1988,19 +2026,31 @@ transition: all 300ms ease;
   width: 15%;
   text-align: center !important;
 }
+.table thead small{
+  color: #B52421 !important;
+}
+.table tbody p{
+  font-size: small;
+}
 .quantitycat.text-center {
   background: white;
   border: 1px solid;
   border-radius: 20px;
   width: 20%;
 }
-.shopinfos small{
-  color: #fff;
-
+.subtotal p{
+  color: #B52421 !important;
+}
+.shopinfos p{
+  color: #fff !important;
 }
 /* .service{
   border-right: .5px solid #b6b3b3;
 } */
+.venforinfobullets img{
+  width:1.2rem;
+  margin: 0rem 1rem;
+}
 
 
 /* vertical tabs */
@@ -2300,8 +2350,8 @@ transition: all 300ms ease;
   width: 100%;
   
 }
-.process-model li a i:visited{
-  background-color: #B52421;
+.process-model li a i.fa{
+  color: #B52421 !important;
 }
 .product-actions small{
   color: #fff;
@@ -2496,9 +2546,9 @@ input[type=number]::-webkit-inner-spin-button {
  .process-model li.visited small{
    font-weight: bold;
  }
- .process-model li.visited i{
+ /* .process-model .fa:visited{
 background: #B52421;
- }
+ } */
 
 /* Make adjustments for tablet */
 @media screen and (max-width: 650px) {

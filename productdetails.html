@@ -100,10 +100,18 @@
                         <h3>Stain Remover</h3>
                     </div>
                     <div class="productdescription">
-                        <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci iusto dolorem vero ad iste,
-                            provident deleniti minus fugit voluptate esse,
-                            nesciunt ducimus eveniet laudantium? Praesentium autem quae optio numquam impedit!
-                        </small>
+                        <ul style="list-style-type: circle !important;">
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                        <style>
+                            .productdescription ul li:marker{
+                                color: black !important;
+                            }
+                        </style>
                     </div>
                     <div class="productprice my-3">
                         <h4><b><i class="fas fa-rupee-sign"></i>100</b></h4>
@@ -116,7 +124,7 @@
                         <!-- <button class="buy-productbtn">
                             <a href="productcart.html"><small>Buy Now</small></a>
                         </button> -->
-                        <button class="add-productbtn">
+                        <button class="add-productbtn" onclick="location.href='productcart.html'">
                           <a href="productcart.html"><small><i class="fas fa-cart-plus"></i> &nbsp;Add to cart</small></a>
                         </button>
                     </div>
