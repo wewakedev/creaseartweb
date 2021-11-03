@@ -753,8 +753,16 @@ ul.links {
     text-align: center;
   }
 }
-
-
+@media only screen and (max-width: 769px) { 
+  .ridekithidden{
+    display: none;
+  }
+} 
+@media only screen and (min-width: 769px) { 
+  .ridekitshow{
+    display: none;
+  }
+} 
 @media only screen and (max-width: 900px){
 .checkoutleft .btns.d-flex.justify-content-between{
   width: 100% !important;
@@ -2157,12 +2165,12 @@ transition: all 300ms ease;
   border-left: 1px dashed #282C3F;
 }
 
-  .signuphead,.guidetitle,.guides,.riderheadsubtext,.faqtitle {
+  .signuphead,.guidetitle,.guides,.riderheadsubtext,.faqtitle,.riderkithead {
     position: relative;
 }
 
 
-.signuphead:after {
+.signuphead:after,.riderkithead:after {
   position: absolute;
   content: '';
   height: 2px;
@@ -2391,11 +2399,11 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   text-align: center;
 }
 
-.product-quantity {
+/* .product-quantity {
   float: left;
   width: 10%;
   text-align: center;
-}
+} */
 
 .product-removal {
   float: left;

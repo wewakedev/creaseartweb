@@ -40,54 +40,21 @@
      background-repeat: no-repeat;
      background-position: center;
      background-size: cover;
-     width: 100%;">
+     padding: 2rem;">
 
       <div class="container riderheader" >
-        <div class="row py-5 justify-content-around align-items-center ">
+        <div class="row py-5 ">
           <div class="col-md-6  ">
             <h1 class=" riderheadtitle text-white"><b>Your Time. <br> Your Goals. <br> You're the Boss</b></h1>
             <br>
             <p class="text-white riderheadsubtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, 
               earum aliquid, officia ipsam ut culpa odio velit explicabo quibusdam, excepturi tenetur blanditiis 
               voluptas nisi sed! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, expedita?</p>
+              <div class="riderregisterbtn">
+                <button class="registerbtn" onclick="location.href='riderform.html';">Register</button>
+              </div>
           </div>
-  
-          <div class="col-md-4 riderformmain" style="background: #EFEFEF;">
-            <div class="formtitle">
-              <h5>Become a Rider</h5>
-              <small>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia?</small>
-            </div>
-            <form id="riderform" action="" method="post">
-              
-              <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-              </fieldset>
-              <fieldset>
-                <input placeholder="Your Phone Number" type="tel" tabindex="2"  pattern="^\d{10}$" required>
-              </fieldset>
-              <fieldset>
-                <input placeholder="Your Email Address" type="email" tabindex="3" required>
-              </fieldset>
-              <fieldset>
-                <select name="vehicle" id="cars" type="vehicle" required>
-                  <option value="" disabled selected>Select your vehicle</option>
-                  <option value="motorbike">Motorcycle</option>
-                  <option value="bicycle">Bicycle</option>   
-                </select>
-              </fieldset>
-              <fieldset>
-                <input placeholder="Enter Vehicle Number" type="vehiclenum" tabindex="4" required>
-              </fieldset>
-              <fieldset>
-                <input placeholder="Enter Driving License" type="license" tabindex="5" required>
-              </fieldset>
-              <fieldset>
-                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
-              </fieldset>
-              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
-              
-            </form>
-          </div>
+          
         </div>
       </div>
       
@@ -147,12 +114,12 @@
     <div class="conatainer-fluid py-5" style="background: #fff;">
       <div class="container">
 
-        <div class="row">
-          <div class="col-md-4 col-1">
-            <img src="img/appss.png" alt="" style="width: 90%; height: auto;">
+        <div class="row justify-content-around">
+          <div class="col-md-4 col-12 text-center">
+            <img src="img/appss.png" alt="">
           </div>
           <div class="col-md-6">
-            <h2 class=" signuphead p-2" style="color: #B52421 !important;"><b>Sign Up Details</b> </h2>
+            <h2 class=" signuphead py-2" style="color: #B52421 !important;"><b>Sign Up Details</b> </h2>
             <div class="row mt-5">
               <div class="col-6">
                 <h6><b>Requirements</b> </h6>
@@ -212,11 +179,42 @@
     </div>
 
 
+    <div class="conatainer-fluid py-5" id="riderkit" name="ridekit" style="background: #fff;">
+      <div class="container">
+
+        <div class="row justify-content-around">
+          <div class="col-md-4 col-12 text-center ridekithidden">
+            <img src="img/riderstarterkit.png" alt="" style="width:80%;">
+          </div>
+          <div class="col-md-6">
+            <h2 class=" riderkithead py-2" style="color: #B52421 !important;"><b>Starter Kit</b> </h2>
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fuga aut ab minus earum at obcaecati a corporis architecto, qui ad laboriosam in rerum cum quidem velit. Aut, eum quae.</small>
+            <div class="row mt-5">
+              <div class="col-6">
+                <h6><b>Starter Kit Includes</b> </h6>
+                <ul class="requirementslist" style="padding-left: 1rem;">
+                  <li> <small>Face Mask</small>  </li>
+                  <li> <small>Bike Phone Mount</small>  </li>
+                  <li> <small>T-Shirt</small>  </li>
+                  <li> <small>Bike Helmet</small>  </li>
+                  <li> <small>Delivery Bag</small>  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-6 text-center ridekitshow">
+                <img src="img/riderstarterkit.png" alt="" style="width:100%;">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
 
 
-    <div class="conatainer-fluid py-5" id="riderfaqs" style="background: #fff;">
+    <div class="container-fluid py-5" id="drivefaq" style="background: #FFF8F1;">
       <h2 class=" faqtitle p-2 text-center"><b> FAQs</b> </h2>
-      <div class="container riderfaq">
+      <div class="container vendorfaq">
         <h2></h2>
         <div class="row">
           <div class="col-12">
