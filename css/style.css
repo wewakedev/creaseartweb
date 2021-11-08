@@ -947,7 +947,7 @@ form .input-textarea {
 .tab1body, .tab2body, .tab3body, .tab4body {
   padding: 0px !important;
 }
-.feedsubmitbtn,.savechangesbtn,.ctavendorbtn,.registerbtn,.vendorformsubmitbtn,.proaddformsubbtn,.contactsubmitbtn{
+.feedsubmitbtn,.savechangesbtn,.ctavendorbtn,.registerbtn,.vendorformsubmitbtn,.proaddformsubbtn,.contactsubmitbtn,.ctariderbtn{
   padding: .4rem 2rem;
   background: #B52421;
   border: transparent;
@@ -2127,12 +2127,7 @@ transition: all 300ms ease;
 .vendorguide img{
   margin: 1rem .5rem;
 }
-.vendorguide:nth-child(even){
-  border: 2px dashed #3DEEFF;
-}
-.vendorguide:nth-child(odd){
-  border: 2px dashed #B52421;
-}
+
 .ridercards,.vendorguide{
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
