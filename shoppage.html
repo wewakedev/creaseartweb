@@ -34,18 +34,18 @@
   width: 100%;
   height: 100%;">
       <div class="container">
-          <div class="row  m-4  p-1">
-              <div class="col-md-3 col-2 text-center">
+          <div class="row py-5">
+              <div class="col-md-3 col-3 text-right">
                   <img class="shopimg1" style="width: 200px; height: auto;" src="img/vendorthumb1.jpg" alt="">
               </div>
-              <div class="col-md-6 col-10 shopinfos">
+              <div class="col-md-6 col-8 shopinfos text-left">
                   <h3 style="color: #fff !important;"><b> Super Fine Dry Cleaners</b></h3>
                   <p >Dry cleaning, Wash & Fold, Wash & Iron</p>
                   <div class=" d-flex text-white mt-2">
                     <div><img src="img/vendorheadcoupontag.svg" alt="" style="width: 3rem; margin: 1rem;"></div>
                   
-                    <div><h5 class="text-white" style="margin: 1rem 0.2rem;"><b>₹50 Off</b></h5>
-                      <p style="margin-top: -1rem !important;">Min order value 450</p>
+                    <div><p class="text-white" style="margin: 1rem 0.2rem;"><b>₹50 Off</b></p>
+                      <small style="margin-top: -1rem !important;">Min order value 450</small>
                     </div>
                     
               
@@ -85,19 +85,25 @@
                 <h6><b> SELECT SERVICES</b></h6>
               </div>
               <div class="col-md-3 col-12 d-flex">
-                <small><b>Express Delivery <sup><i class="fa fa-info-circle" aria-hidden="true"aria-hidden="true" data-toggle="tooltip" data-original-title="Delivery Within 24hrs"></i></sup> </b></small>
+                <small><b>Express Delivery <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Delivery Within 24hrs"></i></sup> </b></small>
                 <input type="checkbox" id="switchexp"class="checkbox dark-modeBtn" />
                 <label for="switchexp" class="toggleexp">
                 </label>   
               </div>
             </div>
           </div>
-          <div class="service my-4 text-center ">
-            <div class="nav flex-row flex-wrap justify-content-around nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link active d-flex justify-content-between align-items-center " id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleannew.svg" alt="" class="serviceicon"><span class="">DRY CLEANING</span> </a>
+          <div class="service container my-4 text-center ">
+            <!-- <div class="nav flex-row flex-wrap justify-content-around nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active d-flex justify-content-between align-items-center " id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon"><span class="">DRY CLEANING</span> </a>
               <a class="nav-link d-flex justify-content-between align-items-center"  id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="false"><img src="img/laundryicon.png" alt="" class="serviceicon"><span class="">LAUNDRY</span> </a>
               <a class="nav-link d-flex justify-content-between align-items-center" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> <span class="">WASH & FOLDS</span></a>
               <a class="nav-link d-flex justify-content-between align-items-center" id="v-pills-washiron-tab" data-toggle="pill" href="#v-pills-washiron" role="tab" aria-controls="v-pills-washiron" aria-selected="false"><img src="img/washiron.png" alt="" class="serviceicon"> <span class="">WASH & IRON</span></a>
+            </div> -->
+            <div class="nav row justify-content-around nav-pills " id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+              <a class="nav-link active col-md-3 col-6 d-flex justify-content-center align-items-center " id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon"><span class="">DRY CLEANING</span> </a>
+              <a class="nav-link d-flex col-md-3 col-6 justify-content-center align-items-center"  id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="false"><img src="img/laundryicon.png" alt="" class="serviceicon"><span class="">LAUNDRY</span> </a>
+              <a class="nav-link d-flex col-md-3 col-6 justify-content-center align-items-center" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> <span class="">WASH & FOLDS</span></a>
+              <a class="nav-link d-flex col-md-3 col-6 justify-content-center align-items-center" id="v-pills-washiron-tab" data-toggle="pill" href="#v-pills-washiron" role="tab" aria-controls="v-pills-washiron" aria-selected="false"><img src="img/washiron.png" alt="" class="serviceicon"> <span class="">WASH & IRON</span></a>
             </div>
         </div>
 
@@ -127,189 +133,134 @@
                       <div class="tab-pane fade show active" id="pills-men" role="tabpanel" aria-labelledby="pills-men-tab">
 
                         <div class="container">
-                          <div class="row justify-content-around">
-
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  
-                                  <th scope="col"><small><b>Clothes list</b> </small> </th>
-                                  <th scope="col"><small><b> Price</b></small> </th>
-                                  <th scope="col"><small><b>Qty</b> </small></th>
-                                  
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  
-                                  <td><small><b>Tshirts</b> </small> </td>
-                                  <td>
-                                    <p class="total-price">
-                                      <span><i class="fas fa-rupee-sign "></i></span>
-                                      <b><span id="price">  100</span></b>
-                                  </p>
-                                  </td>
-                                  <td>
-                                    <div class="quantitycat">
-                                    <button class="btn minus-btn disabled" type="button">-</button>
-                                    <input type="text" id="quantity" class="text-center" readonly value="1">
-                                    <button class="btn plus-btn" type="button">+</button>
-                                    </div>
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  
-                                  <td><small><b>Jeans</b> </small> </td>
-                                  <td>
-                                    <p class="total-price">
-                                      <span><i class="fas fa-rupee-sign "></i></span>
-                                      <b><span id="price">  100</span></b>
-                                  </p>
-                                  </td>
-                                  <td>
-                                    <div class="quantitycat">
-                                    <button class="btn minus-btn disabled" type="button">-</button>
-                                    <input type="text" id="quantity" class="text-center" readonly value="1">
-                                    <button class="btn plus-btn" type="button">+</button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                
-                                  
-                                  
-                              </tbody>
-                            </table>
-
-                            
+                          <div class="row justify-content-around my-2">
+                            <div class="col-4"><small><b>Clothes List</b></small> </div>
+                            <div class="col-4"><small><b>Price</b></small> </div>
+                            <div class="col-4"><small><b>Qty.</b></small> </div>  
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Tshirt</small> </div>
+                            <div class="col-4"><small>₹20</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Jeans</small> </div>
+                            <div class="col-4"><small>₹50</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Blazer</small> </div>
+                            <div class="col-4"><small>₹150</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
                           </div>
                         </div>
-              
-
                         
+              
+   
                       </div>
                       <div class="tab-pane fade" id="pills-women" role="tabpanel" aria-labelledby="pills-women-tab">
 
+                        <div class="container">
+                          <div class="row justify-content-around my-2">
+                            <div class="col-4"><small><b>Clothes List</b></small> </div>
+                            <div class="col-4"><small><b>Price</b></small> </div>
+                            <div class="col-4"><small><b>Qty.</b></small> </div>  
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Saree</small> </div>
+                            <div class="col-4"><small>₹150</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Shirt</small> </div>
+                            <div class="col-4"><small>₹50</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Coat</small> </div>
+                            <div class="col-4"><small>₹200</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                        </div>
                         
                        
                       </div>
                       <div class="tab-pane fade" id="pills-kids" role="tabpanel" aria-labelledby="pills-kids-tab">
+                        
                         <div class="container">
-                          <div class="row justify-content-around">
-
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  
-                                  <th scope="col"><small><b>Clothes List</b> </small> </th>
-                                  <th scope="col"><small><b>Price</b> </small> </th>
-                                  <th scope="col"><small><b>Qty.</b> </small></th>
-                                  
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  
-                                  <td><small><b>Shorts</b> </small> </td>
-                                  <td>
-                                    <p class="total-price">
-                                      <span><i class="fas fa-rupee-sign "></i></span>
-                                      <b><span id="price">  100</span></b>
-                                  </p>
-                                  </td>
-                                  <td>
-                                    <div class="quantitycat">
-                                    <button class="btn minus-btn disabled" type="button">-</button>
-                                    <input type="text" id="quantity" class="text-center" readonly value="1">
-                                    <button class="btn plus-btn" type="button">+</button>
-                                    </div>
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  
-                                  <td><small><b>Shirts</b> </small> </td>
-                                  <td>
-                                    <p class="total-price">
-                                      <span><i class="fas fa-rupee-sign "></i></span>
-                                      <b><span id="price">  100</span></b>
-                                  </p>
-                                  </td>
-                                  <td>
-                                    <div class="quantitycat">
-                                    <button class="btn minus-btn disabled" type="button">-</button>
-                                    <input type="text" id="quantity" class="text-center" readonly value="1">
-                                    <button class="btn plus-btn" type="button">+</button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                
-                                  
-                                  
-                              </tbody>
-                            </table>
-
+                          <div class="row justify-content-around my-2">
+                            <div class="col-4"><small><b>Clothes List</b></small> </div>
+                            <div class="col-4"><small><b>Price</b></small> </div>
+                            <div class="col-4"><small><b>Qty.</b></small> </div>  
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Shirt</small> </div>
+                            <div class="col-4"><small>₹20</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Shorts</small> </div>
+                            <div class="col-4"><small>₹50</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Jacket</small> </div>
+                            <div class="col-4"><small>₹150</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
                           </div>
                         </div>
+
                       </div>
+
                       <div class="tab-pane fade" id="pills-household" role="tabpanel" aria-labelledby="pills-household-tab">
+                        
                         <div class="container">
-                          <div class="row justify-content-around">
-
-                            <table class="table">
-                              <thead>
-                                <tr class="justify-content-center">
-                                  
-                                  <th scope="col"><small><b> Clothes list</b></small> </th>
-                                  <th scope="col"><small><b>Price</b></small> </th>
-                                  <th scope="col"><small><b>Qty.</b></small></th>
-                                  
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  
-                                  <td><small><b>Bedsheets</b> </small> </td>
-                                  <td>
-                                    <p class="total-price">
-                                      <span><i class="fas fa-rupee-sign "></i></span>
-                                      <b><span id="price">  100</span></b>
-                                  </p>
-                                  </td>
-                                  <td>
-                                    <div class="quantitycat">
-                                    <button class="btn minus-btn disabled" type="button">-</button>
-                                    <input type="text" id="quantity" class="text-center" readonly value="1">
-                                    <button class="btn plus-btn" type="button">+</button>
-                                    </div>
-                                  </td>
-                                </tr>
-
-                                <tr>
-                                  
-                                  <td><small><b>Blanket</b> </small>  </td>
-                                  <td>
-                                    <p class="total-price">
-                                      <span><i class="fas fa-rupee-sign "></i></span>
-                                      <b><span id="price">  100</span></b>
-                                  </p>
-                                  </td>
-                                  <td>
-                                    <div class="quantitycat">
-                                    <button class="btn minus-btn disabled" type="button">-</button>
-                                    <input type="text" id="quantity" class="text-center" readonly value="1">
-                                    <button class="btn plus-btn" type="button">+</button>
-                                    </div>
-                                  </td>
-                                </tr>
-                                
-                                  
-                                  
-                              </tbody>
-                            </table>
-
+                          <div class="row justify-content-around my-2">
+                            <div class="col-4"><small><b>Clothes List</b></small> </div>
+                            <div class="col-4"><small><b>Price</b></small> </div>
+                            <div class="col-4"><small><b>Qty.</b></small> </div>  
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Blanket</small> </div>
+                            <div class="col-4"><small>₹200</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Bedsheet</small> </div>
+                            <div class="col-4"><small>₹100</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
+                          </div>
+                          <div class="row my-2">
+                            <div class="col-4"><small>Rugs</small> </div>
+                            <div class="col-4"><small>₹250</small> </div>
+                            <div class=" col-4 clothesquantity ">
+                              <input type="number" value="0" min="0">
+                            </div> 
                           </div>
                         </div>
+
                       </div>
                     </div>
                   </div>
@@ -317,36 +268,53 @@
               </div>
             </div>
             <div class="tab-pane fade" id="v-pills-laundry" role="tabpanel" aria-labelledby="v-pills-laundry-tab">
-              <div class="row mb-1  " style="border-bottom: 1px solid #b6b3b3;">
-                <div class="col-6">
-                  <small style="color: #000;"><i><b> Select Laundry by KG</b> <i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></i> </small>
-                </div>
-                <!-- <div class="col-4 ml-auto">
-                  <input type="checkbox" id="switchkg"class="checkbox dark-modeBtn" />
-                  <label for="switchkg" class="togglekg">
-                  </label>   
-                </div> -->
-              </div>
-              <div class="container text-center">
-                
-                <div><small><i class="fas fa-rupee-sign    "></i> 120</small> <small class="text-dark">per kg</small></div>
-                <div class="inputkg my-3 p-2">
-                  <div class="inputkghead">
-                    <h6>Laundry/Kg</h6>
+             
+              <div class="container">
+                <div class="row d-flex text-center justify-content-between align-items-center">
+                  <div class="col-md-4 col-7">
+                    <p>Laundry / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p>
+                    <small><span style="color: #B52421;">₹90</span>  per kg</small>
                   </div>
-                  <div class="quantitykg">
-                    <button class="btn minus-btn disabled" type="button">-</button>
-                    <input type="text" id="quantity" class="text-center" readonly value="1">
-                    <button class="btn plus-btn" type="button">+</button>
-                    </div>
-                    <div class="text-secondary"><em>Minimum order value: 2kg</em> </div>
-                  <!-- <input type="text" placeholder="Order by Kg"> -->
+                  <div class="col-md-4 col-5 clothesquantity ">
+                    <label for="qty" style="color: #B52421;"><b>Qty</b></label><br>
+                    <input type="number" value="0" min="0">
+                  </div>
                 </div>
-
               </div>
+
             </div>
-            <div class="tab-pane fade" id="v-pills-washfolds" role="tabpanel" aria-labelledby="v-pills-washfolds-tab">..RR.</div>
-            <div class="tab-pane fade" id="v-pills-washiron" role="tabpanel" aria-labelledby="v-pills-washiron-tab">...GG</div>
+            <div class="tab-pane fade" id="v-pills-washfolds" role="tabpanel" aria-labelledby="v-pills-washfolds-tab">
+              
+              <div class="container">
+                <div class="row d-flex text-center justify-content-between align-items-center">
+                  <div class="col-md-4 col-7">
+                    <p>Wash & Folds / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p>
+                    <small><span style="color: #B52421;">₹90</span>  per kg</small>
+                  </div>
+                  <div class="col-md-4 col-5 clothesquantity ">
+                    <label for="qty" style="color: #B52421;"><b>Qty</b></label><br>
+                    <input type="number" value="0" min="0">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-washiron" role="tabpanel" aria-labelledby="v-pills-washiron-tab">
+              
+              <div class="container">
+                <div class="row d-flex text-center justify-content-between align-items-center">
+                  <div class="col-md-4 col-7">
+                    <p>Wash & Iron / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p>
+                    <small><span style="color: #B52421;">₹90</span>  per kg</small>
+                  </div>
+                  <div class="col-md-4 col-5 clothesquantity ">
+                    <label for="qty" style="color: #B52421;"><b>Qty</b></label><br>
+                    <input type="number" value="0" min="0">
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
 
@@ -474,11 +442,6 @@
             <div class="totalcart my-2">
               <div class="item1 m-2 d-flex text-secondary justify-content-between">
                 <small>Express Delivery Charges</small>
-                <!-- <div class="quantitycat text-center">
-                  <button class="btn minus-btn disabled" type="button">-</button>
-                  <input type="text" id="quantity" class="text-center" readonly value="1">
-                  <button class="btn plus-btn" type="button">+</button>
-                  </div> -->
                 <small class="" ><b><i class="fas fa-rupee-sign    "></i> 50</b> </small>
               </div>
               <div class="subtotal m-2 d-flex justify-content-between">
@@ -512,64 +475,6 @@
       <div class="container-fluid " id="footerjs" ></div>
   </div>
         
-
- <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script>
-      //setting default attribute to disabled of minus button
-      document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
-
-      //taking value to increment decrement input value
-      var valueCount
-
-      //taking price value in variable
-      var price = document.getElementById("price").innerText;
-
-      //price calculation function
-      function priceTotal() {
-          var total = valueCount * price;
-          document.getElementById("price").innerText = total
-      }
-
-      //plus button
-      document.querySelector(".plus-btn").addEventListener("click", function() {
-          //getting value of input
-          valueCount = document.getElementById("quantity").value;
-
-          //input value increment by 1
-          valueCount++;
-
-          //setting increment input value
-          document.getElementById("quantity").value = valueCount;
-
-          if (valueCount > 1) {
-              document.querySelector(".minus-btn").removeAttribute("disabled");
-              document.querySelector(".minus-btn").classList.remove("disabled")
-          }
-
-          //calling price function
-          priceTotal()
-      })
-
-      //plus button
-      document.querySelector(".minus-btn").addEventListener("click", function() {
-          //getting value of input
-          valueCount = document.getElementById("quantity").value;
-
-          //input value increment by 1
-          valueCount--;
-
-          //setting increment input value
-          document.getElementById("quantity").value = valueCount
-
-          if (valueCount == 1) {
-              document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
-          }
-
-          //calling price function
-          priceTotal()
-      })
-  </script>
     <script src="js/main.js"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -627,6 +532,79 @@ $('.carousel').slick({
   ]
 });
 
+
+// <div class="row">
+    
+//     <div class="col-md-3">
+//       <div class=" teammember">
+//         <img src="img/team1.png" alt="Avatar" class="teamimage">
+//         <div class="overlay">
+//           <div class="memberdetail">
+//             <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid modi tempore, odit inventore rerum.</small>
+//           </div>
+//         </div>
+        
+//       </div>
+//       <div>
+//         <h6 class="teamname">Shived Bansal</h6>
+//         <small class="text-secondary teamposition">CEO & Director</small>
+//       </div>
+//     </div>
+
+//     <div class="col-md-3">
+//       <div class=" teammember">
+//         <img src="img/team1.png" alt="Avatar" class="teamimage">
+//         <div class="overlay">
+//           <div class="memberdetail">
+//             <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid modi tempore, odit inventore rerum.</small>
+//           </div>
+//         </div>
+        
+//       </div>
+//       <div>
+//         <h6 class="teamname">Shived Bansal</h6>
+//         <small class="text-secondary teamposition">CEO & Director</small>
+//       </div>
+//     </div>
+
+//     <div class="col-md-3">
+//       <div class=" teammember">
+//         <img src="img/team1.png" alt="Avatar" class="teamimage">
+//         <div class="overlay">
+//           <div class="memberdetail">
+//             <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid modi tempore, odit inventore rerum.</small>
+//           </div>
+//         </div>
+        
+//       </div>
+//       <div>
+//         <h6 class="teamname">Shived Bansal</h6>
+//         <small class="text-secondary teamposition">CEO & Director</small>
+//       </div>
+//     </div>
+
+//     <div class="col-md-3">
+//       <div class=" teammember">
+//         <img src="img/team1.png" alt="Avatar" class="teamimage">
+//         <div class="overlay">
+//           <div class="memberdetail">
+//             <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aliquid modi tempore, odit inventore rerum.</small>
+//           </div>
+//         </div>
+        
+//       </div>
+//       <div>
+//         <h6 class="teamname">Shived Bansal</h6>
+//         <small class="text-secondary teamposition">CEO & Director</small>
+//       </div>
+//     </div>
+
+    
+    
+   
+    
+    
+//   </div>
 // Slick version 1.5.8
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
