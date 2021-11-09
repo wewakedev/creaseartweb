@@ -140,7 +140,7 @@ ul{
   Hide radio button (the round disc)
   we will use just the label to create pushbutton effect
 */
-.datetimebtn input[type="radio"],.deliveryaddbtn input[type="radio"] {
+.datetimebtn input[type="radio"],.deliveryaddbtn input[type="radio"]{
     display:none;
     margin:10px;
 }
@@ -631,17 +631,16 @@ fieldset {
   padding: 6rem;
 }
 .valuecells{
-  background: #B52421;
-  margin: 1rem;
-  padding:6rem;
-  font-size: .8rem; border-radius: 50%;
+  
 }
 .valuecell{
-   color: #fff !important;
-   text-align: center;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  background: url(/img/valuesroundbg.svg);background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 1rem;
+  padding:4rem;
+  color: #fff!important;
+  font-size: .8rem; border-radius: 50%;
 }
 /* .teammember {
   position: relative;
@@ -1298,7 +1297,7 @@ color: #000000;
   padding: .3rem 1rem;
   background: #B52421;
   border: transparent;
-  color: #fff;
+  color: #fff !important;
   letter-spacing: 0.2rem;
   /* margin: .5rem 0rem; */
 }
@@ -1546,19 +1545,11 @@ text-align: center;
   border-radius: .5rem;
 }
 
-.addonbtn{
-  font-size: .8rem;
-  width: 100%;
-  /* padding: 5px 12px; */
-  color: #B52421;
-  border-radius: 10px;
-  border: 1px solid black;
-  font-weight: bold;
-}
-.addonbtn:hover{
+
+/* .addonbtn:hover{
   color: white;
   background: #B52421;
-}
+} */
 .addon p{
   margin-bottom: 0rem;
   font-size:.8rem;
@@ -1601,17 +1592,17 @@ text-align: center;
 
 
 /* Checkbox checked effect */
-.checkbox:checked + .togglekg::after, .checkbox:checked + .toggleexp::after {
+.expcheck:checked + .togglekg::after, .expcheck:checked + .toggleexp::after {
   left : 20px; 
 }
       
 /* Checkbox checked togglekg label bg color */
-.checkbox:checked + .togglekg , .checkbox:checked + .toggleexp{
+.expcheck:checked + .togglekg , .expcheck:checked + .toggleexp{
   background-color: #B52421;
 }
       
 /* Checkbox vanished */
-.checkbox { 
+.expcheck { 
   display : none;
 }
 
@@ -2474,7 +2465,7 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   text-align: right;
 }
 input[type=number]::-webkit-inner-spin-button {
-  opacity: 1;
+  opacity: 1
 }
 
 /* This is used as the traditional .clearfix class */

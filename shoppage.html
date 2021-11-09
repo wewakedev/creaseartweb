@@ -86,7 +86,7 @@
               </div>
               <div class="col-md-3 col-12 d-flex">
                 <small><b>Express Delivery <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Delivery Within 24hrs"></i></sup> </b></small>
-                <input type="checkbox" id="switchexp"class="checkbox dark-modeBtn" />
+                <input type="checkbox" id="switchexp"class="expcheck dark-modeBtn" />
                 <label for="switchexp" class="toggleexp">
                 </label>   
               </div>
@@ -346,7 +346,46 @@
           </div>
           <div class="addontitle my-4" >
             <h6><b>Add on services</b> <sup><i class="fa fa-info-circle" aria-hidden="true"aria-hidden="true" data-toggle="tooltip" data-original-title="Addone Details"></i></sup> </h6>
-             
+           
+        
+       <style>
+    
+    
+    
+    .addonbtn input[type=checkbox] {
+        display:none;
+        margin:10px;
+    }
+     
+    /*
+      Change the look'n'feel of labels (which are adjacent to radiobuttons).
+      Add some margin, padding to label
+    */
+    .addonbtn input[type=checkbox] + label {
+      /* font-size: .8rem;
+      padding: .2rem .5rem;
+      background: #e0d9e08f;
+      border-radius: 5px; */
+      font-size: .8rem;
+  width: 100%;
+  padding: .2rem .4rem;
+  margin: 1rem 0rem;
+  color: #B52421;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-weight: bold;
+    }
+    /*
+     Change background color for label next to checked radio button
+     to make it look like highlighted button
+    */
+    .addonbtn input[type=checkbox]:checked + label {
+       background-image: none;
+        background-color:#B52421;
+        color: #fff;
+    }
+    
+       </style>
             <div class="wrapper">
                   <div class="carousel">
                     
@@ -356,7 +395,11 @@
                       <img src="img/antiseptic 100x100.png"><br>
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
-                      <button class="addonbtn">Add+</button>
+                      <div class="addonbtn">
+                        <input type="checkbox" id="addon1" value="all">
+                      <label for="addon1">Add+</label>
+                      </div>
+                      
                     
                     </div>
                     <div class="text-center addon">
@@ -364,14 +407,22 @@
                       <img src="img/emulsifier_icon.png"><br>
                       <p>Emulsifier</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
-                      <button class="addonbtn">Add+</button>
+                      <div class="addonbtn">
+                        <input type="checkbox" id="addon2"value="false">
+                      <label for="addon2">Add+</label>
+                      </div>
+                      
                     
                     </div>
                     <div class="text-center addon">
                       <img src="img/neutralizer_icon.png"><br>
                       <p>Neutralizer</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
-                      <button class="addonbtn">Add+</button>
+                      <div class="addonbtn">
+                        <input type="checkbox" id="addon3" value="true">
+                      <label for="addon3">Add+</label>
+                      </div>
+                      
                     
                     </div>
                     <div class=" addon">
@@ -400,7 +451,11 @@
                       <img src="img/antiseptic 100x100.png"><br>
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
-                      <button class="addonbtn">Add+</button>
+                      <div class="addonbtn">
+                        <input type="checkbox" id="addon4" value="all">
+                      <label for="addon4">Add+</label>
+                      </div>
+                      
                     
                     </div>
 
@@ -408,7 +463,11 @@
                       <img src="img/antiseptic 100x100.png"><br>
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
-                      <button class="addonbtn">Add+</button>
+                      <div class="addonbtn">
+                        <input type="checkbox" id="addon5" name="radios" value="all">
+                      <label for="addon5">Add+</label>
+                      </div>
+                      
                     
                     </div>
 
@@ -416,7 +475,11 @@
                       <img src="img/antiseptic 100x100.png"><br>
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
-                      <button class="addonbtn">Add+</button>
+                      <div class="addonbtn">
+                      <input type="checkbox" id="addon6" name="radios" value="all">
+                      <label for="addon6">Add+</label>
+                      </div>
+                      
                     
                     </div>
 
