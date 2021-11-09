@@ -1297,9 +1297,11 @@ color: #000000;
   padding: .3rem 1rem;
   background: #B52421;
   border: transparent;
-  color: #fff !important;
   letter-spacing: 0.2rem;
   /* margin: .5rem 0rem; */
+}
+.card-read-more button small{
+  color: #fff !important;
 }
 .blogdetails ul{
   display: flex;
