@@ -140,7 +140,7 @@ ul{
   Hide radio button (the round disc)
   we will use just the label to create pushbutton effect
 */
-.datetimebtn input[type=radio],.deliveryaddbtn input[type="radio"] {
+.datetimebtn input[type="radio"],.deliveryaddbtn input[type="radio"] {
     display:none;
     margin:10px;
 }
@@ -151,7 +151,7 @@ ul{
   Change the look'n'feel of labels (which are adjacent to radiobuttons).
   Add some margin, padding to label
 */
-.datetimebtn input[type=radio] + label, .deliveryaddbtn input[type="radio"] + label {
+.datetimebtn input[type="radio"] + label, .deliveryaddbtn input[type="radio"] + label {
   font-size: .8rem;
   padding: .2rem .5rem;
   background: #e0d9e08f;
@@ -161,7 +161,7 @@ ul{
  Change background color for label next to checked radio button
  to make it look like highlighted button
 */
-.datetimebtn input[type=radio]:checked + label,.deliveryaddbtn  input[type="radio"]:checked + label {
+.datetimebtn input[type="radio"]:checked + label,.deliveryaddbtn  input[type="radio"]:checked + label {
    background-image: none;
     background-color:#B52421;
     color: #fff !important;
@@ -823,6 +823,9 @@ ul.links {
 
   color: #B52421 !important;
 }
+.orderstat small{
+  color: #B52421 !important;
+}
 .navmenu ul li a{
   font-weight: 800;
   font-family: 'Roboto';
@@ -1180,22 +1183,22 @@ input#hide:checked ~ div#yesoptform {
   display:none;
 }
 
-#vendorsignform sup{
+#vendorsignform sup,#ridersignform sup{
   color:#B52421;
   font-weight: bold;
 }
-#vendorsignform input[type="radio"] {
+#vendorsignform input[type="radio"],#ridersignform input[type="radio"] {
   -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
   -moz-appearance: checkbox;    /* Firefox */
   -ms-appearance: checkbox;     /* not currently supported */
 }
-#vendorsignform input[type="file"]{
+#vendorsignform input[type="file"],#ridersignform input[type="file"]{
 
   font-size: .8rem; 
   border: none !important;
   background: none;
 }
-#vendorsignform textarea{
+#vendorsignform textarea,#riderignform textarea{
 
  padding: 1rem;
  font-size: .8rem;
@@ -1204,20 +1207,18 @@ input#hide:checked ~ div#yesoptform {
 /* input #file-upload-button{
   background: #00B2FF !important;
 } */
-#vendorsignform input,#vendorsignform textarea{
+#vendorsignform input,#vendorsignform textarea,#ridersignform input,#ridersignform textarea{
   background: linear-gradient(0deg, #F1F2F5, #F1F2F5);
 border: 0.5px solid #AFAFAF;
 box-sizing: border-box;
 border-radius: 3px;
 }
-#vendorsignform label{
+#vendorsignform label,#ridersignform label{
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 800;
 line-height: 22px;
 font-size: .8rem;
-/* identical to box height */
-
 
 color: #000000;
 }
@@ -1915,9 +1916,7 @@ input[type="datetime-local"] {
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
-/* input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
 
-} */
 
 /* input[type="date"]::-webkit-calendar-picker-indicator {
   color: transparent;
@@ -1997,7 +1996,7 @@ transform: scale(1.2);
 -ms-transition: all 300ms ease;
 -o-transition: all 300ms ease;
 transition: all 300ms ease;
- } */
+ }  */
 
 
 /* .timelineicon.one {
@@ -2014,8 +2013,8 @@ transition: all 300ms ease;
 
 .timelineicon.four {
     background-color: #7e8aaf !important;
-} */
-
+}
+*/
 
 
 .mfirst{
@@ -2475,7 +2474,7 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
   text-align: right;
 }
 input[type=number]::-webkit-inner-spin-button {
-  opacity: 1
+  opacity: 1;
 }
 
 /* This is used as the traditional .clearfix class */

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Signup as Vendor</title>
+    <title>Signup as Rider</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +28,7 @@
     <div class="container vendorformheading my-5">
 
        <h3>
-           <b>Supplier/Vendor to Complete and Sign</b> 
+           <b>Rider to Complete and Sign</b> 
        </h3> 
        <small><Span>*</Span>denotes compulsory field. Application will be rejected unless these fields are completed.</small> <hr>
     </div>
@@ -39,24 +39,24 @@
 
 
     <div class="container">
-        <form action="vendorsignup.php" method="POST" id="vendorsignform">
+        <form action="vendorsignup.php" method="POST" id="ridersignform">
 
             <div class="container my-5 p-4" style="background-color: #fff; border-radius: .4rem;">
             
-                <h5 class="my-3"> <b>(A) Supplier/Vendor Information</b></h5>
+                <h5 class="my-3"> <b>(A) Rider Information</b></h5>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="legalname">Legal Name<sup>*</sup></label>
-                      <input type="text" class="form-control" placeholder="" id="legalname" required="required">
+                      <label for="rdrfirstname">First Name<sup>*</sup></label>
+                      <input type="text" class="form-control" placeholder="" id="rdrfirstname" required="required">
                     </div>
                   </div>
                   <!--  col-md-6   -->
             
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="tradename">Trading Name <sup>*</sup> </label>
-                      <input type="text" class="form-control" placeholder="" id="tradename" required="required">
+                      <label for="rdrlastname">Last Name <sup>*</sup> </label>
+                      <input type="text" class="form-control" placeholder="" id="rdrlastname" required="required">
                     </div>
                   </div>
                   <!--  col-md-6   -->
@@ -66,62 +66,12 @@
                 <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="taxid">Tax ID/GST <sup>*</sup></label>
-                        <input type="text" class="form-control" placeholder="" id="taxid" required="required">
+                        <label for="taxid">Date of Birth <sup>*</sup></label>
+                        <input type="date" class="form-control" id="taxid" required="required">
                       </div>
             
             
                     </div>
-                    <!--  col-md-6   -->
-            
-                    <div class="col-md-6">
-            
-                        <div class="enitityradio">
-                          <label for="contact-preference">Legal Entity Status<sup>*</sup>(Please tick)</label>
-                          <div class=" row justify-content-between px-3">
-                              <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="vendorType" id="pubcomp">
-                                  <label class="form-check-label" for="pubcomp">
-                                    Public Company
-                                  </label>
-                              </div>
-                              <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="vendorType" id="pvtcomp">
-                                  <label class="form-check-label" for="pvtcomp">
-                                    Private Company
-                                  </label>
-                              </div>
-                          </div>
-                          
-                          <div class="row justify-content-between px-3">
-                              <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="vendorType" id="partnership">
-                                  <label class="form-check-label" for="partnership">
-                                    Partnership
-                                  </label>
-                              </div>
-                              <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="vendorType" id="soletrader">
-                                  <label class="form-check-label" for="soletrader">
-                                    Sole Trader
-                                  </label>
-                              </div>
-                          </div>
-      
-                          <div class="row px-3">
-                              <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="vendorType" id="trustcomp">
-                                  <label class="form-check-label" for="trustcomp">
-                                    Trust
-                                  </label>
-                              </div>
-                              
-                            </div>
-                          
-                        </div>
-      
-                    </div>
-                  <!--  col-md-6   -->
                 </div>
 
 
@@ -140,15 +90,15 @@
                     <div class="col-md-8">
               
                       <div class="form-group">
-                        <label for="supadd">Supplier/Vendor Address <sup>*</sup></label>
-                        <input type="venadd" class="form-control" id="venadd" placeholder="" required>
+                        <label for="supadd">Rider Address <sup>*</sup></label>
+                        <input type="rdradd" class="form-control" id="rdradd" placeholder="" required="required">
                       </div>
                     </div>
               
                     <div class="col-md-3">
                       <div class="form-group">
-                        <label for="vencity">City <sup>*</sup></label>
-                        <input type="vencity" class="form-control" id="vencity" placeholder="">
+                        <label for="rdrcity">City <sup>*</sup></label>
+                        <input type="rdrcity" class="form-control" id="rdrcity" placeholder="" required="required">
                       </div>
               
                     </div>
@@ -157,23 +107,23 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group">
-                          <label for="venpin">Pin Code<sup>*</sup></label>
-                          <input type="venpin" class="form-control" id="venpin" placeholder="">
+                          <label for="rdrpin">Pin Code<sup>*</sup></label>
+                          <input type="rdrpin" class="form-control" id="rdrpin" placeholder="" required="required">
                         </div>
                     </div>
               
                     <div class="col-md-4">
                         <div class="form-group">
-                          <label for="venstate">State <sup>*</sup></label>
-                          <input type="venstate" class="form-control" id="venstate" placeholder="">
+                          <label for="rdrstate">State <sup>*</sup></label>
+                          <input type="rdrstate" class="form-control" id="rdrstate" placeholder="" required="required">
                         </div>
                 
                     </div>
 
                     <div class="col-md-4">
                         <div class="form-group">
-                          <label for="venmobile">Mobile Number<sup>*</sup></label>
-                          <input type="venmobile" class="form-control" id="venmobile" placeholder="">
+                          <label for="rdrmobile">Mobile Number<sup>*</sup></label>
+                          <input type="rdrmobile" class="form-control" id="rdrmobile" pattern="^\d{10}$" placeholder="" required="required">
                         </div>
                 
                     </div>
@@ -182,8 +132,8 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="venmail">Email<sup>*</sup></label>
-                            <input type="mail" class="form-control" id="venmail" placeholder="">
+                            <label for="rdrmail">Email<sup>*</sup></label>
+                            <input type="mail" class="form-control" id="rdrmail" placeholder="" required="required" >
                         </div>
                     </div>
                 </div>
@@ -244,8 +194,8 @@
                             <input type="mail" class="form-control" id="ownmail" placeholder="">
                         </div>
                     </div>
-                </div>
- -->
+                </div> -->
+
 
             </div>
 
@@ -262,15 +212,15 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                          <label for="banknum">Bank Account Number <sup>*</sup></label>
-                          <input type="banknum" class="form-control" id="banknum" placeholder="">
+                          <label for="rdrbanknum">Bank Account Number <sup>*</sup></label>
+                          <input type="rdrbanknum" class="form-control" id="rdrbanknum" placeholder="" required="required">
                         </div>
                     </div>
               
                     <div class="col-md-6">
                         <div class="form-group">
-                          <label for="ifscnum">IFSC <sup>*</sup></label>
-                          <input type="ifscnum" class="form-control" id="ifscnum" placeholder="">
+                          <label for="rdrifscnum">IFSC <sup>*</sup></label>
+                          <input type="rdrifscnum" class="form-control" id="rdrifscnum" placeholder="" required="required">
                         </div>
                 
                     </div>
@@ -282,15 +232,15 @@
                     <div class="col-md-6">
               
                       <div class="form-group">
-                        <label for="bankname">Bank & Branch Name * <sup>*</sup></label>
-                        <input type="bankname" class="form-control" id="bankname" placeholder="">
+                        <label for="rdrbankname">Bank & Branch Name * <sup>*</sup></label>
+                        <input type="rdrbankname" class="form-control" id="rdrbankname" placeholder="" required="required">
                       </div>
                     </div>
               
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="acholdername">Account Holder Name * <sup>*</sup></label>
-                        <input type="acholdername" class="form-control" id="acholdername" placeholder="">
+                        <label for="rdracholdername">Account Holder Name * <sup>*</sup></label>
+                        <input type="rdracholdername" class="form-control" id="rdracholdername" placeholder="" required="required">
                       </div>
               
                     </div>
@@ -348,142 +298,12 @@
             <div class="container my-5 p-4" style="background-color: #fff; border-radius: .4rem;">
             
                 <h5 class="my-3"> <b>(D) Service Classification</b></h5>
-
-
-                <small><b>What service you are offering? <sup>*</sup> </b> </small>
-
-                <div class="row my-3 ">
-                    <div class="col-md-12 d-flex justify-content-between flex-wrap">
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="drycleanopt" id="drycleanopt">
-                                <label class="form-check-label" for="drycleanopt">
-                                  Drycleaning
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="wnfopt" id="wnfopt">
-                                <label class="form-check-label" for="wnfopt">
-                                  Wash & Fold
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="wniopt" id="wniopt">
-                                <label class="form-check-label" for="wniopt">
-                                  Wash & Iron
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="laundryopt" id="laundryopt">
-                                <label class="form-check-label" for="laundryopt">
-                                  Laundry
-                                </label>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <small><b>What is the basis of the discount offered?</b> </small>
-
-                <div class="row my-3 ">
-                    <div class="col-md-12 d-flex justify-content-between flex-wrap">
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="oderbaseopt" id="oderbaseopt">
-                                <label class="form-check-label" for="oderbaseopt">
-                                  Order Based
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="invoicebasedopt" id="invoicebasedopt">
-                                <label class="form-check-label" for="invoicebasedopt">
-                                  Invoice Based
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="clothcatopt" id="clothcatopt">
-                                <label class="form-check-label" for="clothcatopt">
-                                  Cloth Category Based
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="eachclothopt" id="eachclothopt">
-                                <label class="form-check-label" for="eachclothopt">
-                                  Each Cloth Based
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="otheropt" id="otheropt">
-                                <label class="form-check-label" for="otheropt">
-                                  Others (Please Specify)
-                                </label>
-                                <div class="otherinput">
-                                    <input type="text">
-                                </div>
-                            </div>
-                        </div>
-                        
-
-                    </div>
-                </div>
-
-                <small><b>Do you have your own logistic? *<sup>*</sup> </b> </small>
-
-                <div class="row my-3 ">
-                    <div class="col-md-6 d-flex justify-content-between flex-wrap">
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="radio" name="tab" value="igottwo" onclick="yesopt();" />
-                                <label for="yesopt">Yes</label>
-                            </div>
-                        </div>
-                       
-
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input type="radio" name="tab" value="igotnone" onclick="noopt();" />
-                                <label for="noopt">No</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <script>
-                    function noopt(){
-                      document.getElementById('yesoptform').style.display ='none';
-                    }
-                    function yesopt(){
-                      document.getElementById('yesoptform').style.display = 'block';
-                    }
-                </script>
                 
 
 
                 <!-- If YES to Own Logistics -->
 
-                <div class="row my-3" id="yesoptform" style="display: none;">
+                <div class="row my-3">
                     <div class="container my-3">
                         <small><b>How would you manage logistics? Which type of vehile you use for pick & Drop facility?</b> </small><br>
                     </div>
@@ -696,57 +516,8 @@
                         </div>
 
 
-                        <small><b>What’s the radius of distance (in kms) you can cover for present and future order requirements?</b> </small>
-
-                        <div class="row my-3 ">
-                            <div class="col-md-12 d-flex justify-content-between flex-wrap">
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="onekmopt" id="onekmopt">
-                                        <label class="form-check-label" for="onekmopt">
-                                          Upto 1km
-                                        </label>
-                                    </div>
-                                </div>
-        
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="threekmopt" id="threekmopt">
-                                        <label class="form-check-label" for="threekmopt">
-                                            0 to 3 kms 
-                                        </label>
-                                    </div>
-                                </div>
-        
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="fivekmopt" id="fivekmopt">
-                                        <label class="form-check-label" for="fivekmopt">
-                                            0 to 5 kms 
-                                        </label>
-                                    </div>
-                                </div>
-        
-                                <div class="form-group">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="fivepluskmopt" id="fivepluskmopt">
-                                        <label class="form-check-label" for="fivepluskmopt">
-                                            More than 5 kms
-                                        </label>
-                                    </div>
-                                </div>
-        
-                            </div>
-                        </div>
-
-
-                    </div><!-- if Yes hidden form ends -->
-                    
-                    
-                    
-
-
-
+                    </div>
+                
                     
                     
                 </div>
@@ -785,81 +556,12 @@
                 <div class="row my-3">
                     <div class="col-md-10">
                         <div class="form-group">
-                            <label for="leavecal">Please submit your holiday/leave calender for the entire year:</label>
+                            <label for="leavecal">Please submit your Adhar Card:</label>
                             <input type="file" id="leavecal" name="leavecal"><br><br>
-                        </div>
-                    </div>
-
-                    <div class="col-md-10">
-                        <div class="form-group">
-                            <label for="pricerate">Attach your price list/Rate Card of all services your are offering to creaseart</label>
-                            <input type="file" id="pricerate" name="pricerate"><br><br>
-                        </div>
-                    </div>
-
-                    <div class="col-md-10">
-                        <div class="form-group">
-                            <label for="detailedinv">Recent Invoice with GST/ PAN and Bank details sepecified:</label>
-                            <input type="file" id="detailedinv" name="detailedinv"><br><br>
-                        </div>
-                    </div>
-
-                    <div class="col-md-10">
-                        <div class="form-group">
-                            <label for="letterhead">Company letterhead with GST/PAN and printed bank details, signed by authorised:</label>
-                            <input type="file" id="letterhead" name="letterhead"><br><br>
                         </div>
                     </div>
                 </div>
                 
-
-
-                <small><b>Please select only those points which you are offering</b></small>
-                <ul class="offercheckbox my-3" style="margin-left: -2.5rem;">
-                    <li>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="offer1" id="offer1">
-                                <label class="form-check-label" for="offer1">
-                                    lorem ipsum dolor sit lorem ipsum dolor sit 
-                                </label>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="offer2" id="offer2">
-                                <label class="form-check-label" for="offer2">
-                                    lorem ipsum dolor sit lorem ipsum dolor sit 
-                                </label>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="offer3" id="offer3">
-                                <label class="form-check-label" for="offer3">
-                                    lorem ipsum dolor sit lorem ipsum dolor sit 
-                                </label>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="offer4" id="offer4">
-                                <label class="form-check-label" for="offer4">
-                                    lorem ipsum dolor sit lorem ipsum dolor sit 
-                                </label>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
 
 
                 <!-- <div class="container">
@@ -1039,11 +741,11 @@
                 </div>
 
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="tncopt" id="tncopt" required="required" data-msg-required="This value is required.">
-                  <label class="form-check-label" for="tncopt">
-                      I agree to buy Starter Kit. <a href="vendor.html#vendorkit" target="_blank">View Starter Kit</a>
-                  </label>
-              </div>
+                    <input class="form-check-input" type="checkbox" name="tncopt" id="tncopt" required="required" data-msg-required="This value is required.">
+                    <label class="form-check-label" for="tncopt">
+                        I agree to buy Starter Kit. <a href="rider.html#riderkit" target="_blank">View Starter Kit</a>
+                    </label>
+                </div>
 
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="tncopt" id="tncopt" required="required" data-msg-required="This value is required.">
