@@ -54,11 +54,11 @@
       <div class="shopping-cart container my-5 p-3" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
       
         <div class="container ">
-          <div class="row my-5 justify-content-around align-items-center " style="border-bottom: 1px solid #b6b3b3;">
+          <div class="row my-5 justify-content-between align-items-center " style="border-bottom: 1px solid #b6b3b3;">
             <div class="col-md-6">
               <h4 style="color: #B52421 !important;">Super Fine Dry Cleaners</h4>
             </div>
-            <div class="col-md-3 col-12 d-flex">
+            <div class="col-md-3 text-center col-12 d-flex">
               <small><b>Express Delivery <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Delivery Within 24hrs"></i></sup> </b></small>
               <input type="checkbox" id="switchexp"class="expcheck dark-modeBtn" />
               <label for="switchexp" class="toggleexp">
@@ -68,7 +68,7 @@
         </div>
       
         <div class="product container ">
-          <div class="row my-4 justify-content-around">
+          <div class="row my-4 justify-content-between">
             
           
           <div class="productdetails text-center col-md-2 col-6">
@@ -83,40 +83,186 @@
             <input type="number" value="1" min="1">
           </div>
           <div class="productpriceupdate text-center col-2"><small>0</small> </div>
-          <div class="productremoval col-2">
+          <div class="productremoval  text-center  col-2">
             <button class="remove-product">
              <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
             </button>
           </div>
           </div>
         </div>
-      
-        <div class="totals">
-          <div class="totals-item">
-            <label><small>Subtotal</small> </label>
-            <div class="totals-value" id="cart-subtotal">0</div>
+
+        <hr>
+        <div class="container editdatetime">
+          <div class="row my-4 align-items-center justify-content-between">
+            <div class="col-md-2 col-12">
+              <small><b>Pickup Details</b> </small>
+            </div>
+            <div class="col-md-2 col-6">
+              <input type="date" name="" id="" class="checkoutdate">
+            </div>
+            <div class="col-md-2 col-6">
+              <form action="">
+                <!-- <select id="cars" name="cars"> -->
+                  <select  disabled class="drop-down-list">
+                  <option value="time1">10:00 AM - 12:00 AM</option>
+                  <option value="time3">12:00 AM - 02:00 AM</option>
+                  <option value="time3">02:00 AM - 04:00 AM</option>
+                  <option value="time4">04:00 AM - 06:00 AM</option>
+                  <option value="time5">06:00 AM - 08:00 AM</option>
+                </select>
+                  <script>
+                          function enable_value(event){
+                              if($(event).parent().parent().find('.drop-down-list').prop("disabled")){
+                                  $(event).parent().parent().find('.drop-down-list').attr('disabled', false);
+                              } else {
+                                   $(event).parent().parent().find('.drop-down-list').attr('disabled', true);
+                              }
+                          }
+                  </script>
+              </form>
+            </div>
+            <div class="col-md-2 text-md-center col-12">
+              <small type="" class="checkoutedit" onclick="enable_value(this)" name="edit">Edit</small>
+            </div>
           </div>
-          <div class="totals-item">
-            <label><small> Tax (5%)</small></label>
-            <div class="totals-value" id="cart-tax"><small>3.60</small> </div>
+
+          <!-- Deliverydate -->
+
+          <div class="row my-4 align-items-center justify-content-between">
+            <div class="col-md-2 col-12 ">
+              <small><b>Pickup Details</b> </small>
+            </div>
+            <div class="col-md-2 col-6">
+              <input type="date" name=""  id="" class="checkoutdate">
+              <!-- <input placeholder="Your Date" class="checkoutdate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"> -->
+            </div>
+            <div class="col-md-2 col-6">
+              <form action="">
+                <!-- <select id="cars" name="cars"> -->
+                  <select  disabled class="drop-down-list">
+                  <option value="time1">10:00 AM - 12:00 AM</option>
+                  <option value="time3">12:00 AM - 02:00 AM</option>
+                  <option value="time3">02:00 AM - 04:00 AM</option>
+                  <option value="time4">04:00 AM - 06:00 AM</option>
+                  <option value="time5">06:00 AM - 08:00 AM</option>
+                </select>
+                  <script>
+                          function enable_value(event){
+                              if($(event).parent().parent().find('.drop-down-list').prop("disabled")){
+                                  $(event).parent().parent().find('.drop-down-list').attr('disabled', false);
+                              } else {
+                                   $(event).parent().parent().find('.drop-down-list').attr('disabled', true);
+                              }
+                          }
+                  </script>
+              </form>
+            </div>
+            <div class="col-md-2 text-md-center col-12">
+              <small type="" class="checkoutedit" onclick="enable_value(this)" name="edit">Edit</small>
+            </div>
           </div>
-          <div class="totals-item">
-            <label><small>Shipping</small> </label>
-            <div class="totals-value" id="cart-shipping"><small> 0</small></div>
+
+        </div>
+      <!-- ADDONS -->
+
+      <div class="container addoncheck">
+        <div class="row my-4 align-items-center justify-content-between">
+          <div class="col-md-2 col-8">
+            <div>
+              <small><b>Addon Services</b></small>
+            </div>
+            <div>
+              <small>Softner, Emulsifier</small>
+            </div>
+            
           </div>
-          <div class="totals-item totals-item-total">
-            <label><small><b>Grand Total</b></small> </label>
-            <div class="totals-value" id="cart-total"><small>0</small> </div>
+          
+          <div class="col-md-2 text-center col-4">
+            <small style="color:#B52421 !important"><b>₹540</b></small>
+            
           </div>
         </div>
+        
+      </div>
+
+      <!-- TOTAL -->
+
+        <div class="container total">
+          <div class="row justify-content-between">
+
+            <div class="col-md-3 col-6  ">
+              <label><small> Item Total</small> </label>
+            </div>
+            <div class="totalvalue col-md-2 col-4" id="cart-subtotal">
+              <small>0</small>
+            </div>   
+          </div>
+          <div class="row  justify-content-between">
+
+            <div class="col-md-3 col-6  ">
+              <label><small> Tax (5%)</small></label>
+            </div>
+            <div class="totalvalue  col-md-2 col-4" id="cart-tax">
+              <small>3.60</small> 
+            </div>   
+          </div>
+
+          <div class="row  justify-content-between">
+
+            <div class="col-md-3 col-6 ">
+              <label><small>Express Delivery Charges</small> </label>
+            </div>
+            <div class="totalvalue  col-md-2 col-4" id="cart-shipping">
+              <small>0</small> 
+            </div>   
+          </div>
+
+          <div class="row  justify-content-between">
+
+            <div class="col-md-3 col-6  ">
+              <label><small><b>Grand Total</b></small> </label>
+            </div>
+            <div class="totalvalue col-md-2 col-4" id="cart-total">
+              <small>0</small> 
+            </div>   
+          </div>
+
+
+        </div>
+        
+        <div class="container my-4 addoncheck"><br>
+          <p><b>Your Details</b> </p>
+          <div class="row py-4 align-items-center justify-content-between">
             
-            <button class="produtproceed"><a href="thankorder.html"><small> Proceed</small></a> </button>
+            <div class="col-md-8 col-8">
+              <div>
+                <small><b>Deependra Bhaskar</b></small>
+              </div>
+              <div>
+                <small>Type 1st, Block 30, Room No. 7, Police Colony, Police Line, Jhansi, 284001</small>
+              </div>
+              
+            </div>
+            
+            <div class="col-md-2 text-center col-4">
+              <small style="color:#B52421 !important"><b>Edit</b></small>
+              
+            </div>
+          </div>
+          
+        </div>
+          
       
       </div>
-    </>
+
+    
+      
     </div>
       
+
+    <div class="container">
       
+    </div>
       
       <script>
           /* Set rates + misc */
@@ -198,11 +344,32 @@
       }
       </script>
       
+      <div class="form-check text-center my-5">
+        <form class="form">
+            <input class="form-check-input" type="checkbox" name="allagreeopt" id="allagreeopt" required="required" data-msg-required="This value is required.">
+            <label class="form-check-label" for="allagreeopt">
+                <small>I hereby decalare that all the information I have filled is correct.</small> 
+            </label>
+            <div class="text-center">
+              <button type="submit" onclick="redirect()" class="produtproceed"><a href=""><small> Proceed</small></a> </button>
+            </div> 
+            <script>
+              var redirect = function(){
+               document.location.href="thankorder.html"
+              }
+            </script>
+        </form>
+        
+    </div>
       
 
 
 
+      <div class="container my-5">
 
+          
+      </div>
+</div>
 
 
 
