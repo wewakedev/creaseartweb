@@ -19,6 +19,9 @@
     input[type=locationsearch],.locationicon{
       display: none;
     }
+    .productprice{
+      display: none;
+    }
   </style>
 
   <!-- navbar section -->
@@ -34,85 +37,7 @@
   
 
 
-<script>
-    /* Set rates + misc */
-var taxRate = 0.05;
-var shippingRate = 15.00; 
-var fadeTime = 300;
 
-
-/* Assign actions */
-$('.product-quantity input').change( function() {
-  updateQuantity(this);
-});
-
-$('.productremoval button').click( function() {
-  removeItem(this);
-});
-
-
-/* Recalculate cart */
-function recalculateCart()
-{
-  var subtotal = 0;
-  
-  /* Sum up row totals */
-  $('.product').each(function () {
-    subtotal += parseFloat($(this).children('.productpriceupdate').text());
-  });
-  
-  /* Calculate totals */
-  var tax = subtotal * taxRate;
-  var shipping = (subtotal > 0 ? shippingRate : 0);
-  var total = subtotal + tax + shipping;
-  
-  /* Update totals display */
-  $('.totals-value').fadeOut(fadeTime, function() {
-    $('#cart-subtotal').html(subtotal.toFixed(2));
-    $('#cart-tax').html(tax.toFixed(2));
-    $('#cart-shipping').html(shipping.toFixed(2));
-    $('#cart-total').html(total.toFixed(2));
-    if(total == 0){
-      $('.checkout').fadeOut(fadeTime);
-    }else{
-      $('.checkout').fadeIn(fadeTime);
-    }
-    $('.totals-value').fadeIn(fadeTime);
-  });
-}
-
-
-/* Update quantity */
-function updateQuantity(quantityInput)
-{
-  /* Calculate line price */
-  var productRow = $(quantityInput).parent().parent();
-  var price = parseFloat(productRow.children('.productprice').text());
-  var quantity = $(quantityInput).val();
-  var linePrice = price * quantity;
-  
-  /* Update line price display and recalc cart totals */
-  productRow.children('.productpriceupdate').each(function () {
-    $(this).fadeOut(fadeTime, function() {
-      $(this).text(linePrice.toFixed(2));
-      recalculateCart();
-      $(this).fadeIn(fadeTime);
-    });
-  });  
-}
-
-
-/* Remove item from cart */
-function removeItem(removeButton)
-{
-  /* Remove row from DOM and recalc cart total */
-  var productRow = $(removeButton).parent().parent();
-  productRow.slideUp(fadeTime, function() {
-    productRow.remove();
-    recalculateCart();
-  });
-}
-</script>
   
 
 
@@ -125,17 +50,25 @@ function removeItem(removeButton)
 
 <div class="productexec my-5 light-bg">
   <div class="container">
-
-
-    <div class="tab-pane fade show active" id="tabcart">
-    
-      <h3 style="color: #B52421 !important; margin: 2rem .5rem;">Super Fine Dry Cleaners</h3>
+      
       <div class="shopping-cart container my-5 p-3" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
       
-        
+        <div class="container ">
+          <div class="row my-5 justify-content-around align-items-center " style="border-bottom: 1px solid #b6b3b3;">
+            <div class="col-md-6">
+              <h4 style="color: #B52421 !important;">Super Fine Dry Cleaners</h4>
+            </div>
+            <div class="col-md-3 col-12 d-flex">
+              <small><b>Express Delivery <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Delivery Within 24hrs"></i></sup> </b></small>
+              <input type="checkbox" id="switchexp"class="expcheck dark-modeBtn" />
+              <label for="switchexp" class="toggleexp">
+              </label>   
+            </div>
+          </div>
+        </div>
       
-        <div class="product container">
-          <div class="row justify-content-around">
+        <div class="product container ">
+          <div class="row my-4 justify-content-around">
             
           
           <div class="productdetails text-center col-md-2 col-6">
@@ -152,7 +85,7 @@ function removeItem(removeButton)
           <div class="productpriceupdate text-center col-2"><small>0</small> </div>
           <div class="productremoval col-2">
             <button class="remove-product">
-              <small><i class="fa fa-trash" aria-hidden="true"></i> Remove</small> 
+             <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
             </button>
           </div>
           </div>
@@ -180,7 +113,7 @@ function removeItem(removeButton)
             <button class="produtproceed"><a href="thankorder.html"><small> Proceed</small></a> </button>
       
       </div>
-    </div>
+    </>
     </div>
       
       

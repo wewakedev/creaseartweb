@@ -1522,7 +1522,7 @@ iframe {
 {
   margin: 5px;
   padding: 10px 25px;
-  border: 1px solid #707070;
+  
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   color: #000;
@@ -1562,7 +1562,7 @@ text-align: center;
   padding: 1rem 1.4rem;
 
 }
-.addon .addoninfoicon {
+.addoninfoicon {
   position:absolute;
   top: 2%;
   right: 2%;
@@ -2556,8 +2556,8 @@ input[type=number]::-webkit-inner-spin-button {
   font-size: 12px;
   border-radius: 3px;
 }
-.product .remove-product:hover {
-  background-color: #B52421;
+.product .remove-product .fa:hover {
+  color: #B52421;
 }
 
 /* Totals section */
