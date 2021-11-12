@@ -370,10 +370,11 @@
   width: 100%;
   padding: .2rem .4rem;
   margin: 1rem 0rem;
-  color: #B52421;
+  color: #fff;
+  background: #B52421;
   border-radius: 10px;
-  border: 1px solid black;
-  font-weight: bold;
+  /* border: 1px solid black; */
+  /* font-weight: bold; */
     }
     /*
      Change background color for label next to checked radio button
@@ -381,7 +382,7 @@
     */
     .addonbtn input[type=checkbox]:checked + label {
        background-image: none;
-        background-color:#B52421;
+        background-color:#329405;
         color: #fff;
     }
     
@@ -397,8 +398,10 @@
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <div class="addonbtn">
-                        <input type="checkbox" id="addon1" value="all">
-                      <label for="addon1">Add+</label>
+                        <!-- <input type="checkbox" id="addon1" value="all">
+                      <label for="addon1">Add+</label> -->
+                      <input type="checkbox" class="checkit" name="addon1" id="addon1" value="1" onclick="yesno('addon1','checkadd1');" />
+                      <label for="addon1" name="checkadd1" id="checkadd1">Add +</label>
                       </div>
                       
                     
@@ -409,8 +412,8 @@
                       <p>Emulsifier</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <div class="addonbtn">
-                        <input type="checkbox" id="addon2"value="false">
-                      <label for="addon2">Add+</label>
+                        <input type="checkbox" class="checkit" name="addon2" id="addon2" value="2" onclick="yesno('addon2','checkadd2');" />
+                      <label for="addon2" name="checkadd2" id="checkadd2">Add +</label>
                       </div>
                       
                     
@@ -421,8 +424,8 @@
                       <p>Neutralizer</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <div class="addonbtn">
-                        <input type="checkbox" id="addon3" value="true">
-                      <label for="addon3">Add+</label>
+                        <input type="checkbox" class="checkit" name="addon3" id="addon3" value="3" onclick="yesno('addon3','checkadd3');" />
+                      <label for="addon3" name="checkadd3" id="checkadd3">Add +</label>
                       </div>
                       
                     
@@ -432,8 +435,8 @@
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <div class="addonbtn">
-                        <input type="checkbox" id="addon4" value="all">
-                      <label for="addon4">Add+</label>
+                        <input type="checkbox" class="checkit" name="addon4" id="addon4" value="4" onclick="yesno('addon4','checkadd4');" />
+                      <label for="addon4" name="checkadd4" id="checkadd4">Add +</label>
                       </div>
                       
                     
@@ -445,8 +448,8 @@
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <div class="addonbtn">
-                        <input type="checkbox" id="addon5" name="radios" value="all">
-                      <label for="addon5">Add+</label>
+                        <input type="checkbox" class="checkit" name="addon5" id="addon5" value="5" onclick="yesno('addon5','checkadd5');" />
+                      <label for="addon5" name="checkadd5" id="checkadd5">Add +</label>
                       </div>
                       
                     
@@ -458,8 +461,8 @@
                       <p>Aniseptic</p>
                       <p><b><i class="fas fa-rupee-sign "></i>120</b></p>
                       <div class="addonbtn">
-                      <input type="checkbox" id="addon6" name="radios" value="all">
-                      <label for="addon6">Add+</label>
+                        <input type="checkbox" class="checkit" name="addon6" id="addon6" value="6" onclick="yesno('addon6','checkadd6');" />
+                        <label for="addon6" name="checkadd6" id="checkadd6">Add +</label>
                       </div>
                       
                     

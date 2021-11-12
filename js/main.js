@@ -220,9 +220,23 @@ $(document).ready(function() {
 
 
 
+// ADDONCHECKSTAT
 
 
 
+                        function yesno(thecheckbox, thelabel) {
+    
+    var checkboxvar = document.getElementById(thecheckbox);
+    var labelvar = document.getElementById(thelabel);
+    if (!checkboxvar.checked) {
+        labelvar.innerHTML = "Add +";
+    }
+    else {
+        labelvar.innerHTML = "&#10003;";
+    }
+}
+              
+                      
 
 
 

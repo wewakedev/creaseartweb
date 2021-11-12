@@ -647,6 +647,68 @@ var decrementQty = minusBtn.click(function() {
     
   </div>
 
+  
+  <div class="jumbotron text-center">
+    <h1>My First Bootstrap Page</h1>
+    <p>Resize this responsive page to see the effect!</p> 
+  </div>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Column 1</h3>
+        <input id="image1" onclick="openmodal(this);"/>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Modal -->
+  <div id="couponmodal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <a class="hello" data-id="2">2</p>
+      <a class="hello" data-id="3">3</p>
+      <a class="hello" data-id="4">4</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <script>
+
+    function openmodal(input) {
+     
+     $('#couponmodal').modal('show');
+     $(".hello").unbind().click(function(event){
+   
+         $(input).val($(this).attr("data-id"));
+         $('#couponmodal').modal('hide');
+     });
+   }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     
@@ -790,6 +852,7 @@ $('.carousel').slick({
     
 //   </div>
 // Slick version 1.5.8
+
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>

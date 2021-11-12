@@ -71,18 +71,18 @@
           <div class="row my-4 justify-content-between">
             
           
-          <div class="productdetails text-center col-md-2 col-6">
+          <div class="productdetails text-center col-md-3 col-2">
             <div class="producttitle"><small><b>2 x T-Shirt</b> </small> </div>
             <!-- <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p> -->
           </div>
-          <div class=" col-md-2 col-6 text-center productcategory">
+          <div class=" col-md-2 col-3 text-center productcategory">
             <div class="producttitle"><small><b>Dry Cleaning</b> </small> </div>
           </div>
           <div class="productprice col-md-2 col-3 text-center"><small>200</small> </div>
-          <div class="product-quantity text-center col-md-2 col-3">
+          <div class="product-quantity text-center col-md-2 col-2">
             <input type="number" value="1" min="1">
           </div>
-          <div class="productpriceupdate text-center col-2"><small>0</small> </div>
+          <div class="productpriceupdate text-center col-3"><small>0</small> </div>
           <div class="productremoval  text-center  col-2">
             <button class="remove-product">
              <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
@@ -129,12 +129,11 @@
           <!-- Deliverydate -->
 
           <div class="row my-4 align-items-center justify-content-between">
-            <div class="col-md-2 col-12 ">
-              <small><b>Pickup Details</b> </small>
+            <div class="col-md-2 col-12">
+              <small><b>Delivery Details</b> </small>
             </div>
             <div class="col-md-2 col-6">
-              <input type="date" name=""  id="" class="checkoutdate">
-              <!-- <input placeholder="Your Date" class="checkoutdate" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="date"> -->
+              <input type="date" name="" id="" class="checkoutdate">
             </div>
             <div class="col-md-2 col-6">
               <form action="">
@@ -162,6 +161,7 @@
             </div>
           </div>
 
+          
         </div>
       <!-- ADDONS -->
 
@@ -169,7 +169,7 @@
         <div class="row my-4 align-items-center justify-content-between">
           <div class="col-md-2 col-8">
             <div>
-              <small><b>Addon Services</b></small>
+              <small style="color:#B52421 !important"><b>Addon Services</b></small>
             </div>
             <div>
               <small>Softner, Emulsifier</small>
@@ -185,6 +185,28 @@
         
       </div>
 
+      <!--COUPON -->
+
+      <div class="container couponcheck">
+        <div class="row my-4 justify-content-center">
+          <div class="col-md-3 text-center">
+            <div>
+              <input id="image1" onclick="return  openmodal(this);" placeholder="ADD COUPON"/>
+            </div>
+          </div>
+        </div>
+        <style>
+          .couponcheck input{
+            padding: .8rem;
+            border: 1px dashed #B52421;
+            text-align: center;
+          }
+        </style>
+        <!-- COUPON_MODAL -->
+      </div>
+      
+      
+
       <!-- TOTAL -->
 
         <div class="container total">
@@ -194,7 +216,7 @@
               <label><small> Item Total</small> </label>
             </div>
             <div class="totalvalue col-md-2 col-4" id="cart-subtotal">
-              <small>0</small>
+              <small>₹300</small>
             </div>   
           </div>
           <div class="row  justify-content-between">
@@ -203,7 +225,7 @@
               <label><small> Tax (5%)</small></label>
             </div>
             <div class="totalvalue  col-md-2 col-4" id="cart-tax">
-              <small>3.60</small> 
+              <small>₹10</small> 
             </div>   
           </div>
 
@@ -213,19 +235,21 @@
               <label><small>Express Delivery Charges</small> </label>
             </div>
             <div class="totalvalue  col-md-2 col-4" id="cart-shipping">
-              <small>0</small> 
+              <small>₹40</small> 
             </div>   
           </div>
 
+          <hr>
           <div class="row  justify-content-between">
 
             <div class="col-md-3 col-6  ">
               <label><small><b>Grand Total</b></small> </label>
             </div>
             <div class="totalvalue col-md-2 col-4" id="cart-total">
-              <small>0</small> 
+              <small><b>₹350</b></small> 
             </div>   
           </div>
+          <hr>
 
 
         </div>
@@ -348,9 +372,9 @@
         <form class="form">
             <input class="form-check-input" type="checkbox" name="allagreeopt" id="allagreeopt" required="required" data-msg-required="This value is required.">
             <label class="form-check-label" for="allagreeopt">
-                <small>I hereby decalare that all the information I have filled is correct.</small> 
+                <small>I agree to the <a href="#">Terms & Conditions</a></small> 
             </label>
-            <div class="text-center">
+            <div class="text-center my-3">
               <button type="submit" onclick="redirect()" class="produtproceed"><a href=""><small> Proceed</small></a> </button>
             </div> 
             <script>
@@ -362,13 +386,6 @@
         
     </div>
       
-
-
-
-      <div class="container my-5">
-
-          
-      </div>
 </div>
 
 
