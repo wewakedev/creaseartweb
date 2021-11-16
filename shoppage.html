@@ -9,6 +9,9 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="css/style.css">
   <script src="//code.jquery.com/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -81,10 +84,10 @@
 
           <div class="container">
             <div class="row mb-1 justify-content-between  " style="border-bottom: 1px solid #b6b3b3;">
-              <div class="col-md-3 col-6">
+              <div class="col-md-3 col-4">
                 <h6><b> SELECT SERVICES</b></h6>
               </div>
-              <div class="col-md-3 col-12 d-flex">
+              <div class="col-md-3 col-8 justify-content-center d-flex">
                 <small><b>Express Delivery <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Delivery Within 24hrs"></i></sup> </b></small>
                 <input type="checkbox" id="switchexp"class="expcheck dark-modeBtn" />
                 <label for="switchexp" class="toggleexp">
@@ -93,16 +96,10 @@
             </div>
           </div>
           <div class="service container my-4 text-center ">
-            <!-- <div class="nav flex-row flex-wrap justify-content-around nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link active d-flex justify-content-between align-items-center " id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon"><span class="">DRY CLEANING</span> </a>
-              <a class="nav-link d-flex justify-content-between align-items-center"  id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="false"><img src="img/laundryicon.png" alt="" class="serviceicon"><span class="">LAUNDRY</span> </a>
-              <a class="nav-link d-flex justify-content-between align-items-center" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> <span class="">WASH & FOLDS</span></a>
-              <a class="nav-link d-flex justify-content-between align-items-center" id="v-pills-washiron-tab" data-toggle="pill" href="#v-pills-washiron" role="tab" aria-controls="v-pills-washiron" aria-selected="false"><img src="img/washiron.png" alt="" class="serviceicon"> <span class="">WASH & IRON</span></a>
-            </div> -->
-            <div class="nav row justify-content-around nav-pills " id="v-pills-tab" role="tablist" aria-orientation="horizontal">
-              <a class="nav-link active col-md-3 col-6 d-flex justify-content-center align-items-center " id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon"><span class="">DRY CLEANING</span> </a>
+            <div class="nav row justify-content-around  nav-pills " id="v-pills-tab" role="tablist" aria-orientation="horizontal">
+              <a class="nav-link active col-md-3 col-6 d-flex justify-content-center  align-items-center " id="v-pills-dryclean-tab" data-toggle="pill" href="#v-pills-dryclean" role="tab" aria-controls="v-pills-dryclean" aria-selected="true"><img src="img/drycleaning.png" alt="" class="serviceicon"><span class="">DRY CLEANING</span> </a>
               <a class="nav-link d-flex col-md-3 col-6 justify-content-center align-items-center"  id="v-pills-laundry-tab" data-toggle="pill" href="#v-pills-laundry" role="tab" aria-controls="v-pills-laundry" aria-selected="false"><img src="img/laundryicon.png" alt="" class="serviceicon"><span class="">LAUNDRY</span> </a>
-              <a class="nav-link d-flex col-md-3 col-6 justify-content-center align-items-center" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> <span class="">WASH & FOLDS</span></a>
+              <a class="nav-link d-flex col-md-3 col-6 justify-content-center align-items-center" id="v-pills-washfolds-tab" data-toggle="pill" href="#v-pills-washfolds" role="tab" aria-controls="v-pills-washfolds" aria-selected="false"><img src="img/washfoldicon.png" alt="" class="serviceicon"> <span class="">WASH & FOLD</span></a>
               <a class="nav-link d-flex col-md-3 col-6 justify-content-center align-items-center" id="v-pills-washiron-tab" data-toggle="pill" href="#v-pills-washiron" role="tab" aria-controls="v-pills-washiron" aria-selected="false"><img src="img/washiron.png" alt="" class="serviceicon"> <span class="">WASH & IRON</span></a>
             </div>
         </div>
@@ -133,7 +130,7 @@
                       <div class="tab-pane fade show active" id="pills-men" role="tabpanel" aria-labelledby="pills-men-tab">
 
                         <div class="container">
-                          <div class="row justify-content-around my-2">
+                          <div class="row venitemcat justify-content-around my-2">
                             <div class="col-4"><small><b>Clothes List</b></small> </div>
                             <div class="col-4"><small><b>Price</b></small> </div>
                             <div class="col-4"><small><b>Qty.</b></small> </div>  
@@ -142,21 +139,32 @@
                             <div class="col-4"><small>Tshirt</small> </div>
                             <div class="col-4"><small>₹20</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0" max="10">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Jeans</small> </div>
                             <div class="col-4"><small>₹50</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0" max="10">
-                            </div> 
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>                            </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Blazer</small> </div>
                             <div class="col-4"><small>₹150</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0" max="10">
+                              <iv class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </iv>
                             </div> 
                           </div>
                         </div>
@@ -167,7 +175,7 @@
                       <div class="tab-pane fade" id="pills-women" role="tabpanel" aria-labelledby="pills-women-tab">
 
                         <div class="container">
-                          <div class="row justify-content-around my-2">
+                          <div class="row venitemcat justify-content-around my-2">
                             <div class="col-4"><small><b>Clothes List</b></small> </div>
                             <div class="col-4"><small><b>Price</b></small> </div>
                             <div class="col-4"><small><b>Qty.</b></small> </div>  
@@ -176,21 +184,33 @@
                             <div class="col-4"><small>Saree</small> </div>
                             <div class="col-4"><small>₹150</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Shirt</small> </div>
                             <div class="col-4"><small>₹50</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Coat</small> </div>
                             <div class="col-4"><small>₹200</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                         </div>
@@ -199,8 +219,8 @@
                       </div>
                       <div class="tab-pane fade" id="pills-kids" role="tabpanel" aria-labelledby="pills-kids-tab">
                         
-                        <div class="container">
-                          <div class="row justify-content-around my-2">
+                        <div class="container ">
+                          <div class="row venitemcat justify-content-around my-2">
                             <div class="col-4"><small><b>Clothes List</b></small> </div>
                             <div class="col-4"><small><b>Price</b></small> </div>
                             <div class="col-4"><small><b>Qty.</b></small> </div>  
@@ -209,21 +229,33 @@
                             <div class="col-4"><small>Shirt</small> </div>
                             <div class="col-4"><small>₹20</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Shorts</small> </div>
                             <div class="col-4"><small>₹50</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Jacket</small> </div>
                             <div class="col-4"><small>₹150</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                         </div>
@@ -233,7 +265,7 @@
                       <div class="tab-pane fade" id="pills-household" role="tabpanel" aria-labelledby="pills-household-tab">
                         
                         <div class="container">
-                          <div class="row justify-content-around my-2">
+                          <div class="row venitemcat justify-content-around my-2">
                             <div class="col-4"><small><b>Clothes List</b></small> </div>
                             <div class="col-4"><small><b>Price</b></small> </div>
                             <div class="col-4"><small><b>Qty.</b></small> </div>  
@@ -242,21 +274,33 @@
                             <div class="col-4"><small>Blanket</small> </div>
                             <div class="col-4"><small>₹200</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Bedsheet</small> </div>
                             <div class="col-4"><small>₹100</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                           <div class="row my-2">
                             <div class="col-4"><small>Rugs</small> </div>
                             <div class="col-4"><small>₹250</small> </div>
                             <div class=" col-4 clothesquantity ">
-                              <input type="number" value="0" min="0">
+                              <div class="button-container d-flex justify-content-center align-items-center">
+                                <button class="cart-qty-plus" type="button" value="+">+</button>
+                                <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                                <button class="cart-qty-minus" type="button" value="-">-</button>
+                            </div>
                             </div> 
                           </div>
                         </div>
@@ -270,15 +314,20 @@
             <div class="tab-pane fade" id="v-pills-laundry" role="tabpanel" aria-labelledby="v-pills-laundry-tab">
              
               <div class="container">
-                <div class="row d-flex text-center justify-content-between align-items-center">
-                  <div class="col-md-4 col-7">
-                    <p>Laundry / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p>
-                    <small><span style="color: #B52421;">₹90</span>  per kg</small>
+                <div class="row venitemcat justify-content-between text-center my-2">
+                  <div class="col-md-4 col-7"><b><p>Laundry / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p></b></div>
+                  <div class="col-4"><b><p>Qty</p> </b></div>   
+                </div>
+
+                <div class="row  justify-content-between text-center my-2">
+                  <div class="col-md-4 col-7"><small><span style="color: #B52421;">₹90</span>  per kg</small></div>
+                  <div class=" col-4 clothesquantity ">
+                    <div class="button-container d-flex justify-content-center align-items-center">
+                      <button class="cart-qty-plus" type="button" value="+">+</button>
+                      <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                      <button class="cart-qty-minus" type="button" value="-">-</button>
                   </div>
-                  <div class="col-md-4 col-5 clothesquantity ">
-                    <label for="qty" style="color: #B52421;"><b>Qty</b></label><br>
-                    <input type="number" value="0" min="0">
-                  </div>
+                  </div> 
                 </div>
               </div>
 
@@ -286,15 +335,20 @@
             <div class="tab-pane fade" id="v-pills-washfolds" role="tabpanel" aria-labelledby="v-pills-washfolds-tab">
               
               <div class="container">
-                <div class="row d-flex text-center justify-content-between align-items-center">
-                  <div class="col-md-4 col-7">
-                    <p>Wash & Folds / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p>
-                    <small><span style="color: #B52421;">₹90</span>  per kg</small>
+                <div class="row venitemcat justify-content-between text-center my-2">
+                  <div class="col-md-4 col-7"><b><p>Wash & Fold / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p></b></div>
+                  <div class="col-4"><b><p>Qty</p> </b></div>   
+                </div>
+
+                <div class="row  justify-content-between text-center my-2">
+                  <div class="col-md-4 col-7"><small><span style="color: #B52421;">₹90</span>  per kg</small></div>
+                  <div class=" col-4 clothesquantity ">
+                    <div class="button-container d-flex justify-content-center align-items-center">
+                      <button class="cart-qty-plus" type="button" value="+">+</button>
+                      <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                      <button class="cart-qty-minus" type="button" value="-">-</button>
                   </div>
-                  <div class="col-md-4 col-5 clothesquantity ">
-                    <label for="qty" style="color: #B52421;"><b>Qty</b></label><br>
-                    <input type="number" value="0" min="0">
-                  </div>
+                  </div> 
                 </div>
               </div>
 
@@ -302,15 +356,20 @@
             <div class="tab-pane fade" id="v-pills-washiron" role="tabpanel" aria-labelledby="v-pills-washiron-tab">
               
               <div class="container">
-                <div class="row d-flex text-center justify-content-between align-items-center">
-                  <div class="col-md-4 col-7">
-                    <p>Wash & Iron / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p>
-                    <small><span style="color: #B52421;">₹90</span>  per kg</small>
+                <div class="row venitemcat justify-content-between text-center my-2">
+                  <div class="col-md-4 col-7"><b><p>Wash & Iron / Kg <sup><i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" data-original-title="Place Orders in Kg"></i></sup></p></b></div>
+                  <div class="col-4"><b><p>Qty</p> </b></div>   
+                </div>
+
+                <div class="row  justify-content-between text-center my-2">
+                  <div class="col-md-4 col-7"><small><span style="color: #B52421;">₹90</span>  per kg</small></div>
+                  <div class=" col-4 clothesquantity ">
+                    <div class="button-container d-flex justify-content-center align-items-center">
+                      <button class="cart-qty-plus" type="button" value="+">+</button>
+                      <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
+                      <button class="cart-qty-minus" type="button" value="-">-</button>
                   </div>
-                  <div class="col-md-4 col-5 clothesquantity ">
-                    <label for="qty" style="color: #B52421;"><b>Qty</b></label><br>
-                    <input type="number" value="0" min="0">
-                  </div>
+                  </div> 
                 </div>
               </div>
 
@@ -543,7 +602,7 @@
 //   });
 // });
 $('.carousel').slick({
-  dots: false,
+  dots: true,
   infinite: false,
   speed: 300,
   slidesToShow: 4,
@@ -653,7 +712,30 @@ $('.carousel').slick({
     
     
 //   </div>
-// Slick version 1.5.8
+
+var incrementQty;
+var decrementQty;
+var plusBtn  = $(".cart-qty-plus");
+var minusBtn = $(".cart-qty-minus");
+var incrementQty = plusBtn.click(function() {
+	var $n = $(this)
+		.parent(".button-container")
+		.find(".qty");
+	$n.val(Number($n.val())+1 );
+	update_amounts();
+});
+
+var decrementQty = minusBtn.click(function() {
+		var $n = $(this)
+		.parent(".button-container")
+		.find(".qty");
+	var QtyVal = Number($n.val());
+	if (QtyVal > 0) {
+		$n.val(QtyVal-1);
+	}
+	update_amounts();
+});
+
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
