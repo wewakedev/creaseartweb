@@ -602,15 +602,105 @@ var decrementQty = minusBtn.click(function() {
 
 
 
+<div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog leftsidebar" role="document">
+      <div class="modal-content">
+
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"  aria-label="Close"><span aria-hidden="true">&times;</span></button>	
+          </div>
+
+          <div class="text-center">
+            <!-- <span><p class="" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: 10px 18px; margin: 20px 70px; cursor: pointer; color: white; background: #B52421">Login</p></span>  -->
+         </div>
+          
+          <div class="modal-body sidebar-item">
+              <ul>
+                <li><span><p class="" id="myModalLabel" data-toggle="modal" data-dismiss="modal" data-target="#modallogin" style="padding: .8rem 1.6rem;
+                  margin: 0rem 7rem 0rem 0rem; cursor: pointer; color: white; background: #B52421">Login / Signup</p></span> </li>
+                  <hr>
+                <li><img src="img/ham/myaccount.svg" alt="">&nbsp; <a class="" href="profile.html"><b>My Account </b></a></li>
+                <li><img src="img/ham/orderhere.svg" alt=""> &nbsp;<a class="" data-toggle="modal" data-target="#enterpin" data-dismiss="modal" href=""><b>Order Here</b></a></li>
+                <li><img src="img/discount.png" alt="" style="width: 1.3rem;">&nbsp; <a class="" href="offers.html"><b>Offers</b></a></li>
+                <li><img src="img/ham/support.svg" alt="">&nbsp; <a class="" href="support.html"><b>Support</b></a></li>
+                <li><img src="img/ham/faq.svg" alt="">&nbsp; <a class="" href="faqs.html"><b>FAQs</b></a></li>
+                <li><img src="img/ham/cart.svg" alt="">&nbsp; <a class="" href="checkout.html"><b>Cart</b></a></li>
+                <li><img src="img/ham/about.svg" alt="">&nbsp; <a class="" href="about.html"><b>About Us</b></a></li>
+                <li><img src="img/ham/feed.svg" alt="">&nbsp; <a class="" href="feedback.html"><b>Feedback</b></a></li>
+                <li><img src="img/ham/rateus.svg" alt="">&nbsp; <a class="" href=""><b>Rate Us</b></a></li>
+                <hr>
+                <!-- <li> <a class="" href="#"><b>Products</b></a></li>
+                <hr>
+                <ul style="margin-left: 2rem;">
+                  <li><a href="drive.html"><b>Drive</b> </a></li>
+                  <li><a href="selfdrive.html"><b>Self Delivery</b> </a></li>
+                  <li><a href="#"><b>Starter Kit</b> </a></li>
+                </ul> -->
+              </ul>
+              
+              <div class="aaqrbadges ">
+                <div class="row justify-content-around">
+                    <div class="sidebarbadge ">
+                      <img class="googlebadge" src="img/gplayqr.png" alt="">
+                    </div>
+                    <div class="sidebarbadge text-center">
+                      <img class="iosbadge" src="img/astoreqr.png"  alt="">
+                    </div>
+                </div>
+                
+              </div>
+          </div>
+
+      </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
 
 
 
 
 
+<div class="container">
+  <form class="is-readonly">
+    <div class="form-group">
+      
+      <input type="text" class="form-control is-disabled" id="exampleInputPassword1" placeholder="Name" value="SamaraSsr" disabled>
+    </div>
+  <div class="form-group">
+      
+      <input type="email" class="form-control is-disabled" id="exampleInputEmail1" placeholder="Email" value="samara@company.com" disabled>
+    </div>
+    <button type="button" class=" btn-edit js-edit">Edit</button>
+    <button type="button" class=" btn-save js-save">Save</button>
+  </form>
+  
+  </div>
 
+<script>
+  $(document).ready(function(){
+	$('.js-edit, .js-save').on('click', function(){
+  	var $form = $(this).closest('form');
+  	$form.toggleClass('is-readonly is-editing');
+    var isReadonly  = $form.hasClass('is-readonly');
+    $form.find('input,textarea').prop('disabled', isReadonly);
+  });
+});
+</script>
+<STyle>
+  form.is-readonly .btn-save {
+  display: none;
+}
+form.is-readonly input[disabled], form.is-readonly textarea[disabled] {
+  cursor: text;
+  background-color: #fff;
+  border-color: transparent;
+  outline-color: transparent;
+  box-shadow: none;
+}
+form.is-editing .btn-edit {
+  display: none;
+}
 
-
-
+</STyle>
     <!-- Footer -->
     
   <div class="">

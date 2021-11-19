@@ -38,7 +38,7 @@
     <div class="container propagehead my-5">
         <div class="row text-center">
             <div class="col-md-4 mt-2">
-              <h2><b style="color: #B52421 !important;">CREAEART</b> <span><b>STORES</b></span></h2>
+              <h2><b style="color: #B52421 !important;">CREAEART</b> <span class="retailstext"><b>Retail</b></span></h2>
             </div>
   
             <div class="col-md-6 col-10">
@@ -112,7 +112,7 @@
                     <div class="productdescription container">
                         
                         <div class="mrpdes row ">
-                            <div class="col-md-8">
+                            <div class="col-md-12 col-lg-8">
                                 <table class="table mrptable" id="mrpdes">
                                     <tr>
                                       <td><p><b>M.R.P</b></p></td>
@@ -127,16 +127,16 @@
                                     <tr>
                                         <td><p><b>You Save</b></p></td>
                                         <td>:</td>
-                                        <td><small><i class="fa fa-rupee-sign"></i>166 <span style="color: #43A047;">(21%)</span></small></td>
+                                        <td><small style="color:#B52421;"><i class="fa fa-rupee-sign"></i>166 <span style="color: #43A047;">(21%)</span></small></td>
                                     </tr>
                                     
-                                  </table>
+                                </table>
                             </div>
                             
                         </div>
                         <hr>
                         <div class="mrpdes row ">
-                            <div class="col-md-8">
+                            <div class="col-md-12 col-lg-8">
                                 <table class="table mrptable" id="mrpdes">
                                     <tr>
                                       <td><p><b>Brand</b></p></td>
@@ -198,7 +198,7 @@
                     
                         
                 </div>
-                <div class="col-md-4 addtocartsection">
+                <div class="col-md-4 addtocartsection m-2 m-md-0 col-lg-3">
                     <div>
                         <h6 style="color: #B52421 !important;"><b>INR. 550.00</b></h6>
                         <small>INR 550 includes shipping and delivery fees</small><br>
@@ -215,23 +215,33 @@
                     <div class="stockstate">
                         <h6 style="color: #43A047 !important;"><b>In Stock</b></h6>
                     </div>
-                    <div class="row  justify-content-between proquant text-center my-2">
+                    <div class="row proquant my-2">
 
-                        <div class=" col-md-12 col-4 clothesquantity ">
-                          <div class="button-container d-flex justify-content-center align-items-center">
-                            <button class="cart-qty-plus" type="button" value="+">+</button>
-                            <input type="number" name="qty" min="0" class="qty form-control" value="0"/>
-                            <button class="cart-qty-minus" type="button" value="-">-</button>
-                        </div>
+                        <div class=" col-md-12 col-12 productquantity">
+                            <div class="d-flex align-items-center">
+                              <div class="quantlabel">
+                                <b><small>Qty : &nbsp; &nbsp;</small></b>
+                              </div>
+                              <div class="quantpro align-items-center">
+                                    <button class="proqtyminus" type="button" value="-">-</button>
+                                    <input type="number" name="qty" min="0" class="qty" value="0"/>
+                                    <button class="proqtyplus" type="button" value="+">+</button>
+                                    
+                              </div>
+                            
+                            </div>
                         </div> 
-                      </div>
+                    </div>
                     <div class="product-actions row my-3">
-                         <div class="col-6 text-center">
+                         <div class="col-12 text-center">
                            <button class="add-productbtn" onclick="location.href='productcart.html'">
                           <a href="productcart.html"><small><i class="fas fa-cart-plus"></i> &nbsp;Add to cart</small></a>
                         </button> 
                          </div>
 
+                    </div>
+                    <div class="returnstate">
+                        <small>Return Policy: <span style="color: #0082C6;">Returnable until Jan 31</span></small>
                     </div>
                 </div>
                 
@@ -240,22 +250,21 @@
     </div>
 
 
-    <div class="container productcatone my-5 py-2">
+    <div class="container productcatone my-2 py-2">
         
-        <div class="catonehead text-center my-3">
-            <h5><b style="color: #B52421 !important;">Related Items</b></h5>
+        <div class="catonehead my-3">
+            <h5><b style="color: #B52421 !important;"> Other Related Items</b></h5>
         </div>
-        <hr style="background-color: #B52421;">
+        <hr style="">
         <div class="catoneitems">
-            <div class="row d-flex flex-wrap justify-content-around ">
+            <div class="row d-flex flex-wrap justify-content-between ">
             
-                <div class="productitem col-md-4 col-xl-3 col-6">
+                <div class="productitem col-md-4 col-lg-3 col-6">
                     <div class="productimg">
                         <img src="img/products/productiron.jpg" alt="">
                     </div>
                     <div class="productitemdeats">
-                        <p>Iron</p>
-                        <p><i class="fas fa-rupee-sign"></i>500</p>
+                        <h6>Iron</h6>
                         <div class="ratings">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -264,6 +273,8 @@
                             <i class="fa fa-star-half" aria-hidden="true"></i>
                             <span class="ratingcount">(21)</span>
                         </div>
+                        <p><span><i class="fas fa-rupee-sign"></i>399.00</span> <strike><i class="fas fa-rupee-sign"></i>599.00</strike></p>
+                        
                     </div>
                     
                 </div>
@@ -273,8 +284,7 @@
                         <img src="img/products/productstainremo.jpg" alt="">
                     </div>
                     <div class="productitemdeats">
-                        <p>Stain Remover</p>
-                        <p><i class="fas fa-rupee-sign"></i>100</p>
+                        <h6>Stain Remover</h6>
                         <div class="ratings">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -283,6 +293,8 @@
                             <i class="fa fa-star-half" aria-hidden="true"></i>
                             <span class="ratingcount">(21)</span>
                         </div>
+                        <p><span><i class="fas fa-rupee-sign"></i>399.00</span> <strike><i class="fas fa-rupee-sign"></i>599.00</strike></p>
+                        
                     </div>
                     
                 </div>
@@ -292,8 +304,7 @@
                         <img src="img/products/productbasket.jpg" alt="">
                     </div>
                     <div class="productitemdeats">
-                        <p>Stain Remover</p>
-                        <p><i class="fas fa-rupee-sign"></i>100</p>
+                        <h6>Baskets</h6>
                         <div class="ratings">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -302,17 +313,362 @@
                             <i class="fa fa-star-half" aria-hidden="true"></i>
                             <span class="ratingcount">(21)</span>
                         </div>
+                        <p><span><i class="fas fa-rupee-sign"></i>399.00</span> <strike><i class="fas fa-rupee-sign"></i>599.00</strike></p>
+                        
                     </div>
                     
                 </div>
             </div>
         </div>
+        <hr>
 
     </div>
+    
 
 
+<div class="container my-2 py-2 procomments">
+    <div class="procommentshead my-3">
+        <h5><b style="color: #B52421 !important;">Customer questions & answers</b></h5>
+    </div>
+    <hr style="">
 
+    <div class="searchcomment col-md-10">
+        <div class="">
+            <div class="p-1 bg-light shadow-sm mb-4">
+              <div class="input-group">
+                <input type="search" placeholder="Have a question? Search for answers" aria-describedby="button-addon1" class="form-control border-0 bg-light"><br>
+                <div class="input-group-append">
+                  <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+            </div>
 
+            <style>
+                .form-control::placeholder {
+                    font-size: 0.95rem;
+                    color: #aaa;
+                  }
+                  .form-control:focus {
+                    box-shadow: none;
+                  }
+                  .p-1.bg-light.rounded.rounded-pill.shadow-sm.mb-4 {
+                      width: 100%;
+                  }
+                  .form-control-underlined {
+                    border-width: 0;
+                    border-bottom-width: 1px;
+                    border-radius: 0;
+                    padding-left: 0;
+                  }
+            </style>
+            
+        </div>
+    </div>
+
+    <div class="comments col-md-10 ">
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        <comment>
+            <table class="table mrptable my-3" id="procomment">
+                <tr>
+                  <td><small><b>Question:</b></small></td>
+                  
+                  <td><small>Lorem ipsum dolor sit amet.</small></td>
+                </tr>
+                <tr>
+                    <td><small><b>Answer: </b></small></td>
+                    <td><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem modi adipisci eius aliquid dolor! Quia voluptatum dolore culpa asperiores maiores.</small></td>
+                </tr>
+            
+            </table>
+        </comment>
+
+        
+
+        <script>
+                        $(function() {
+              $("comment").slice(0, 4).show();
+              $("#loadMore").on('click', function(e) {
+                e.preventDefault();
+                $("comment:hidden").slice(0, 4).slideDown();
+                if ($("comment:hidden").length == 0) {
+                  $("#loadLess").fadeIn('slow');
+                  $("#loadMore").hide();
+                //   $("#loadMore").text('Load only the first 4');
+                }
+                $('html,body').animate({
+                  scrollTop: $(this).offset().top
+                }, 1000);
+              });
+            
+              $("#loadLess").on('click', function(e) {
+                e.preventDefault();
+                $('comment:not(:lt(4))').fadeOut();
+                $("#loadMore").fadeIn('slow');
+                $("#loadLess").hide();
+            
+                desiredHeight = $(window).height();
+            
+                $('html,body').animate({
+                  scrollTop: $(this).offset().top + desiredHeight
+                });
+              });
+            
+            });
+        </script>
+        
+
+          
+
+        <div class="showmorecomment col-12 text-center">
+            <a href="javascript:;" id="loadMore"><small>See more answered questions</small> </a>
+            <a href="javascript:;" id="loadLess"><small>See less answered questions</small> </a>
+        </div>
+          
+    </div>
+
+    <hr class="mt-5">
+
+</div>
+
+<div class="container writereview">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="reviewhead">
+                <h5><b style="color: #B52421 !important;">Customer Reviews</b></h5>
+            </div>
+            <div class="ratingstat">
+                <div class="ratings">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half" aria-hidden="true"></i>
+                    <span class="font-weight-normal text-dark"> 3.8 out of 5</span>
+                </div>
+            </div>
+            <div class="ratingbar">
+                <div class="row justify-content-around align-items-center">
+
+                    <div class=""><small>5 Star</small></div>
+                    <div class="col-8">
+                        <div class='progress-bar'>
+                            <div class='progress-value value-80'></div>
+                        </div>
+                    </div>
+                    <div class="ratingtent">
+                        <small>86%</small>
+                    </div>
+                </div>
+                <div class="row justify-content-around align-items-center">
+
+                    <div class=""><small>4 Star</small></div>
+                    <div class="col-8">
+                        <div class='progress-bar'>
+                            <div class='progress-value value-60'></div>
+                        </div>
+                    </div>
+                    <div class="ratingtent">
+                        <small>6%</small>
+                    </div>
+                </div>
+                <div class="row justify-content-around align-items-center">
+
+                    <div class=""><small>3 Star</small></div>
+                    <div class="col-8">
+                        <div class='progress-bar'>
+                            <div class='progress-value value-40'></div>
+                        </div>
+                    </div>
+                    <div class="ratingtent">
+                        <small>4%</small>
+                    </div>
+                </div>
+                <div class="row justify-content-around align-items-center">
+
+                    <div class=""><small>2 Star</small></div>
+                    <div class="col-8">
+                        <div class='progress-bar'>
+                            <div class='progress-value value-20'></div>
+                        </div>
+                    </div>
+                    <div class="ratingtent">
+                        <small>3%</small>
+                    </div>
+                </div>
+                <div class="row justify-content-around align-items-center">
+
+                    <div class=""><small>1 Star</small></div>
+                    <div class="col-8">
+                        <div class='progress-bar'>
+                            <div class='progress-value value-10'></div>
+                        </div>
+                    </div>
+                    <div class="ratingtent">
+                        <small>1%</small>
+                    </div>
+                </div>
+                
+                  
+            </div>
+            <hr>
+            <form action="">
+                <div class="reviewhead">
+                    <h5><b style="color: #B52421 !important;">Review this product</b></h5>
+                    <h6>Share your thought with other customers</h6>
+                </div>
+                <h6>Overall Rating</h6>
+                <div class="ratingstarform">
+                    <small></small>
+                    <span onmouseover="starmark(this)" onclick="starmark(this)" id="1one" class="fa fa-star checked"></span>
+                    <span onmouseover="starmark(this)" onclick="starmark(this)" id="2one" class="fa fa-star "></span>
+                    <span onmouseover="starmark(this)" onclick="starmark(this)" id="3one"  class="fa fa-star "></span>
+                    <span onmouseover="starmark(this)" onclick="starmark(this)" id="4one"  class="fa fa-star"></span>
+                    <span onmouseover="starmark(this)" onclick="starmark(this)" id="5one" class="fa fa-star"></span>
+                    <br />
+                    <small>Add a headline</small>
+                    <input type="text" style="margin-top:5px;" class="form-control" rows="3" id="comment" placeholder="What's most important to you?"></input>
+                    <small>Add a written review</small>
+                    <textarea style="margin-top:5px;" class="form-control" rows="3" id="headcomment" placeholder="Enter your review"></textarea>
+                    
+                    <button onclick="result()" type="button" style="margin-top:10px;margin-left:5px;" class="reviewsubmit">Submit</button>
+                </div>
+            </form>
+            
+            <script>
+                var count;
+
+                function starmark(item) {
+                  count = item.id[0];
+                  sessionStorage.starRating = count;
+                  var subid = item.id.substring(1);
+                  for (var i = 0; i < 5; i++) {
+                    if (i < count) {
+                      document.getElementById(i + 1 + subid).style.color = "orange";
+                    } else {
+                      document.getElementById(i + 1 + subid).style.color = "black";
+                    }
+                  }
+                }
+
+// function result() {
+//   //Rating : Count
+//   //Review : Comment(id)
+//   alert(
+//     "Rating : " +
+//       count +
+//       "\nReview : " +
+//       document.getElementById("comment").value
+//   );
+// }
+
+            </script>
+        </div>
+    </div>
+</div>
 
 
 
@@ -335,11 +691,11 @@
 <script>
     var incrementQty;
 var decrementQty;
-var plusBtn  = $(".cart-qty-plus");
-var minusBtn = $(".cart-qty-minus");
+var plusBtn  = $(".proqtyplus");
+var minusBtn = $(".proqtyminus");
 var incrementQty = plusBtn.click(function() {
 	var $n = $(this)
-		.parent(".button-container")
+		.parent(".quantpro")
 		.find(".qty");
 	$n.val(Number($n.val())+1 );
 	update_amounts();
@@ -347,7 +703,7 @@ var incrementQty = plusBtn.click(function() {
 
 var decrementQty = minusBtn.click(function() {
 		var $n = $(this)
-		.parent(".button-container")
+		.parent(".quantpro")
 		.find(".qty");
 	var QtyVal = Number($n.val());
 	if (QtyVal > 0) {
@@ -362,7 +718,7 @@ var decrementQty = minusBtn.click(function() {
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="js/main.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </body>

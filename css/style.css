@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 
 h1,h2,h3,h4,h5,h6{
   font-family: 'Montserrat', sans-serif;
   color: #282C3F !important;
+  font-weight: bold;
+}
+.userlog,.shoptitle{
+  font-family: 'Montserrat', sans-serif;
+}
+.userlog p{
+  margin: .2rem;
 }
 
-p,small{
+p,small,label,td,tr{
 /* font: normal normal normal 16px/20px poppins;
 letter-spacing: 0.25px; */
-font-family: 'Roboto';
+font-family: 'Roboto' sans-serif;
 color: #191717;
 opacity: 1;
 }
@@ -65,24 +73,36 @@ ul{
 .cartmain{
   position: absolute;
   top: 30%;
-  right: 5%;
+  right: 4%;
   
 }
-.sidebar-item ul{
-  color: #282C3F;
+.retailstext{
+  font-family: 'Marck Script', cursive;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.sidebar-item ul a{
+  color: #fff !important;
   list-style-type: none;
-  font-family: 'Roboto', sans-serif !important; 
+  font-family: 'Montserrat', sans-serif !important; 
   font-size: 1rem;
   padding: 0px;
 }
+.sidebar-item ul li  img{
+  width: 20px;
+}
+.sidebar-item ul{
+  padding-inline-start: 5px !important;
+
+}
 .sidebar-item ul li a:hover{
-  color: #B52421 !important;
+  color: #282C3F !important;
 }
 .sidebar-item ul li {
-  padding: 5px 10px;
-  margin: 1.5rem auto;
+  padding:.8rem .2rem;
+  margin: 1rem auto;
   cursor: pointer;
-  /* border-bottom: 1px solid #ced4da; */
+  border-bottom: 1px solid #fff;
 }
 .modal.left .modal-dialog,.modal.right .modal-dialog
  {
@@ -347,7 +367,6 @@ fieldset {
   background-color: #5B7BD5;
   background-image: linear-gradient(#5B7BD5, #4864B1);
 }
-
 
 /* Google */
 .loginBtn--google {
@@ -798,11 +817,11 @@ ul.links {
       width: 100% !important;
     }
     .cart-qty-plus {
-      left: 15% !important;
+      right: 10% !important;
     }
     .cart-qty-minus {
       
-      right: 15% !important;
+      left: 10% !important;
     }
     .appsec{
         text-align: center;
@@ -858,6 +877,11 @@ ul.links {
     display: none;
     
   }
+  .addtocartsection{
+    height: 80vh !important;
+    margin: 0px !important;
+  }
+ 
   .googlebadge, .iosbadge {
     width: 150px;
 ;
@@ -882,6 +906,7 @@ ul.links {
 .guidearrow::after{
   display: none;
 }
+
 }
 
 /* @media only screen and (min-width: 1200px){
@@ -1037,14 +1062,19 @@ form .input-textarea {
 .tab1body, .tab2body, .tab3body, .tab4body {
   padding: 0px !important;
 }
-.feedsubmitbtn,.savechangesbtn,.ctavendorbtn,.registerbtn,.vendorformsubmitbtn,.proaddformsubbtn,.contactsubmitbtn,.ctariderbtn{
+.feedsubmitbtn,.savechangesbtn,.ctavendorbtn,.registerbtn,.vendorformsubmitbtn,.proaddformsubbtn,.contactsubmitbtn,.ctariderbtn,.reviewsubmit{
   padding: .4rem 2rem;
   background: #B52421;
   border: transparent;
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+.reviewsubmit{
+  padding: .2rem .4rem;
+  font-size: small;
+  float: right;
+  margin: .5rem;
+}
 .proaddformsubbtn{
   background: #59A5D8;
   border-radius: 5px;
@@ -1244,7 +1274,10 @@ form .input-textarea {
   background: transparent !important;
   border-bottom: 1px solid #B52421 !important;
 }
-.nav-tabs .nav-link {
+ .nav-tabs {
+  border: none !important;
+}
+.nav-tabs .nav-link{
   border: none !important;
 }
 
@@ -2194,10 +2227,14 @@ transition: all 300ms ease;
 .service a,.category ul li a{
   font: normal normal bold 12px/18px Montserrat;
 }
-.mrptable td, .mrptable th{
+.mrptable td, .mrptable th,.commenttable td,.commenttable th{
 padding:0rem .5rem !important;
 border: none !important;
 font-family: 'Montserrat';
+}
+.commenttable .proques{
+  color: #0574AE !important;
+
 }
 
 .checkoutbtn h6, .pinsubmitbtn{
@@ -2471,14 +2508,19 @@ font-family: 'Montserrat';
 .productitemdeats{
   text-align: center;
 }
-.productitemdeats p:nth-child(2){
-  color: gray;
-  font-weight: bold;
+.productitemdeats p:nth-child(3){
+  color: #B52421;
+  font-weight: 600;
+  /* margin: .5rem; */
+}
+strike{
+  color: #a1aab0;
+  font-size: .8rem;
 }
 
-.productitemdeats p:nth-child(1){
-  color:#B52421;
-  font-weight: 900;
+.productitemdeats h6:nth-child(1){
+font-weight: bold;
+color: #282C3F !important;
 }
 .productimg img{
   margin: .5rem;
@@ -2494,21 +2536,26 @@ font-family: 'Montserrat';
 }
 
 .clothesquantity input[type='number'],.productquantity input[type='number']{
-  width: 30%;
   border: 1px solid transparent;
   background: #fff;
-  margin: 0 0 1rem;
   text-align: center;
   padding: .5rem;
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.clothesquantity input[type='number']{
+  width: 50%;
+}
+
+.productquantity input[type='number']{
+  width: 100%;
 }
 
 .product-actions button{
   padding: .4rem .8rem;
   font-size: bold;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   width: 100%;
   
 }
@@ -2616,14 +2663,17 @@ input[type=number]::-webkit-inner-spin-button {
 	display: inline-block;
 	margin: 0px 5px;
 }
+.quantpro{
+  position: relative;
+}
 .addtocartsection{
-  height: 60vh;
+  height: 65vh;
   padding: 1.5rem;
   border: 1px solid #707070;
   border-radius: 7px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-.cart-qty-plus,
+.cart-qty-plus,.proqtyplus,.proqtyminus,.cartqtyplus,.cartqtyminus,
 .cart-qty-minus{
 	width: 20px;
 	height: 20px;
@@ -2634,12 +2684,21 @@ input[type=number]::-webkit-inner-spin-button {
     position: absolute;
     top: 5%;
 }
-.cart-qty-minus,.cart-qty-plus{
-  left: 38%;
+.cart-qty-minus{
+  left: 30%;
 }
-.proquant .cart-qty-minus{
-  left:60%;
+.cart-qty-plus{
+  right: 30%;
 }
+.proqtyminus{
+  left: 10%;
+  }
+  
+  .proqtyplus{
+    right: 10%;
+    
+  }
+
 /* .cart-qty-plus:hover,
 .cart-qty-minus:hover{
 	background-color: #5161ce;
@@ -2751,6 +2810,73 @@ input[type=number]::-webkit-inner-spin-button {
   color: #fff !important;
  
  }
+ comment {
+  display: none;
+ 
+}
+.showmorecomment{
+  font-family: 'Montesrrat' sans-serif;
+}
+
+#loadLess {
+  display: none;
+}
+
+#loadMore,
+#loadLess{
+  padding: 10px;
+  text-align: center;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: .2rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: all 600ms ease-in-out;
+  -webkit-transition: all 600ms ease-in-out;
+  -moz-transition: all 600ms ease-in-out;
+  -o-transition: all 600ms ease-in-out;
+}
+/*Rating Stars*/
+
+
+
+
+/* Rating bars */
+
+
+progress{
+  padding: .4rem;
+}
+.ratingbar small{
+  margin: 1rem .3rem;
+}
+.progress-bar {
+  background-color: #efefef !important;
+  border-radius: 3px;
+  height: 1rem;
+  width: 100%;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.progress-bar .progress-value {
+  background-color: #FFB000;
+  height: 1rem;
+}
+.progress-bar .value-10{
+  width: 12%;
+}
+.progress-bar .value-20 {
+  width: 20%;
+}
+.progress-bar .value-40 {
+  width: 40%;
+}
+.progress-bar .value-60 {
+  width: 60%;
+}
+.progress-bar .value-80{
+  width: 80%;
+}
 
  .process-model li.visited small{
    font-weight: bold;
@@ -2767,6 +2893,10 @@ background: #B52421;
     border-top: 1px solid #eee;
   }
 
+  comment,.showmorecomment{
+    font-size: .8rem;
+  }
+  
   .column-labels {
     display: none;
   }
