@@ -2530,7 +2530,9 @@ color: #282C3F !important;
 }
 
 /***************PRODUCT INNER DESCRIPTION************/
-
+.topreviewercontent p{
+  font-family: 'Montesrrat' sans-serif;
+}
 .productname h3{
   font-weight: bold;
 }
@@ -2559,9 +2561,9 @@ color: #282C3F !important;
   width: 100%;
   
 }
-.process-model li a i.fa{
+/* .process-model li a i.fa{
   color: #B52421 !important;
-}
+} */
 .product-actions small{
   color: #fff;
   font-weight: 500;
@@ -2589,47 +2591,13 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 */
 /* Global settings */
 /* Global "table" column settings */
-.product-image {
-  float: left;
-  width: 20%;
-  text-align: center;
-}
-
-.product-details {
-  float: left;
-  width: 37%;
-  text-align: center;
-}
-
-.product-price {
-  float: left;
-  width: 12%;
-  text-align: center;
-}
-
-/* .product-quantity {
-  float: left;
-  width: 10%;
-  text-align: center;
-} */
-
-.product-removal {
-  float: left;
-  width: 9%;
-  text-align: center;
-}
-
-.product-line-price {
-  float: left;
-  width: 12%;
-  text-align: right;
-}
+/*  */
 input[type=number]::-webkit-inner-spin-button {
   opacity: 1
 }
 
 /* This is used as the traditional .clearfix class */
-.group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
+/* .group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
 .group:after,
 .shopping-cart:after,
 .column-labels:after,
@@ -2637,21 +2605,21 @@ input[type=number]::-webkit-inner-spin-button {
 .totals-item:after {
   content: '';
   display: table;
-}
+} */
 
-.group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+/* .group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
   clear: both;
 }
 
 .group, .shopping-cart, .column-labels, .product, .totals-item {
   zoom: 1;
-}
+} */
 
 /* Apply clearfix in a few places */
 /* Apply dollar signs */
-.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+/* .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content:"\20B9";
-}
+} */
 
 
 /* .shopping-cart {
@@ -2704,21 +2672,13 @@ input[type=number]::-webkit-inner-spin-button {
 	background-color: #5161ce;
 	color: #fff;
 } */
-/* Column headers */
-.column-labels{
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid rgb(0, 0, 0);
-  font-family: 'Roboto';
-  color: #282C3F;
-}
+
+
 #proaddform label{
   font-family: 'Roboto';
   color: #282C3F;
 }
-.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
-  text-indent: -9999px;
-}
+
 
 /* Product entries */
 .product ,.editdatetime,.addoncheck{
@@ -2727,20 +2687,7 @@ input[type=number]::-webkit-inner-spin-button {
   border: 2px solid #f0f0f0;
 }
 
-.product .product-image {
-  text-align: center;
-}
-.product .product-image img {
-  width: 100px;
-}
-.product .product-details .product-title {
-  margin-right: 20px;
-  font-family: "poppins";
-}
-.product .product-details .product-description {
-  margin: 5px 20px 5px 0;
-  line-height: 1.4em;
-}
+
 .product .product-quantity input {
   width: 40px;
   text-align: center;
@@ -2765,25 +2712,10 @@ input[type=number]::-webkit-inner-spin-button {
   color: #B52421;
 }
 
-/* Totals section */
-/* .totals .totals-item {
-  float: right;
-  clear: both;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.totals .totals-item label {
-  float: left;
-  clear: both;
-  width: 79%;
-  text-align: right;
-}
-.totals .totals-item-total {
-  font-family: "Roboto";
-} */
-.totalvalue{
-  text-align: center;
-  
+
+
+.totals-value {
+  text-align: right !important;
 }
 .totalvalue small{
   color:#B52421 !important;
