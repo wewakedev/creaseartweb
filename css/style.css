@@ -19,7 +19,7 @@ h1,h2,h3,h4,h5,h6{
 p,small,label,td,tr{
 /* font: normal normal normal 16px/20px poppins;
 letter-spacing: 0.25px; */
-font-family: 'Roboto' sans-serif;
+font-family: 'Montserrat', sans-serif;
 color: #191717;
 opacity: 1;
 }
@@ -816,12 +816,13 @@ ul.links {
     .clothesquantity input[type='number'],.productquantity input[type='number'] {
       width: 100% !important;
     }
+    
     .cart-qty-plus {
-      right: 10% !important;
+      right: 5% !important;
     }
     .cart-qty-minus {
       
-      left: 10% !important;
+      left: 5% !important;
     }
     .appsec{
         text-align: center;
@@ -871,6 +872,8 @@ ul.links {
   .circleapp{
     display: none;
   }
+  .cart-qty-plus, .proqtyplus, .proqtyminus, .cartqtyplus, .cartqtyminus, .cart-qty-minus {
+    width: 5px !important;}
 } 
 @media only screen and (min-width: 768px) { 
   .ridekitshow{
@@ -2451,7 +2454,7 @@ font-family: 'Montserrat';
   font-size: .7rem;
 }
 .copyoffer{
-  color: #FF8800;
+  color: #000;
   border: 1px solid #FF8800; 
   padding: .2rem .4rem; 
   margin: .3rem 0px; 
@@ -2460,6 +2463,7 @@ font-family: 'Montserrat';
 }
 .couponoffers button:focus{
   background-color: #E76F51;
+  font-family: 'Montesrrat' sans-serif;
 }
 
 
@@ -2646,11 +2650,16 @@ input[type=number]::-webkit-inner-spin-button {
 	width: 20px;
 	height: 20px;
 	border: none;
-  background-color: transparent;
+  background-color: #B52421;
     border-radius: .25rem;
-    z-index: 9999;
+    z-index: 99;
     position: absolute;
-    top: 5%;
+    top: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+
 }
 .cart-qty-minus{
   left: 30%;
@@ -2719,6 +2728,9 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .totalvalue small{
   color:#B52421 !important;
+}
+.totalvalue {
+  text-align: center;
 }
 .total{
   background-color: #F6F6F6;

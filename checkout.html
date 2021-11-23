@@ -340,24 +340,7 @@
       }
       
       
-      /* Update quantity */
-      function updateQuantity(quantityInput)
-      {
-        /* Calculate line price */
-        var productRow = $(quantityInput).parent().parent();
-        var price = parseFloat(productRow.children('.productprice').text());
-        var quantity = $(quantityInput).val();
-        var linePrice = price * quantity;
-        
-        /* Update line price display and recalc cart totals */
-        productRow.children('.productpriceupdate').each(function () {
-          $(this).fadeOut(fadeTime, function() {
-            $(this).text(linePrice.toFixed(2));
-            recalculateCart();
-            $(this).fadeIn(fadeTime);
-          });
-        });  
-      }
+      
       
       
       /* Remove item from cart */
@@ -379,13 +362,8 @@
                 <small>I agree to the <a href="#">Terms & Conditions</a></small> 
             </label>
             <div class="text-center my-3">
-              <button type="submit" onclick="redirect()" class="produtproceed"><a href=""><small> Proceed</small></a> </button>
+              <button type="submit" onclick="location.href='thankorder.html'" class="produtproceed"><a href=""><small> Proceed</small></a> </button>
             </div> 
-            <script>
-              var redirect = function(){
-               document.location.href="thankorder.html"
-              }
-            </script>
         </form>
         
     </div>
@@ -396,53 +374,30 @@
 
 
 <script>
-  var incrementQty;
-var decrementQty;
-var plusBtn  = $(".cart-qty-plus");
-var minusBtn = $(".cart-qty-minus");
-var incrementQty = plusBtn.click(function() {
-	var $n = $(this)
-		.parent(".product-quantity")
-		.find(".qty");
-	$n.val(Number($n.val())+1 );
-	update_amounts();
-});
-
-var decrementQty = minusBtn.click(function() {
-		var $n = $(this)
-		.parent(".product-quantity")
-		.find(".qty");
-	var QtyVal = Number($n.val());
-	if (QtyVal > 0) {
-		$n.val(QtyVal-1);
-	}
-	update_amounts();
-});
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      var incrementQty;
+      var decrementQty;
+      var plusBtn  = $(".cart-qty-plus");
+      var minusBtn = $(".cart-qty-minus");
+      var incrementQty = plusBtn.click(function() {
+      	var $n = $(this)
+      		.parent(".product-quantity")
+      		.find(".qty");
+      	$n.val(Number($n.val())+1 );
+      	update_amounts();
+      });
+      
+      var decrementQty = minusBtn.click(function() {
+      		var $n = $(this)
+      		.parent(".product-quantity")
+      		.find(".qty");
+      	var QtyVal = Number($n.val());
+      	if (QtyVal > 0) {
+      		$n.val(QtyVal-1);
+      	}
+      	update_amounts();
+      });
+      
+  </script>
 
 
 
